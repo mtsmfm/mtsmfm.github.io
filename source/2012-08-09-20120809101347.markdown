@@ -1,0 +1,22 @@
+---
+layout: post
+title: RMagick install error
+date: 2012-08-09 10:13
+comments: false
+categories: 
+published: false
+---
+
+Can't find Magick-configって言われた\
+ImageMagickは入ってるのでぐぐったら、\
+libmagick9-devを入れればいいらしいが、そんなものないと怒られた\
+代わりにgraphicsmagick-libmagick-dev-compatを導入しろとも言われた
+
+    sudo apt-get install graphicsmagick-libmagick-dev-compat
+
+今度はCan't find MagickWand.h
+
+    sudo apt-get install libmagickwand-dev
+    sudo gem install rmagick
+
+おｋ，いけた

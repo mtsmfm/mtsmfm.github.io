@@ -1,0 +1,30 @@
+---
+layout: post
+title: vmでrailsの開発をする際
+date: 2012-02-02 12:22
+comments: false
+categories: 
+published: false
+---
+
+ネットに繋がってないとローカルの接続なのにやたら遅くなることに昨日気がついた。\
+ついでにSSHも接続までに10秒とかかかる。\
+DNS周りの問題だった模様。\
+\
+/etc/ssh/sshd\_config
+
+~~~~ {.syntax-highlight}
+UseDNS no
+~~~~
+
+\
+
+/usr/local/lib/ruby/1.9.1/webrick/config.rb
+
+~~~~ {.syntax-highlight}
+:DoNotReverseLookup => true,
+~~~~
+
+\
+
+何とかなった。一安心。

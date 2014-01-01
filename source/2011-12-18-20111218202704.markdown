@@ -1,0 +1,13 @@
+---
+layout: post
+title: ひとりなんとかカレンダー
+date: 2011-12-18 20:27
+comments: false
+categories: 
+published: false
+---
+
+~~3日坊主~~\
+ネタがある日はいいけど無い日が困る\
+\
+Selenium RC server を使ったテスト周りについてそのうち書きたい

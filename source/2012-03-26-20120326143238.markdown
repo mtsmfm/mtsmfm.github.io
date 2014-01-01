@@ -1,0 +1,17 @@
+---
+layout: post
+title: 2chの規制に泣いた時
+date: 2012-03-26 14:32
+comments: false
+categories: 
+published: false
+---
+
+Amazon EC2でw3m使うのが一番楽な気が\
+\
+ただし、改行コードを気を付けないと\
+:set ff=dos\
+してから\
+\
+\
+そのうちプロキシ鯖としてなんとかしたい気もする

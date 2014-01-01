@@ -1,0 +1,46 @@
+---
+layout: post
+title: XeTeX 用テンプレート
+date: 2012-11-20 16:11
+comments: false
+categories: 
+published: false
+---
+
+~~~~ {.syntax-highlight}
+\documentclass[12pt,a4paper]{article}
+
+\setlength{\topmargin}{20mm}
+\addtolength{\topmargin}{-1in}
+\setlength{\oddsidemargin}{20mm}
+\addtolength{\oddsidemargin}{-1in}
+\setlength{\evensidemargin}{15mm}
+\addtolength{\evensidemargin}{-1in}
+\setlength{\textwidth}{170mm}
+\setlength{\textheight}{254mm}
+\setlength{\headsep}{0mm}
+\setlength{\headheight}{0mm}
+\setlength{\topskip}{0mm}
+
+\usepackage{xltxtra}
+\setmainfont{IPAPMincho}
+\setsansfont{IPAPGothic}
+\setmonofont{IPAGothic}
+\XeTeXlinebreaklocale "ja"
+
+\usepackage{xeCJK} %日本語の改行を綺麗にするため
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{float}
+
+\title{title}
+\author{author}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\end{document}
+~~~~

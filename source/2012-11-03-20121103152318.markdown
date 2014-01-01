@@ -1,0 +1,10 @@
+---
+layout: post
+title: vmでshared folder がうまくいかない
+date: 2012-11-03 15:23
+comments: false
+categories: 
+published: false
+---
+
+vmware toolを再インスコ

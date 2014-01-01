@@ -1,0 +1,25 @@
+---
+layout: post
+title: mysqlに踊らされた一日
+date: 2012-08-30 18:24
+comments: false
+categories: 
+published: false
+---
+
+謎現象に踊らされたのでメモ。\
+\
+capistranoを導入して、bundleでshared配下にinstallさせたらなんかうまくいかない。\
+mysql2が入らないと怒られる。\
+でも原因が表示されない。\
+\
+mysql-develとかが入ってない？ -\> そんなことはない\
+rubyを更新してみる -\> だめ\
+\
+mysqldを止めてみたらうまくいった。\
+\
+なんなんだと再起動してtopしてみるとmysqld起動直後にCPUを占有しまくり。\
+なのに走ってるクエリとかはない。\
+なんじゃこりゃ。\
+ぐぐってPC再起動するといいかもみたいなのがでてきたので再起動したら直った。\
+なにこれ。

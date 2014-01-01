@@ -1,0 +1,32 @@
+---
+layout: post
+title: evinceで明朝がゴシックになる
+date: 2013-01-15 20:44
+comments: false
+categories: 
+published: false
+---
+
+\~/.fonts.conf
+
+~~~~ {.syntax-highlight}
+<?xml version="1.0"?>
+<fontconfig>
+  <match target="pattern">
+    <test name="family" compare="contains">
+      <string>Ryumin</string>
+    </test>
+    <edit name="family" mode="prepend" binding="strong">
+      <string>IPAMincho</string>
+    </edit>
+  </match>
+  <match target="pattern">
+    <test name="family" compare="contains">
+      <string>GothicBBB</string>
+    </test>
+    <edit name="family" mode="prepend" binding="strong">
+      <string>IPAGothic</string>
+    </edit>
+  </match>
+</fontconfig>
+~~~~

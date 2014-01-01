@@ -1,0 +1,28 @@
+---
+layout: post
+title: dd-wrtについて
+date: 2011-09-12 17:16
+comments: false
+categories: 
+published: false
+---
+
+WOLはマジックパケットだけ見てるみたいだからポート番号はいくつでもいいみたい？\
+\
+udpのyを192.168.1.x:zにポートフォワード\
+\
+管理→コマンドから
+
+    ip neigh change 192.168.1.x lladdr ff:ff:ff:ff:ff:ff nud permanent dev br0
+
+\
+
+するとルーターのy番ポートに届いたパケットがブロードキャストされるみたい\
+ソフトはWOL Magic Packet Sender\
+ホスト名でいけそうな楽なソフトがこれだった\
+\
+\
+DDNSは\
+サービス名：手動設定\
+DDNSサーバー:www.mydns.jp\
+URL:/login.html?

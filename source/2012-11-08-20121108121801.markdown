@@ -1,0 +1,10 @@
+---
+layout: post
+title: ファイル名がSJISのzipをunzipする方法
+date: 2012-11-08 12:18
+comments: false
+categories: 
+published: false
+---
+
+    unzip -O cp932 hoge.zip

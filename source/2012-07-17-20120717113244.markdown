@@ -1,0 +1,18 @@
+---
+layout: post
+title: git diff の文字化け
+date: 2012-07-17 11:32
+comments: false
+categories: 
+published: false
+---
+
+euc-jpのdiff取るだけで文字化けした\
+
+    git config --global core.pager "nkf -w | LESSCHARSET=utf-8 less"
+
+\
+
+参考\
+git diffのpagerで日本語文字化け対策\
+[http://tbaba-prog.blogspot.jp/2011/04/git-diffpager\_17.html](http://tbaba-prog.blogspot.jp/2011/04/git-diffpager_17.html)

@@ -1,0 +1,50 @@
+---
+layout: post
+title: railsアプリ作るときに最初にやること
+date: 2012-04-14 17:53
+comments: false
+categories: 
+published: false
+---
+
+    rails new hoge -T -d mysql
+
+\
+
+Gemfileに追加
+
+    gem 'haml-rails'
+    gem 'coffee-filter'
+    gem 'therubyracer'
+
+    group :test, :development do
+      gem 'rspec-rails'
+      gem 'spork', '~> 0.9.0.rc'
+      gem 'guard-spork'
+      gem 'guard-rspec'
+      gem 'factory_girl_rails'
+      gem 'capistrano'
+      gem 'rails-erd'
+      gem 'capybara'
+    end
+
+\
+
+    rails g rspec:install
+    spork rspec --bootstrap
+    guard init spork
+    guard init rspec
+
+\
+
+spec\_helper.rbの\
+Spork.each\_runブロックを編集
+
+~~~~ {.syntax-highlight}
+Spork.each_run do
+  # This code will be run each time you run your specs.
+  load "#{Rails.root}/config/routes.rb"
+  Dir["#{Rails.root}/app/**/*.rb"].each { |f| load f }
+  FactoryGirl.reload
+end
+~~~~

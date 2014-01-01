@@ -1,0 +1,14 @@
+---
+layout: post
+title: テストが書けないn個の理由
+date: 2012-04-19 16:26
+comments: false
+categories: 
+published: false
+---
+
+​1. リファクタがうまくできない(特にテストコード)\
+\
+shared\_exampleとかhashにしてeachで回すとかletとかやりようはあるだろうけど、\
+なかなかdryに書けない。\
+そのうち嫌になってくる。

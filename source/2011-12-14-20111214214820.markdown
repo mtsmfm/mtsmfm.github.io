@@ -1,0 +1,51 @@
+---
+layout: post
+title: ひとりなんとかカレンダー3日目
+date: 2011-12-14 21:48
+comments: false
+categories: 
+published: false
+---
+
+今日はrailsのhas\_secure\_passwordについて\
+これはrails3.1から？の機能で、\
+ハッシュ化されたパスワードをdbに保存して、認証時に入力されたパスワードをハッシュ化して認証する\
+というよくある流れを勝手にやってくれるという優れものです。\
+\
+手順としては\
+Gemfileに
+
+~~~~ {.syntax-highlight}
+gem 'bcrypt-ruby'
+~~~~
+
+と書いて
+
+    $ bundle install
+
+して\
+モデルに
+
+~~~~ {.syntax-highlight}
+has_secure_password
+~~~~
+
+と書いて、\
+そのモデルにstring型でpassword\_digestという名前のカラムを作って終わりです。
+
+~~~~ {.syntax-highlight}
+User.create(login_id: "login_id", password: "password")
+user = User.find_by_login_id("login_id")
+user.authenticate("hoge")
+#=> false
+user.authenticate("password")
+#=> userが返る
+~~~~
+
+passwordというプロパティとauthenticateというメソッドが勝手に用意されます。\
+\
+ちなみに、何度か作って消してを試すと分かると思いますが、\
+password\_digestは同じ条件でも異なるものになります。\
+つまり、ちゃんとソルトが用いられているというわけです。\
+おそらくpassword\_digest自体にソルトが含まれているためでしょう。\
+bcrypt-rubyのリファレンスあたりにそんなことが書かれていた、ような・・・
