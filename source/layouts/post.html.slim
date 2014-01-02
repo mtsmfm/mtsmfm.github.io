@@ -1,9 +1,7 @@
 = wrap_layout :layout do
   section.post
-    header.post-header
-      h2.post-title
-        = current_article.title
-      p.post-meta
-        = current_article.date.strftime('%F')
-    .post-description
-      = current_article.body
+    h2
+      = link_to current_article.title, current_article
+    time
+      = current_article.date.strftime('%F')
+    = current_article.body
