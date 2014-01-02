@@ -4,7 +4,12 @@ source 'http://rubygems.org'
 
 gem "middleman", "~> 3.2.1"
 gem "middleman-blog", "~> 3.5.1"
+gem 'middleman-syntax', github: 'middleman/middleman-syntax' # for rouge
+gem 'middleman-livereload'
 gem 'slim'
+gem 'redcarpet'
+gem 'nokogiri'
+gem 'font-awesome-middleman'
 
 # For feed.xml.builder
 gem "builder", "~> 3.0"
