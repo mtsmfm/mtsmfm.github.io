@@ -10,6 +10,7 @@ gem 'slim'
 gem 'redcarpet'
 gem 'nokogiri'
 gem 'font-awesome-middleman'
+gem 'middleman-gumby'
 
 # For feed.xml.builder
 gem "builder", "~> 3.0"
