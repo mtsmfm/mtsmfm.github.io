@@ -112,3 +112,7 @@ end
 activate :deploy do |deploy|
   deploy.method = :git
 end
+
+activate :google_analytics do |ga|
+  ga.tracking_id = 'UA-48013282-1'
+end

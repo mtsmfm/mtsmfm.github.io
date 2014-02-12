@@ -12,6 +12,7 @@ gem 'nokogiri'
 gem 'font-awesome-middleman'
 gem 'middleman-gumby'
 gem 'middleman-deploy'
+gem 'middleman-google-analytics'
 
 # For feed.xml.builder
 gem "builder", "~> 3.0"
