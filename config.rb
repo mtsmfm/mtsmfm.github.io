@@ -111,6 +111,7 @@ end
 
 activate :deploy do |deploy|
   deploy.method = :git
+  deploy.branch = 'master'
 end
 
 activate :google_analytics do |ga|
