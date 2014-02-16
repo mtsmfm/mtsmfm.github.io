@@ -8,7 +8,7 @@ gem 'middleman-deploy'
 gem 'middleman-google-analytics'
 gem 'middleman-gumby'
 gem 'middleman-livereload'
-gem 'middleman-syntax', github: 'middleman/middleman-syntax' # for rouge
+gem 'middleman-syntax', '>= 2.0'
 gem 'nokogiri'
 gem 'redcarpet'
 gem 'slim'
