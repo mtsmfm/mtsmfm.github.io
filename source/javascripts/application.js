@@ -1,1 +1,1 @@
-//= require gumby/production
+//= require gumby

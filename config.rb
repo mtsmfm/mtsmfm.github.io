@@ -9,8 +9,6 @@ set :markdown, fenced_code_blocks: true, smartypants: true
 
 activate :syntax, line_numbers: true
 activate :livereload
-activate :gumby
-
 activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths
   # blog.prefix = "blog"
