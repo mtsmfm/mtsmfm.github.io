@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 source 'https://rails-assets.org'
 
+gem 'builder'
 gem 'font-awesome-middleman'
 gem 'middleman'
 gem 'middleman-blog'
