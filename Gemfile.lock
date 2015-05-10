@@ -164,6 +164,6 @@ DEPENDENCIES
   middleman-livereload
   middleman-syntax
   nokogiri
-  rails-assets-gumby
+  rails-assets-gumby!
   redcarpet
   slim
