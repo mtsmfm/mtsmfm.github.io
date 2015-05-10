@@ -9,10 +9,9 @@ gem 'middleman-google-analytics'
 gem 'middleman-livereload'
 gem 'middleman-syntax'
 gem 'nokogiri'
+gem 'redcarpet'
+gem 'slim'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-gumby'
 end
-
-gem 'redcarpet'
-gem 'slim'
