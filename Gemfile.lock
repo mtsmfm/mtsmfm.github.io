@@ -100,6 +100,8 @@ GEM
       rouge (~> 1.0)
     mini_portile (0.6.2)
     minitest (5.6.1)
+    modular-scale (2.0.6)
+      compass (>= 0.12.0)
     multi_json (1.11.0)
     net-sftp (2.1.2)
       net-ssh (>= 2.6.5)
@@ -163,6 +165,7 @@ DEPENDENCIES
   middleman-google-analytics
   middleman-livereload
   middleman-syntax
+  modular-scale
   nokogiri
   rails-assets-gumby!
   redcarpet
