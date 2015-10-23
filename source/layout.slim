@@ -11,18 +11,15 @@ html
   body
     .row
       .three.columns
-        #sidebar
-          h3
-            = link_to 'mtsmfm blog', '/'
-          .row
-            .six.columns
-              .large.btn.default
-                = link_to 'https://github.com/mtsmfm' do
-                  i.fa.fa-github
-            .six.columns
-              .large.btn.default
-                = link_to 'https://twitter.com/mtsmfm' do
-                  i.fa.fa-twitter
+        h3
+          = link_to 'mtsmfm blog', '/'
+        .row
+          .large.btn.default
+            = link_to 'https://github.com/mtsmfm' do
+              i.fa.fa-github
+          .large.btn.default
+            = link_to 'https://twitter.com/mtsmfm' do
+              i.fa.fa-twitter
       .nine.columns
         = yield
   = google_analytics_universal_tag
