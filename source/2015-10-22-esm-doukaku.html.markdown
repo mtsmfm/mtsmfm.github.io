@@ -113,3 +113,7 @@ JS の方は ES6 とかとっさに頭から出るほど使えていないので
 - [Clojure](https://gist.github.com/nakana/6227290a07e102dfbe49)
 - [C](https://gist.github.com/nakana/a0d45ade0a59ad216598)
 - [まさかのラーメン屋シミュレータ](https://output.jsbin.com/qaneca)
+
+#### @cielavenir
+
+- [Ruby](http://qiita.com/cielavenir/items/fa6e7b4e79e1673bbe05)
