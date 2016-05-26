@@ -12,6 +12,7 @@ gem 'modular-scale'
 gem 'nokogiri'
 gem 'redcarpet'
 gem 'slim'
+gem 'pry'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-gumby'

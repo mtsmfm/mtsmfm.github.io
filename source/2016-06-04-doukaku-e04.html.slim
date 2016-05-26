@@ -1,0 +1,250 @@
+---
+title: オフラインリアルタイムどう書く E04 の問題 - ドキドキ登山
+date: 2016-06-04 16:00 JST
+tags:
+---
+
+ruby:
+  CENTER = {x: 150, y: 150}
+  MAP = {
+    1 => %w(A B),
+    2 => %w(B C),
+    3 => %w(C D),
+    4 => %w(D E),
+    5 => %w(E F),
+    6 => %w(F G),
+    7 => %w(G H),
+    8 => %w(H A)
+  }
+  SEED = 3001
+  srand(SEED)
+
+  def draw_base(input)
+    tag(:circle, cx: CENTER[:x], cy: CENTER[:y], r: 20, stroke: "black", fill: "none") +
+    content_tag(:text, '頂上', x: CENTER[:x], y: CENTER[:y], 'text-anchor': "middle", 'dominant-baseline': "central") +
+    8.times.map do |i|
+      outputs = []
+
+      theta = (2 * Math::PI) * (i / 8.0)
+      x1 = CENTER[:x] + Math.cos(theta) * 100
+      y1 = CENTER[:y] - Math.sin(theta) * 100
+      x2 = CENTER[:x] + Math.cos(theta) * 20
+      y2 = CENTER[:y] - Math.sin(theta) * 20
+      outputs << tag(:path, stroke: "black", d: "M#{x1},#{y1}L#{x2},#{y2}")
+
+      char = ?A
+      i.times { char.succ! }
+      x = CENTER[:x] + Math.cos(theta) * 110
+      y = CENTER[:y] - Math.sin(theta) * 110
+      outputs << content_tag(:text, char, x: x, y: y, 'text-anchor': "middle", 'dominant-baseline': "central")
+      outputs << tag(:circle, cx: x, cy: y, r: 10, stroke: :black, fill: :none)
+
+      char = i + 1
+      theta = (2 * Math::PI) * (i / 8.0) + (2 * Math::PI / 16)
+      x = CENTER[:x] + Math.cos(theta) * 130
+      y = CENTER[:y] - Math.sin(theta) * 130
+      outputs << content_tag(:text, char, x: x, y: y, 'text-anchor': "middle", 'dominant-baseline': "central", 'font-size': '0.8rem')
+
+      outputs
+    end.join("\n").html_safe +
+    content_tag(:text, "入力 #{input}", x: CENTER[:x], y: CENTER[:y] * 2, 'text-anchor': "middle", 'dominant-baseline': "central")
+  end
+
+  def draw_climb(i, order, max_num, options: {})
+    i -= 1
+
+    r = (order.quo(max_num) * 60 + 40).to_f
+
+    theta1 = (2 * Math::PI) * (i / 8.0)
+    theta2 = (2 * Math::PI) * ((i + 1) / 8.0)
+    x1 = CENTER[:x] + Math.cos(theta1) * r
+    y1 = CENTER[:y] - Math.sin(theta1) * r
+    x2 = CENTER[:x] + Math.cos(theta2) * r
+    y2 = CENTER[:y] - Math.sin(theta2) * r
+    dx = x2 - x1
+    dy = y2 - y1
+    f1 = f2 = 0
+    start = 0
+    rx = ry = r
+
+    d = "M#{x1},#{y1}a#{rx} #{ry} #{start} #{f1} #{f2} #{dx},#{dy}"
+    tag(:path, {stroke: "black",  d: d, fill: "none"}.merge(options))
+  end
+
+  def draw_rock(climbs, rock)
+    before_r = 20
+    outputs = []
+
+    climbs.chars.map(&:to_i).each.with_index do |climb, i|
+      if MAP[climb].include?(rock)
+        outputs << draw_climb(climb, i, climbs.length, options: {stroke: "red", 'stroke-width': 3, 'stroke-dasharray': '3, 3'})
+
+        theta = (2 * Math::PI) * ((rock.ord - ?A.ord) / 8.0)
+        r = (i.quo(climbs.length) * 60 + 40).to_f
+        x1 = CENTER[:x] + Math.cos(theta) * before_r
+        y1 = CENTER[:y] - Math.sin(theta) * before_r
+        x2 = CENTER[:x] + Math.cos(theta) * r
+        y2 = CENTER[:y] - Math.sin(theta) * r
+
+        outputs << tag(:path, stroke: "red", d: "M#{x1},#{y1}L#{x2},#{y2}", 'stroke-width': 3, 'stroke-dasharray': '3, 3')
+
+        before_r = r
+        rock = (MAP[climb] - [rock]).first
+      end
+    end
+
+    theta = (2 * Math::PI) * ((rock.ord - ?A.ord) / 8.0)
+    r = 100.0
+    x1 = CENTER[:x] + Math.cos(theta) * before_r
+    y1 = CENTER[:y] - Math.sin(theta) * before_r
+    x2 = CENTER[:x] + Math.cos(theta) * r
+    y2 = CENTER[:y] - Math.sin(theta) * r
+
+    outputs << tag(:path, stroke: "red", d: "M#{x1},#{y1}L#{x2},#{y2}", 'stroke-width': 3, 'stroke-dasharray': '3, 3')
+
+    outputs.join("\n")
+  end
+
+  def draw_answer(answer)
+    answer.chars.map {|man|
+      theta = (2 * Math::PI) * ((man.ord - ?A.ord) / 8.0)
+      x = CENTER[:x] + Math.cos(theta) * 110
+      y = CENTER[:y] - Math.sin(theta) * 110
+      tag(:circle, cx: x, cy: y, r: 10, stroke: "red", fill: "none", 'stroke-width': 3)
+    }.join("\n")
+  end
+
+  def draw(input, display_rock: false, display_answer: false)
+    climbs, rock = input.split(?:)
+
+    content_tag(:svg, xmlns: "http://www.w3.org/2000/svg", width: CENTER[:x] * 2, height: CENTER[:y] * 2.3, viewBox: "0 0 300 300") do
+      outputs = [draw_base(input)]
+
+      outputs += climbs.chars.map.with_index do |c, i|
+        draw_climb(c.to_i, i, climbs.length)
+      end
+
+      outputs << draw_rock(climbs, rock) if display_rock
+      outputs << draw_answer(solve(input)) if display_answer
+
+      outputs.join("\n")
+    end
+  end
+
+  def solve(input)
+    lines, start_rock = input.split(?:)
+    lines = lines.chars.map(&:to_i)
+
+    ng_indexes = []
+
+    rock = start_rock
+    lines.each.with_index do |l, i|
+      if MAP[l].include?(rock)
+        rock = (MAP[l] - [rock]).first
+        ng_indexes << i
+      end
+    end
+
+    dead = []
+
+    (?A..?H).each do |man|
+      pos = man
+
+      lines.each.with_index.to_a.reverse.each do |l, i|
+        if MAP[l].include?(pos)
+          if i.in?(ng_indexes)
+            dead << man
+            break
+          else
+            pos = (MAP[l] - [pos]).first
+          end
+        end
+      end
+
+      dead << man if !dead.include?(man) && (man == rock || pos == start_rock)
+    end
+
+    ((?A..?H).to_a - dead).join
+  end
+
+  def random_input(length)
+    Array.new(length) { (1..8).to_a.sample }.join + ?: + (?A..?H).to_a.sample
+  end
+
+markdown:
+  [オフラインリアルタイムどう書く](https://yhpg.doorkeeper.jp) E04 の問題です。
+
+  ## 問題
+
+  次の図は山を上から見たところである。
+
+= draw('2512:C')
+
+markdown:
+  A ~ H が登山者、1 ~ 8 は方角、実線が登山道である。
+
+  A ~ H のうち登頂できた人を求めたい。
+
+  ## ルール
+
+  登山には次のルールがある:
+
+  1. 登山道を麓から頂上に向かって登る
+  2. 登る際に、横方向の登山道があればそちらを通る
+
+  ただし、一部の登山道は頂上からの落石によって通行止めになっており、通行止めに行きあたると登頂失敗になる。
+
+  落石は、頂上から登山者と同じルールで麓まで転がってくる。
+
+  先述した例 (`2512:C`) だと、通行止めの道は次の図の赤破線のようになる。
+
+= draw('2512:C', display_rock: true)
+
+markdown:
+  よって、頂上に辿りつけた人は次の図の赤丸のようになる。
+
+= draw('2512:C', display_rock: true, display_answer: true)
+markdown:
+
+  ## 入力
+
+  `2512:C` のような形式。
+  コロンの前は頂点と並行に伸びる登山道の情報。頂上から順に並んでいる。
+  コロンの後は落石の開始位置。
+
+  ## 出力
+
+  `DEFGH` のような形式。登頂に成功した人をアルファベット順で並べる。
+
+h2 サンプルデータ
+
+- data = %w(2512:C 1:A :C 2345:B 1256:E 1228:A)
+- data += (4..7).flat_map {|i| Array.new(2) { random_input(i) } }
+- data << '3456781:C'
+- data += (data.size..30).map {|i| random_input(i) }
+- raise unless data.uniq == data
+table
+  thead
+    tr
+      th #
+      th 入力
+      th 期待
+      th 状況へのリンク
+
+  tbody
+    - data.each.with_index do |input, i|
+      tr
+        td= i
+        td= input
+        td= solve(input)
+        td= link_to '状況', '', anchor: input
+
+h2 テストデータ
+textarea= data.map.with_index {|d, i| %!/*#{i}*/ test("#{d}", "#{solve(d)}"! }.join("\n")
+
+h2 状況一覧
+
+- data.each do |input, i|
+  h3{id= input}= input
+  = draw(input, display_rock: true, display_answer: true)
+  hr
