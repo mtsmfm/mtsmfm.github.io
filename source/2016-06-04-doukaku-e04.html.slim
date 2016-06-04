@@ -244,7 +244,7 @@ table
         td= link_to '状況', '', anchor: input
 
 h2 テストデータ
-textarea= data.map.with_index {|d, i| %!/*#{i}*/ test("#{d}", "#{solve(d)}"! }.join("\n")
+textarea= data.map.with_index {|d, i| %!/*#{i}*/ test("#{d}", "#{solve(d)}")! }.join("\n")
 
 h2 状況一覧
 
