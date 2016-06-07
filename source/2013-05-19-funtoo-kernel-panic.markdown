@@ -1,5 +1,4 @@
 ---
-layout: post
 title: カーネルパニック
 date: 2013-05-19 10:30
 comments: true

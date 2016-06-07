@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 新年あけました
 date: 2014-01-03 22:08 JST
 tags:

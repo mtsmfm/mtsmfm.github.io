@@ -1,19 +1,23 @@
 source 'https://rubygems.org'
 
-gem 'builder'
-gem 'font-awesome-middleman'
 gem 'middleman'
 gem 'middleman-blog'
-gem 'middleman-deploy'
+gem 'middleman-compass'
+gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
 gem 'middleman-google-analytics'
 gem 'middleman-livereload'
+gem 'middleman-sprockets', '~> 4.0.0.rc'
 gem 'middleman-syntax'
-gem 'modular-scale'
+
+gem 'activesupport', require: 'active_support/all'
+gem 'builder'
+gem 'font-awesome-middleman'
 gem 'nokogiri'
+gem 'pry'
 gem 'redcarpet'
 gem 'slim'
-gem 'pry'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-gumby'
+  gem 'rails-assets-modular-scale'
 end

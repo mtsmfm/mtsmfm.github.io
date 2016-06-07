@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Funtoo Linux インストール講習会 いってきました
 date: 2013-05-17 21:12
 comments: true
-categories: 
+categories:
 ---
 
 [第1回 Funtoo Linux インストール講習会](http://esminc.doorkeeper.jp/events/3547)

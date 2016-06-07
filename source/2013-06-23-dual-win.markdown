@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Win 7 とのデュアルブート
 date: 2013-06-23 19:30
 comments: true
