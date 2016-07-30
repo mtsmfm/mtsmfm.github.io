@@ -1,0 +1,195 @@
+---
+title: オフラインリアルタイムどう書く E06 の問題 - 目指せホゲモンマスター
+date: 2016-08-06 16:00 JST
+tags:
+---
+
+ruby:
+  SEED = 3001
+  srand(SEED)
+
+  class Pokemon
+    attr_reader :lvl, :type
+    attr_accessor :hp
+
+    def initialize(str)
+      @lvl, @type = str.chars
+      @lvl = @lvl.to_i
+      @hp = @lvl
+    end
+
+    def battle(other_poke)
+      if lvl == other_poke.lvl
+        other_poke.hp -= damage(type, other_poke.type)
+        self.hp       -= damage(other_poke.type, type)
+        return
+      end
+
+      if lvl > other_poke.lvl
+        first  = self
+        second = other_poke
+      elsif lvl < other_poke.lvl
+        first  = other_poke
+        second = self
+      end
+
+      second.hp -= damage(first.type, second.type)
+      if second.live?
+        first.hp -= damage(second.type, first.type)
+      end
+    end
+
+    def live?
+      hp.positive?
+    end
+
+    def inspect
+      "lvl: #{lvl}, type: #{type}, hp: #{hp}"
+    end
+
+    def to_s
+      inspect
+    end
+
+    private
+
+    def damage(offence, defence)
+      return 2 if offence == defence
+
+      case [offence, defence]
+      when %w(R G),%w(G B),%w(B R)
+        4
+      else
+        1
+      end
+    end
+  end
+
+  class Player
+    attr_reader :pokemons, :id
+
+    def initialize(pokemons:, id:)
+      @id = id
+      @pokemons = pokemons.map {|p| Pokemon.new(p) }
+    end
+
+    def heal
+      pokemons.each do |p|
+        p.hp = p.lvl
+      end
+    end
+
+    def win?(other_player)
+      heal
+      other_player.heal
+
+      other_player.pokemons.each do |other_poke|
+        pokemons.each do |poke|
+          while poke.live? && other_poke.live?
+            poke.battle(other_poke)
+          end
+        end
+      end
+
+      pokemons.any?(&:live?)
+    end
+  end
+
+  def solve(input)
+    players = input.split(?,).map.with_index(1) {|pokemons, i|
+      Player.new(pokemons: pokemons.scan(/\d./), id: i)
+    }
+
+    players.sort_by.with_index do |player, i|
+      [(players - [player]).count {|p| !player.win?(p) }, i]
+    end.map(&:id).join(?,)
+  end
+
+  def random_input(length)
+    Array.new(length) { Array.new((1..4).to_a.sample) { [(1..9).to_a.sample, %w(R G B).sample].join }.join }.join(?,)
+  end
+
+markdown:
+  [オフラインリアルタイムどう書く](https://yhpg.doorkeeper.jp/events/48610) E06 の問題です。
+
+  ## 問題の概要
+
+  ホゲモンリーグを勝ち抜いて、ホゲモンマスターになろう!
+
+  ## ルール
+
+  プレイヤー同士でホゲモンを戦わせ、総当たり戦を行う。
+
+  1. プレイヤーは手持ちの中で登録した順に 1 匹づつホゲモンを繰り出し、常に 1 対 1 で戦う
+  - ホゲモンには体力があり、 0 以下になるともう行動することはできない
+
+  ### 戦闘について
+
+  1. 戦闘はターン制で、1 ターンに 1 回攻撃できる
+  - レベルが高い方が先に攻撃する
+    - レベルが低い方は、体力が残っていたら攻撃する
+  - レベルが同じ場合、同時に攻撃する
+
+  ### ダメージについて
+
+  1. ホゲモンには R/G/B 3 つのタイプがある
+
+    次のようなタイプ相性になっている:
+    ![タイプ相性](2016/08/06/type.png)
+
+  2. 有利な方は、相手に 4 ダメージを与える
+  - 不利な方は、相手に 1 ダメージを与える
+  - タイプが同じ場合、相手に 2 ダメージを与える
+
+  ### 体力について
+
+  1. ホゲモンの初期体力はレベルと同じ
+  - プレイヤー同士で戦いを始める前に、お互いの手持ちのホゲモンの体力を回復する
+
+  ## 入力
+
+  `9B,3R2G,1R2B3G` のような形式。
+  プレイヤーをカンマで区切っている。
+  数字がホゲモンのレベル、R/G/B がホゲモンのタイプ。
+
+  ## 出力
+
+  `1,3,2` のような形式。
+  数字はプレイヤーが入力で何番目にいたか。
+  プレイヤーを勝数順でカンマで区切って並べる。
+  勝数が同じ場合は入力と同じ順とする。
+
+  ## 戦闘の例
+
+  3R2G 対 1R2B3G は次のような戦いを経て、1R2B3G 側の勝利になる。
+
+  ![例](2016/08/06/battle.png)
+
+  ## 補足
+
+  実装ができた方は [Qiitaの記事](http://qiita.com/mtsmfm/items/7a0bfd2ac5b7674ce8c7) のコメント欄からリンクを張っていただくと見つけやすくて助かります。
+
+h2 サンプルデータ
+
+- data = %w(9B,3R2G,1R2B3G)
+- data += %w(1G)
+- data += %w(1G,1R,1B)
+- data += %w(8B,3R2G,1R2B3G)
+- data += (data.size..30).map {|i| random_input((i / 1.5).floor) }
+- raise unless data.uniq == data
+table
+  thead
+    tr
+      th #
+      th 入力
+      th 期待
+
+  tbody
+    - data.each.with_index do |input, i|
+      tr
+        td= i
+        td= input
+        td= solve(input)
+
+h2 テストデータ
+textarea= data.map.with_index {|d, i| %!/*#{i}*/ test("#{d}", "#{solve(d)}")! }.join("\n")
