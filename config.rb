@@ -4,7 +4,7 @@ set :markdown_engine, :redcarpet
 set :markdown, fenced_code_blocks: true, smartypants: true
 
 activate :syntax, line_numbers: true
-activate :livereload
+activate :livereload, port: '35729', js_host: 'localhost'
 activate :blog do |blog|
   blog.layout = 'post'
 
