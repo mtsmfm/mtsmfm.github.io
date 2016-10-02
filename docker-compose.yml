@@ -1,0 +1,22 @@
+version: '2'
+services:
+  middleman:
+    tty: true
+    stdin_open: true
+    build:
+      context: .
+      args:
+        - APP_HOME=${PWD}
+    command: bin/middleman -p 3000
+    environment:
+      BUNDLE_PATH: ${PWD}/vendor/bundle
+    ports:
+      - 3000:3000
+      - 35729:35729
+    volumes:
+      - .:${PWD}
+      - bundle:${PWD}/vendor/bundle
+      - ~/.ssh:/root/.ssh:ro
+      - ~/.gitconfig:/root/.gitconfig:ro
+volumes:
+  bundle:
