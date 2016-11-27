@@ -1,0 +1,133 @@
+---
+title: オフラインリアルタイムどう書く E10 の問題 - 塗って繋ぐ
+date: 2016-12-03 16:00 JST
+tags:
+---
+
+ruby:
+  load __dir__ + '/2016-12-03-doukaku-e10/doukaku.rb'
+  
+  def draw_base(board_size: 400, padding: 30)
+    content_tag(:svg, xmlns: "http://www.w3.org/2000/svg", width: board_size + padding, height: board_size + padding, viewBox: "-#{padding} -#{padding} #{board_size + padding * 2} #{board_size + padding*2}") do
+      outputs = []
+      
+      outputs << draw_rect(0, 0, board_size, board_size)
+      
+      yield(outputs)
+      
+      outputs.join("\n")
+    end
+  end
+  
+  def draw_rect(x, y, width, height, fill: "none")
+    tag(:rect, x: x, y: y, width: width, height: height, style: "fill:#{fill};stroke:black")
+  end
+
+  def draw(input, board_size: 400)
+    board = input.chars.reduce([[true]], &method(:process))
+    
+    result = draw_base(board_size: board_size) do |outputs|
+      delta = board_size / board.size.to_f
+      
+      board.each.with_index do |row, y|
+        row.each.with_index do |col, x|
+          if col
+            outputs << draw_rect(x * delta, y * delta, delta, delta, fill: "black")
+          end
+        end
+      end
+    end
+    
+    tag(:img, src: "data:image/svg+xml;base64,#{Base64.encode64(result).gsub(/\n/,"")}")
+  end 
+
+markdown:
+  [オフラインリアルタイムどう書く](https://yhpg.doorkeeper.jp/events/53794) E10 の問題です。
+
+  ## 問題の概要
+
+  黒い正方形それぞれを9等分して5箇所を白く塗る操作を X、4箇所を白く塗る操作を O とする。
+  操作を繰り返した結果、白の領域が繋がった部分がいくつになったか求めよ。
+  
+  ### X
+  
+  ![操作X](2016/12/03/x.svg)
+
+  ### O
+  
+  ![操作X](2016/12/03/o.svg)
+  
+  ### XO
+
+  ![操作X](2016/12/03/xo.svg)  
+
+markdown:
+  ## ルール
+
+
+  ## 入力
+
+  `XOX` のような形式。
+  
+  各々操作の種類の名前。
+  
+  ## 出力
+
+  `21` のような形式。
+  
+  白の繋がっている部分の数。
+  
+  ## 補足
+
+  実装ができた方は [Qiitaの記事](http://qiita.com/mtsmfm/items/8a78b895910a89e3012d) のコメント欄からリンクを張っていただくと見つけやすくて助かります。
+
+h2 サンプルデータ
+
+ruby:
+  data = [
+    ["X", "5"],
+    ["O", "4"],
+    ["XX", "5"],
+    ["OX", "10"],
+    ["XO", "9"],
+    ["XOO", "17"],
+    ["OXX", "21"],
+    ["OXO", "18"],
+    ["OOOX", "130"],
+    ["OXXO", "29"],
+    ["XXOX", "81"],
+    ["XOXXO", "89"],
+    ["OOOOX", "630"],
+    ["OXOOO", "66"],
+    ["OXOXOX", "2001"],
+    ["OXOXXO", "417"],
+    ["OXXOXX", "1601"],
+    ["XXXOXOO", "345"],
+    ["OOOOOXO", "3258"],
+    ["OXXOXXX", "6401"],
+  ].to_h
+table
+  thead
+    tr
+      th #
+      th 入力
+      th 期待
+      th 状況へのリンク
+
+  tbody
+    - data.each.with_index do |(input, expected), i|
+      tr
+        td= i
+        td= input
+        td= expected
+        td= link_to '状況', '', anchor: i
+
+h2 テストデータ
+textarea= data.map.with_index {|(input, expected), i| %!/*#{i}*/ test("#{input}", "#{expected}")! }.join("\n")
+
+h2 状況一覧
+
+- data.each.with_index do |(input, expected), i|
+  h3{id= i} ##{i} : #{input}
+  = draw(input)
+  hr
