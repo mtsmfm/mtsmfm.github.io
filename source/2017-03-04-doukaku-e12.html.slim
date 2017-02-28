@@ -1,0 +1,60 @@
+---
+title: オフラインリアルタイムどう書く E12 の問題 - 積むけど消えない
+date: 2017-03-04 16:00 JST
+tags:
+---
+
+ruby:
+  json = JSON.parse(File.read(File.join(__dir__, "2017-03-04-doukaku-e12/doukaku.json")), symbolize_names: true)
+
+markdown:
+  [オフラインリアルタイムどう書く](https://yhpg.doorkeeper.jp/events/57434) E12 の問題です。
+
+  ## 問題の概要
+
+  5 種類のテトロミノを積んでいく。高さを求めよ。
+  
+  ![テトロミノ](2017/03/04/list.png)
+
+  ## 入力
+
+  `3S0T2O3I` のような形式。
+  
+  数字は右にいくつずらしてから落とすか、文字 (I、 L、 O、 S、 T) はテトロミノの形。
+  
+  ## 出力
+
+  `8` のような形式。高さ。
+  
+  ## 補足
+
+  実装ができた方は [Qiitaの記事](http://qiita.com/mtsmfm/items/d307c7b884cd86621262) のコメント欄からリンクを張っていただくと見つけやすくて助かります。
+
+h2 サンプルデータ
+
+table
+  thead
+    tr
+      th #
+      th 入力
+      th 期待
+      th 状況へのリンク
+
+  tbody
+    - json.each.with_index do |data, i|
+      tr
+        td= i
+        td= data[:input]
+        td= data[:expected]
+        td= link_to '状況', '', anchor: i
+
+h2 テストデータ
+
+textarea= json.map.with_index {|data, i| %!/*#{i}*/ test("#{data[:input]}", "#{data[:expected]}")! }.join("\n")
+
+h2 状況一覧
+
+- json.each.with_index do |data, i|
+  h3{id= i} ##{i} : #{data[:input]} : #{data[:expected]}
+  = data[:image]
+  hr
