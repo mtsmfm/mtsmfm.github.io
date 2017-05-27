@@ -7,4 +7,3 @@ ARG APP_HOME
 ENV APP_HOME $APP_HOME
 RUN mkdir -p $APP_HOME
 WORKDIR $APP_HOME
-RUN gem install bundler
