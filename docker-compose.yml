@@ -1,6 +1,6 @@
 version: '2'
 services:
-  middleman:
+  app:
     tty: true
     stdin_open: true
     build:
@@ -14,9 +14,9 @@ services:
       - 3000:3000
       - 35729:35729
     volumes:
-      - .:${PWD}
-      - bundle:${PWD}/vendor/bundle
+      - mtsmfm-github-io-sync:${PWD}:nocopy
       - ~/.ssh:/root/.ssh:ro
       - ~/.gitconfig:/root/.gitconfig:ro
 volumes:
-  bundle:
+  mtsmfm-github-io-sync:
+    external: true

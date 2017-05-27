@@ -4,12 +4,15 @@
 
 - docker
 - docker-compose
+- docker-sync
 
 ## Setup
 
-    docker-compose run middleman bundle install
+    docker-sync start
+    docker-compose run app bundle install
     docker-compose up
+    # open localhost:3000
 
 ## Deploy
 
-    docker-compose run middleman bin/middleman deploy
+    docker-compose run app bin/middleman deploy
