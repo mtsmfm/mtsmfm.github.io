@@ -6,9 +6,13 @@ tags:
 
 ruby:
   json = JSON.parse(File.read(File.join(__dir__, "2017-06-03-doukaku-e14/doukaku.json")), symbolize_names: true)
+  json += JSON.parse(File.read(File.join(__dir__, "2017-06-03-doukaku-e14/doukaku2.json")), symbolize_names: true)
 
 markdown:
   [オフラインリアルタイムどう書く](https://yhpg.doorkeeper.jp/events/59397) E14 の問題です。
+
+  追記: 当日発表中に自分で気づいて懺悔しましたが、ある場合のテストケースが足りずに出題者の回答が特定の状況で誤検出していました。
+  [@Nabetani さんありがとうございます。](http://qiita.com/mtsmfm/items/89b6634f363bbf5b47f5#comment-ba97a09d85a837b385c6)
 
   ## 問題の概要
 
