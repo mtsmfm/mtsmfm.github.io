@@ -1,0 +1,44 @@
+---
+title: Docker 版 pow もどきの Yaichi を作った
+date: 2017-06-29 01:00 JST
+tags:
+---
+
+複数のアプリが連携しているような Web アプリを開発する場合、アプリ A が localhost:3000 で、B が localhost:3001 で...
+というような構成にして手元では開発することがあるだろう。
+
+現に Quipper では生徒向け、先生向け、管理者向け、問題作成者向け etc といったようにアプリがいくつもあって、ポート何番で動いているのかよくわからなくなる。
+前々から Docker 版 pow みたいなのが欲しいなー (pow 使ったことないけど) と思っていたので、えいやで作った。
+
+[https://github.com/mtsmfm/yaichi](https://github.com/mtsmfm/yaichi)
+
+名前は某りゅうおうのプロ棋士から。
+
+`docker run -v /var/run/docker.sock:/var/run/docker.sock -p XXXX:YYYY mtsmfm/yaichi` すると、他のコンテナのネットワークに自身を勝手に追加して、
+`<container-name>.localhost:XXXX` へのアクセスを他のコンテナの YYYY ポートへと流すリバースプロキシとして動作する。
+livereload などのために別のポートも欲しければ、 `-p ZZZZ:AAAA` を追加すればおっけー。
+
+雑にクラスレベルのインスタンス変数としてキャッシュしているけれど、スレッドセーフじゃないので mutex とか使わないといけない気がしているが、
+今週とりあえずで使ってみている分には概ね動いていそう。
+
+ngx\_mruby と CRuby のコラボレーション () によって動いている。
+listen するポートをコンテナ起動時のポート設定に応じて決定したかったが、 ngx\_mruby だけで完結するやり方がわからなかったので erb で解決。
+mruby での erb の使い方もわからなかったので、起動時の erb による nginx.conf の生成だけ CRuby を使っている。
+
+当初一番時間がかかったのは Docker イメージの軽量化。
+[ngx\_mruby の Dockerfile を元に](https://github.com/matsumotory/ngx_mruby/blob/master/Dockerfile)していたが、
+200 MB 超になってしまったので [alpine 使うように書き直してみた](https://github.com/mtsmfm/yaichi/commit/beb854b97fd0816b311ddff9c2ce170e5fce90a0)ら 50 MB まで減った。
+
+ngx_mruby をシングルバイナリで動くようにする方法があったら multi stage build で済みそうだけどやり方がわからなかった。
+
+---
+
+Quipper に入って1ヶ月弱、午後出社がこんなに快適とは知らなかった。
+
+普段の業務では会話はほぼ日本語だが、今日は初の英語でのミーティングがあった。自身の英語力不足を感じた。
+やはりうまいこと会話ができないと発言しようがないし出席する意味がない。
+
+---
+
+1 つくらい通ればいいなぁと出した CFP が Tokyu もぎんざも RubyKaigi も全部通って嬉しい悲鳴。
+宿どうしよう。
