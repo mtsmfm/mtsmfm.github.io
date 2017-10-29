@@ -1,0 +1,72 @@
+---
+title: オフラインリアルタイムどう書く E19 の問題 - カード当てゲーム
+date: 2017-11-04 16:00 JST
+tags:
+---
+
+ruby:
+  json = JSON.parse(File.read(File.join(__dir__, "2017-11-04-doukaku-e19/doukaku.json")), symbolize_names: true)
+
+markdown:
+  [オフラインリアルタイムどう書く](https://yhpg.doorkeeper.jp/events/66089) E19 の問題です。
+
+  1からNまでのカードが2枚ずつある。
+  このカードは、奇数と偶数で裏に書いてある模様が違う。
+  これをシャッフルし、裏向きにして左から小さい順に2行に並べる。
+
+  並んでいるカードを当てよう。
+
+  ![図](2017/11/04/image.svg)
+
+  ## 入力
+
+  `xxoxo,oooxo` のような形式。
+  `o` は奇数、`x` は偶数、`,` は行の区切り。
+
+  つまり、この場合、1 ~ 5 までのカードが2枚ずつあり、
+
+  ```
+  xxoxo
+  ```
+
+  ```
+  oooxo
+  ```
+
+  のように並んでいるということ。
+
+  ## 出力
+
+  `2,2,3,4,5,1,1,3,4,5` のような形式。
+
+  数字を `,` で区切ったもの。行の区切りは不要。
+
+  候補が複数あれば、 `1,1,2,2,5,3,3,4,4,5|3,3,4,4,5,1,1,2,2,5` のように `|` で区切る。
+
+  ## 補足
+
+  不正な入力について考慮する必要はない。
+
+  ----------
+
+  実装ができた方は [Qiitaの記事](http://qiita.com/mtsmfm/items/67bf5c121ecbd9b5fab3) のコメント欄からリンクを張っていただくと見つけやすくて助かります。
+
+h2 サンプルデータ
+
+table
+  thead
+    tr
+      th #
+      th 入力
+      th 期待
+
+  tbody
+    - json.each.with_index do |data, i|
+      tr
+        td= i
+        td= data[:input]
+        td= data[:expected]
+
+h2 テストデータ
+
+textarea= json.map.with_index {|data, i| %!/*#{i}*/ test("#{data[:input]}", "#{data[:expected]}");! }.join("\n")
