@@ -8,15 +8,15 @@ services:
       args:
         - APP_HOME=${PWD}
     command: bin/middleman -p 3000
-    environment:
-      BUNDLE_PATH: ${PWD}/vendor/bundle
     ports:
       - 3000:3000
       - 35729:35729
     volumes:
-      - mtsmfm-github-io-sync:${PWD}:nocopy
+      - .:${PWD}:cached
+      - bundle:/vendor/bundle
+      - build:/${PWD}/build
       - ~/.ssh:/root/.ssh:ro
       - ~/.gitconfig:/root/.gitconfig:ro
 volumes:
-  mtsmfm-github-io-sync:
-    external: true
+  bundle:
+  build:

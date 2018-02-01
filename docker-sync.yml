@@ -1,7 +1,0 @@
-version: '2'
-options:
-  verbose: true
-syncs:
-  mtsmfm-github-io-sync:
-    src: .
-    sync_userid: 1000
