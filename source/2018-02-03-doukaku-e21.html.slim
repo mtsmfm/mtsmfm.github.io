@@ -4,9 +4,6 @@ date: 2018-02-03 16:00 JST
 tags:
 ---
 
-ruby:
-  json = JSON.parse(File.read(File.join(__dir__, "2018-02-03-doukaku-e21/doukaku.json")), symbolize_names: true)
-
 markdown:
   [オフラインリアルタイムどう書く E21](https://yhpg.doorkeeper.jp/events/69404) の問題です。
 
@@ -47,7 +44,10 @@ markdown:
 
   実装ができた方は [Qiitaの記事](http://qiita.com/mtsmfm/items/b48952dee07784cce8f2) のコメント欄からリンクを張っていただくと見つけやすくて助かります。
 
-h2 サンプルデータ
+ruby:
+  json = JSON.parse(File.read(File.join(__dir__, "2018-02-03-doukaku-e21/doukaku2.json")), symbolize_names: true)
+
+h2 サンプルデータ(修正版)
 
 table
   thead
@@ -63,6 +63,29 @@ table
         td= data[:input]
         td= data[:expected]
 
-h2 テストデータ
+h2 テストデータ(修正版)
+
+textarea= json.map.with_index {|data, i| %!/*#{i}*/ test("#{data[:input]}", "#{data[:expected]}");! }.join("\n")
+
+ruby:
+  json = JSON.parse(File.read(File.join(__dir__, "2018-02-03-doukaku-e21/doukaku.json")), symbolize_names: true)
+
+h2 サンプルデータ(修正前、一意にならない)
+
+table
+  thead
+    tr
+      th #
+      th 入力
+      th 期待
+
+  tbody
+    - json.each.with_index do |data, i|
+      tr
+        td= i
+        td= data[:input]
+        td= data[:expected]
+
+h2 テストデータ(修正前、一意にならない)
 
 textarea= json.map.with_index {|data, i| %!/*#{i}*/ test("#{data[:input]}", "#{data[:expected]}");! }.join("\n")
