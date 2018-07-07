@@ -1,0 +1,49 @@
+<html><head><meta charset="utf-8" /><meta content="IE=edge;chrome=1" http-equiv="X-UA-Compatible" /><script src="/javascripts/application.js"></script><link href="/stylesheets/application.css" rel="stylesheet" /><title>mtsmfm blog - 転職しました</title><link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" /></head><body><div class="row"><div class="three columns"><h3><a href="/">mtsmfm blog</a></h3><div class="row"><div class="large btn default"><a href="https://github.com/mtsmfm"><i class="fa fa-github"></i></a></div><div class="large btn default"><a href="https://twitter.com/mtsmfm"><i class="fa fa-twitter"></i></a></div></div></div><div class="nine columns"><section class="post"><h2><a href="/2017/06/01/career-change.html">転職しました</a></h2><time>2017-06-01</time><p>5月末で<a href="http://agile.esm.co.jp">永和システムマネジメント</a> を退職し、<a href="https://www.quipper.com/">Quipper</a> に入社してました。</p>
+
+<p>前職は新卒で入社し、学生時代コード書ける方とか思ってたけれど微塵もできないことを突きつけていただいたり、
+プログラマとしてのありかた、仕事のやり方など非常に多くのことを学ばせていただきました。</p>
+
+<p>仕事だけでなくコミュニティ面でも多くの刺激を得ることができ、西日暮里.rb とか OSS とかもこの会社にいなければしなかっただろうなぁと思います。</p>
+
+<p>中でも一番影響を受けたのは <a href="https://github.com/tkywtnb">@tkywtnb</a> さんの「まずは自分の母国語と呼べる言語を作れ」という言葉で、
+そこから Ruby をだいぶ学び直したりして、とても Ruby が好きになりました。</p>
+
+<p>好き勝手やってたら評価もしていただき、事業部の MVP やリードプログラマという役職を頂いたのは大きな励みになりました。</p>
+
+<p>一方、受託開発会社よりサービス会社に興味が出てきたり、 OSS などでもうちょっと英語うまいこと言えたらなーと思っていたりしていた中、
+知人に声をかけていただいてこの度転職することにしました。</p>
+
+<p>5月いっぱい有給消化で暇だったので、 Relay Modern を ActionCable とくっつけて遊んだり、ひたちなかに行ったり、<a href="https://github.com/mtsmfm/language_server-ruby">Ruby 用の Language Server を作ったり</a>
+川越で食べ歩きしたり <a href="https://www.meetup.com/ja-JP/GraphQL-Tokyo/">GraphQL のイベント</a> をやったり<a href="https://www.amazon.co.jp/dp/B01LSJB3K2">謎の薬剤に足を浸したり</a> macOS で Docker 縛り開発の実験をしてました。</p>
+
+<p>Docker for Mac は volume のマウントが遅い遅いとは聞いていましたが、 Linux の Docker 上だと 1 秒かからないものが 30 秒以上かかるのにはたまげました。
+最近<a href="https://blog.docker.com/2017/05/user-guided-caching-in-docker-for-mac/">ユーザによる cache 宣言をする機構が入って3倍早くなった</a>とのことでしたが、それでも 10 倍遅いのでつらみ。
+ただ <a href="http://docker-sync.io/">docker-sync</a> 使ったら Linux と遜色ないレベルになったので docker-sync はすごい。</p>
+
+<p>Language Server は現状 <code>ruby -wc</code> と rcodetools による補完くらいしかないですが、 parser とか使ってもうちょっとがんばっていきたいところ。
+<a href="https://github.com/davidhalter/jedi">jedi</a> とか <a href="https://github.com/felixfbecker/php-language-server/">php-language-server</a> あたりを参考にするといいのだろうか。
+vscode をお使いのみなさまは<a href="https://marketplace.visualstudio.com/items?itemName=mtsmfm.ruby-lsc">すぐに試せるのでどうぞ</a>。
+これも開発は Docker 縛り。</p>
+
+<p>転職してもまたすぐ<a href="https://yhpg.doorkeeper.jp/events/59397">どう書くで出題しに行く</a>ので仲良くしてください。</p>
+
+<p>例のリスト置いときますね: <a href="http://amzn.asia/c0EKuDP">http://amzn.asia/c0EKuDP</a></p>
+</section><div id="disqus_thread"><script>/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'mtsmfmblog'; // required: replace example with your forum shortname
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></script></div></div></div></body><script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-48013282-1', 'auto');
+  ga('send', 'pageview');
+</script></html>

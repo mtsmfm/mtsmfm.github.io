@@ -1,0 +1,73 @@
+<p>Win 7 とデュアルブートができるようになったので、やったことについてメモ。</p>
+
+<h2>xfs は縮小ができない</h2>
+
+<p>funtoo を公式ガイド通りにインストールしましたが、 xfs 形式の場合はパーティションの縮小ができず、
+Win 用の領域を作ることができませんでした。そこで、一旦 / 以下を外付け HDD に退避させ、
+新しく作りなおしました。</p>
+
+<h2>GPT パーティションではありません</h2>
+
+<p>しかし、Win 7 のインストール時に 「GPT パーティションではありません」といった旨のメッセージが出たため、
+SSD 全体をフォーマットして Win 7 をインストールしました。</p>
+
+<h2>funtoo をインストールする</h2>
+
+<p>なんとなくもう一度最初からインストールしました。ほとんど公式ガイド通りですが、主にパーティションの設定と
+boot.conf を変更しました。</p>
+
+<h3>パーティションの設定</h3>
+<div class="highlight plaintext"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7</pre></td><td class="code"><pre>   Device Boot      Start         End      Blocks   Id  System
+   /dev/sda1            2048      206847      102400    7  HPFS/NTFS/exFAT
+   /dev/sda2          206848   235685887   117739520    7  HPFS/NTFS/exFAT
+   /dev/sda3   *   235685888   236709887      512000   83  Linux
+   /dev/sda4       236709888   468860927   116075520    5  Extended
+   /dev/sda5       236711936   245100543     4194304   82  Linux swap / Solaris
+   /dev/sda6       245102592   468860927   111879168   83  Linux
+</pre></td></tr></tbody></table>
+</div>
+
+<h3>boot.conf</h3>
+<div class="highlight plaintext"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14</pre></td><td class="code"><pre>boot {
+        generate grub
+        default "Funtoo Linux"
+        timeout 3
+}
+
+"Funtoo Linux" {
+        kernel vmlinuz[-v]
+}
+
+"Windows 7" {
+        type win7
+        params root=/dev/sda1
+}
+</pre></td></tr></tbody></table>
+</div>
+
+<h2>funtoo で gdm が起動しない</h2>
+
+<p>Wi-Fi はとりあえずいいかと linux-firmware と networkmanager を入れていなかったのが原因でした。</p>
+
+<h2>Win 7 を SP 1 にできない</h2>
+
+<p>Win 7 を SP 1 にできませんでした。 boot フラグを立てなおしたらできました。</p>

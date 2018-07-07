@@ -1,0 +1,57 @@
+<html><head><meta charset="utf-8" /><meta content="IE=edge;chrome=1" http-equiv="X-UA-Compatible" /><script src="/javascripts/application.js"></script><link href="/stylesheets/application.css" rel="stylesheet" /><title>mtsmfm blog - 接続詞ステップ</title><link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" /></head><body><div class="row"><div class="three columns"><h3><a href="/">mtsmfm blog</a></h3><div class="row"><div class="large btn default"><a href="https://github.com/mtsmfm"><i class="fa fa-github"></i></a></div><div class="large btn default"><a href="https://twitter.com/mtsmfm"><i class="fa fa-twitter"></i></a></div></div></div><div class="nine columns"><section class="post"><h2><a href="/2014/02/23/cucumber-wiki-conjunction-steps.html">接続詞ステップ</a></h2><time>2014-02-23</time><p>原文 : <a href="https://github.com/cucumber/cucumber/wiki/Conjunction-Steps-(Antipattern)">Conjunction Steps (Antipattern)</a></p>
+
+<p>オンライン辞書の Merriam-Webster によれば:</p>
+
+<blockquote>
+<p>con·junc·tion :an uninflected linguistic form that joins together sentences, clauses, phrases, or words</p>
+
+<p>文や節、熟語や単語を結ぶ、語形変化しない語学上の構造</p>
+</blockquote>
+
+<p>これをステップでやらないでください。
+これはステップを特化や再利用しにくくします。
+そのため、 Cucumber は接続詞のためのサポート (かつ、しかし) が組込まれています。</p>
+
+<h2>例</h2>
+<div class="highlight gherkin"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="nf">前提</span> サングラスとマスタングを持っている
+</pre></td></tr></tbody></table>
+</div>
+
+<h2>直し方</h2>
+<div class="highlight gherkin"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="nf">前提</span> サングラスを持っている
+<span class="nf">かつ</span> マスタングを持っている
+</pre></td></tr></tbody></table>
+</div>
+
+<h2>接続詞ステップが問題ない場合</h2>
+
+<p>ときどき、シナリオを読み易くするためにいくつかのステップを 1 つにまとめたくなります。
+<a href="https://github.com/cucumber/cucumber/wiki/Calling-Steps-from-Step-Definitions">ステップのステップ定義からの呼び出し</a> はこれを可能にしますが、
+小さなステップを作ることであなたの作業がより簡単になります。</p>
+
+<hr>
+
+<p>ここで言う conjunction って &ldquo;接続詞&rdquo; だったか&hellip;
+&ldquo;結合したステップ&rdquo; とかかと思ってたけれど辞書の引用を見て気づいた</p>
+
+<p>あと、マスタングって車?</p>
+</section><div id="disqus_thread"><script>/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'mtsmfmblog'; // required: replace example with your forum shortname
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></script></div></div></div></body><script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-48013282-1', 'auto');
+  ga('send', 'pageview');
+</script></html>

@@ -1,0 +1,66 @@
+<p>Funtoo Linux インストール講習会では、カーネルに debian sources を用いました。
+もろもろが一通り入ってるので起動しないことはまずないですが、
+コンパイルに時間がかかる、使わないものまで読み込まれるといった不便な点もあるみたいです。
+@ursm さんにカーネルを自分で設定するようお勧めされたこともあり、
+講習会後に gentoo sources によるカーネルコンパイルに挑戦してみました。</p>
+
+<p><a href="http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=7">gentoo インストールガイドのカーネル設定</a>を頼りにしていたらカーネルパニックになり、
+起動した後も wifi がうまく動かなかったので iwlwifi をモジュールとして入れたら
+なんとかなったよというお話。</p>
+
+<h2>自分のハマりどころや教えていただいた便利情報など</h2>
+
+<p>インストールガイド内の設定を見ながら、噛み合わない部分を飛ばしたら結局 XFS ファイルサポートくらいしか弄らずにコンパイル。すると、</p>
+<div class="highlight plaintext"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre>Unable to mount root fs on unknow block(0,0)
+</pre></td></tr></tbody></table>
+</div>
+
+<p>という感じでカーネルパニックに。</p>
+
+<p>boot.conf にはgentoo sources の場合には initrd や params は不要らしいと
+教わり、さらに /boot 下に bzImage をコピーするだけではダメだそうで。
+<code>make install</code> して /boot 下にカーネルの設定ファイルとセットで置かなければならないと。
+それでも起動せず、カーネルの設定を見直したら AHCI サポートのチェックがはずれており(おいおい)なんとか起動。</p>
+
+<p>しかし wifi の挙動が何かおかしい。debian sources のときも繋ったと思ったらすぐ使えなくなったりだった。
+こりゃよくわからんともう一度funtooインストールガイドの一番最初からやり直して、今度は途中で debian sources 入れずに gentoo sources で設定をしてみる。</p>
+
+<p>すると、なんということでしょう。 AHCI サポートにチェックが入っているではありませんか。
+<strong>自分で弄った可能性も高い</strong>が、debian sources を入れたあとと、最初から gentoo sources を入れたときではデフォルトの設定が違うかもしれない&hellip;</p>
+
+<p>とりあえず iwlwifi にチェックを入れてコンパイル。
+無事起動したが、やっぱり wifi がなんかおかしい。
+なんとなく モジュール としてコンパイルしてみるとうまくいきました。</p>
+
+<h2>まとめ</h2>
+
+<ul>
+<li><code>make install</code>しよう</li>
+<li>iwlwifi は モジュールとして入れよう</li>
+<li>boot.conf は書くことほとんどないよ</li>
+<li><code>make menuconfig</code>ではなくて<code>make nconfig</code> すると検索とかできて便利だよ</li>
+<li>Rescue CDで起動したあとに <code>lspci -k</code> してドライバとか何つかってるか見れるよ</li>
+</ul>
+
+<p>備忘録として、カーネルコンパイルしてgrubの設定するまでの流れを書いておく。</p>
+<div class="highlight plaintext"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10</pre></td><td class="code"><pre>emerge gentoo-sources
+cd /usr/src/linux
+make nconfig
+make &amp;&amp; make modules_install
+make install
+
+emerge boot-update
+vi /etc/boot.conf
+grub-install --no-floppy /dev/sda
+boot-update
+</pre></td></tr></tbody></table>
+</div>

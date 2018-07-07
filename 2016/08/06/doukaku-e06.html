@@ -1,0 +1,120 @@
+<html><head><meta charset="utf-8" /><meta content="IE=edge;chrome=1" http-equiv="X-UA-Compatible" /><script src="/javascripts/application.js"></script><link href="/stylesheets/application.css" rel="stylesheet" /><title>mtsmfm blog - オフラインリアルタイムどう書く E06 の問題 - 目指せホゲモンマスター</title><link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" /></head><body><div class="row"><div class="three columns"><h3><a href="/">mtsmfm blog</a></h3><div class="row"><div class="large btn default"><a href="https://github.com/mtsmfm"><i class="fa fa-github"></i></a></div><div class="large btn default"><a href="https://twitter.com/mtsmfm"><i class="fa fa-twitter"></i></a></div></div></div><div class="nine columns"><section class="post"><h2><a href="/2016/08/06/doukaku-e06.html">オフラインリアルタイムどう書く E06 の問題 - 目指せホゲモンマスター</a></h2><time>2016-08-06</time><p><a href="https://yhpg.doorkeeper.jp/events/48610">オフラインリアルタイムどう書く</a> E06 の問題です。</p>
+
+<h2>問題の概要</h2>
+
+<p>ホゲモンリーグを勝ち抜いて、ホゲモンマスターになろう!</p>
+
+<h2>ルール</h2>
+
+<p>プレイヤー同士でホゲモンを戦わせ、総当たり戦を行う。</p>
+
+<ol>
+<li>プレイヤーは手持ちの中で登録した順に 1 匹づつホゲモンを繰り出し、常に 1 対 1 で戦う</li>
+<li>ホゲモンには体力があり、 0 以下になるともう行動することはできない</li>
+</ol>
+
+<h3>戦闘について</h3>
+
+<ol>
+<li>戦闘はターン制で、1 ターンに 1 回攻撃できる</li>
+<li>レベルが高い方が先に攻撃する
+
+<ul>
+<li>レベルが低い方は、体力が残っていたら攻撃する</li>
+</ul></li>
+<li>レベルが同じ場合、同時に攻撃する</li>
+</ol>
+
+<h3>ダメージについて</h3>
+
+<ol>
+<li>ホゲモンには R/G/B 3 つのタイプがある</li>
+</ol>
+
+<p>次のようなタイプ相性になっている:
+  <img src="/images/2016/08/06/type.png" alt="タイプ相性" /></p>
+
+<ol>
+<li>有利な方は、相手に 4 ダメージを与える</li>
+<li>不利な方は、相手に 1 ダメージを与える</li>
+<li>タイプが同じ場合、相手に 2 ダメージを与える</li>
+</ol>
+
+<h3>体力について</h3>
+
+<ol>
+<li>ホゲモンの初期体力はレベルと同じ</li>
+<li>プレイヤー同士で戦いを始める前に、お互いの手持ちのホゲモンの体力を回復する</li>
+</ol>
+
+<h2>入力</h2>
+
+<p><code>9B,3R2G,1R2B3G</code> のような形式。
+プレイヤーをカンマで区切っている。
+数字がホゲモンのレベル、R/G/B がホゲモンのタイプ。</p>
+
+<h2>出力</h2>
+
+<p><code>1,3,2</code> のような形式。
+数字はプレイヤーが入力で何番目にいたか。
+プレイヤーを勝数順でカンマで区切って並べる。
+勝数が同じ場合は入力と同じ順とする。</p>
+
+<h2>戦闘の例</h2>
+
+<p>3R2G 対 1R2B3G は次のような戦いを経て、1R2B3G 側の勝利になる。</p>
+
+<p><img src="/images/2016/08/06/battle.png" alt="例" /></p>
+
+<h2>補足</h2>
+
+<p>実装ができた方は <a href="http://qiita.com/mtsmfm/items/7a0bfd2ac5b7674ce8c7">Qiitaの記事</a> のコメント欄からリンクを張っていただくと見つけやすくて助かります。</p>
+<h2>サンプルデータ</h2><table><thead><tr><th>#</th><th>入力</th><th>期待</th></tr></thead><tbody><tr><td>0</td><td>9B,3R2G,1R2B3G</td><td>1,3,2</td></tr><tr><td>1</td><td>1G</td><td>1</td></tr><tr><td>2</td><td>1G,1R,1B</td><td>1,2,3</td></tr><tr><td>3</td><td>8B,3R2G,1R2B3G</td><td>3,1,2</td></tr><tr><td>4</td><td>6G,9R7B7B</td><td>2,1</td></tr><tr><td>5</td><td>5B1B,1G1B2R6G,7B6G4B6B</td><td>3,2,1</td></tr><tr><td>6</td><td>7R,2R9G,6R4B1G6R,5G1G6G</td><td>3,1,2,4</td></tr><tr><td>7</td><td>2B9G8B3R,4R3G,2B,8B</td><td>1,2,4,3</td></tr><tr><td>8</td><td>1B,5G1R1B4R,5R,8B9B4G,7G5R8G</td><td>5,4,3,2,1</td></tr><tr><td>9</td><td>9G5B,6B6R1R5G,7G6G,8B5R,5G7G,2G5B7B</td><td>2,1,3,4,5,6</td></tr><tr><td>10</td><td>5B,1B8R2B,8G6R4B,4B1G6R8G,3B6G6G5R,7B</td><td>3,4,5,6,1,2</td></tr><tr><td>11</td><td>2G2G7G9B,6G5G5R,2G,4G,5R,3G8R,6G9R</td><td>1,7,6,2,5,4,3</td></tr><tr><td>12</td><td>6G7B4R6B,9R4G,6G5B5G3B,6R7G,9B,7G7B8R,5G8G2R,6B8G7B1B</td><td>8,1,6,2,3,4,7,5</td></tr><tr><td>13</td><td>9B8B2G4B,2B1R,7R6G8R,4R,1G7B7R,4B3B4R,4B3R2R4G,4G9R9R</td><td>1,3,8,5,6,7,2,4</td></tr><tr><td>14</td><td>5G,3G,9G7G8B,7B,8G6B1B5G,1G3B,5G8R,6G,7B</td><td>3,5,7,8,1,2,4,9,6</td></tr><tr><td>15</td><td>5B1R5B,6R,7R7R,8B1B,6R1G,7B3R2R,4R3B,6G1R8G,6B4R4R2B,9G5B</td><td>10,1,4,6,9,3,8,5,7,2</td></tr><tr><td>16</td><td>7R4G1G6R,9B3G3R4G,2G7G,5B,5R8R,9G7R9B,8R7R5G,7B9R1R8R,7R,9R1B</td><td>6,8,7,2,1,5,4,10,3,9</td></tr><tr><td>17</td><td>3G8B2B8G,7B7R5G,4B9G2R,4G,1G2R5R8R,1B,8R9G7G,7R6B,6B8B,3G3R,3R2R</td><td>2,7,1,3,9,5,8,10,11,4,6</td></tr><tr><td>18</td><td>5G3B,4B3G,7G8R2B7R,6G,1G,1B,1R9R2R7R,3R4G1R,4B3G2G8G,3B,2B1G,7R</td><td>3,7,9,8,1,4,2,12,10,11,5,6</td></tr><tr><td>19</td><td>4B2B5G1G,2G2B3R,7G4B9R9G,7R9G,5B,5G3G,7R5R,4B,6G3R4G3G,3R9G,8R9G4R,2R</td><td>3,11,4,7,10,9,1,5,6,2,8,12</td></tr><tr><td>20</td><td>8R,9R,5R,4G,3G2G1R,5G,4G5G,2G,6G6B1G,8R2G6B2G,1G5B8B,1G,7R</td><td>10,9,2,1,11,13,3,7,6,4,5,8,12</td></tr><tr><td>21</td><td>2R,4G7G,4R,1G1R7G,5B6G,2G,4B9R,7R2B7R4B,3B1G5G,8B9R,6B1G6R,1R2R,9G2B2R,4R9B</td><td>10,11,14,8,13,5,7,2,3,4,9,1,12,6</td></tr><tr><td>22</td><td>6R3R3B,1R,7R4B4G,7G9B,4G6G8B,4R7R4B,5R3R,3R,5B2G4R,1B,5B,9B2R,5G4R,6R3R3G</td><td>4,3,5,12,9,14,6,11,1,13,7,8,2,10</td></tr><tr><td>23</td><td>5B7B,8G,7G,6R9B3B,2B,3G3B8R7B,7R7G6R,4B6B5G,4R4G9R,4B7G6G5G,3B8B1B1G,5G7G2R,1B,2G6G5B3G,4R4B8B</td><td>7,6,9,10,4,12,14,2,8,15,3,1,11,5,13</td></tr><tr><td>24</td><td>8B9B,6R3B2G,5B,6R2R5R,3R1B,1R1R1B9B,4R4B9G9G,8R2B,6B,1B,2R,4B,6G7R,7G,3G2G7R,7B7G8G</td><td>7,16,1,2,13,6,15,8,9,14,3,4,12,5,11,10</td></tr><tr><td>25</td><td>8R,4G,8G5G,7G1R1R7R,6R,2G3B5B,7G3R1B,4B9G9G,5R4G5R7B,8B9B1B4G,5G9R1R,8B,7G1B,9B3R,2R9G,6G5G</td><td>9,11,4,8,1,3,7,10,15,5,14,16,6,13,2,12</td></tr><tr><td>26</td><td>1G3B8G,8R6B9B9B,7B,7R3B5G1B,3G,7B8G9B,2B2G6B6B,2B7G9R1B,2G8B6R8R,3R,9B3G5R2G,5B2R3R5B,8B4B,4G1R,2B,8R1B7B4R,9B</td><td>6,2,9,11,8,1,4,7,16,12,17,13,14,3,5,10,15</td></tr><tr><td>27</td><td>2B,6G1G6G4R,3B8B3B,9G,1R,3B,7R9G2R,6R1G4G6B,3B5G8G,8G1G3B4R,4G8G,6G2B5B,4G2G5R,1B,4G6G,3G1R9G,8B5R4B7R,4R3B</td><td>7,8,17,10,2,9,13,16,18,4,12,11,15,3,6,1,5,14</td></tr><tr><td>28</td><td>9G,6B3G1B4B,4B3R2R5G,2R1G,6B6R8B1R,4R3R1R,9R,8R8B,4G,3G9B,6G8B2R,5R8R6G,5B1B7B4B,2R3G1G3B,3R5B4R,8G5G,5G2B2R,8G</td><td>5,11,12,3,8,15,10,16,1,7,2,13,6,18,14,17,4,9</td></tr><tr><td>29</td><td>7B9R,2B3R1R2R,2G6B3G,6R,8G,6B7B6R,1R1G5B6G,9G,2R6G,7B6B9G5R,5G4G1B7B,4B9R2B5G,2G8B9G9G,8G3B5R,3G,2R,3R2B9B,8B3B,1R</td><td>10,13,14,6,12,1,11,17,8,7,2,3,5,9,4,18,16,15,19</td></tr><tr><td>30</td><td>8G6B9G,8G,7B4G2G6G,3B8R2R,4R1R3R8B,3G,2R1R,1R9G2B1G,4G8G,8B8B2R8R,2R1R1G,4B2B6R4B,6G9G3G6R,9B6B8R,9R7B,3G,5B4B,4B4G6B8B,4B5G,8B2R</td><td>1,14,10,13,15,18,3,5,8,9,12,2,20,4,19,17,11,7,6,16</td></tr></tbody></table><h2>テストデータ</h2><textarea>/*0*/ test("9B,3R2G,1R2B3G", "1,3,2")
+/*1*/ test("1G", "1")
+/*2*/ test("1G,1R,1B", "1,2,3")
+/*3*/ test("8B,3R2G,1R2B3G", "3,1,2")
+/*4*/ test("6G,9R7B7B", "2,1")
+/*5*/ test("5B1B,1G1B2R6G,7B6G4B6B", "3,2,1")
+/*6*/ test("7R,2R9G,6R4B1G6R,5G1G6G", "3,1,2,4")
+/*7*/ test("2B9G8B3R,4R3G,2B,8B", "1,2,4,3")
+/*8*/ test("1B,5G1R1B4R,5R,8B9B4G,7G5R8G", "5,4,3,2,1")
+/*9*/ test("9G5B,6B6R1R5G,7G6G,8B5R,5G7G,2G5B7B", "2,1,3,4,5,6")
+/*10*/ test("5B,1B8R2B,8G6R4B,4B1G6R8G,3B6G6G5R,7B", "3,4,5,6,1,2")
+/*11*/ test("2G2G7G9B,6G5G5R,2G,4G,5R,3G8R,6G9R", "1,7,6,2,5,4,3")
+/*12*/ test("6G7B4R6B,9R4G,6G5B5G3B,6R7G,9B,7G7B8R,5G8G2R,6B8G7B1B", "8,1,6,2,3,4,7,5")
+/*13*/ test("9B8B2G4B,2B1R,7R6G8R,4R,1G7B7R,4B3B4R,4B3R2R4G,4G9R9R", "1,3,8,5,6,7,2,4")
+/*14*/ test("5G,3G,9G7G8B,7B,8G6B1B5G,1G3B,5G8R,6G,7B", "3,5,7,8,1,2,4,9,6")
+/*15*/ test("5B1R5B,6R,7R7R,8B1B,6R1G,7B3R2R,4R3B,6G1R8G,6B4R4R2B,9G5B", "10,1,4,6,9,3,8,5,7,2")
+/*16*/ test("7R4G1G6R,9B3G3R4G,2G7G,5B,5R8R,9G7R9B,8R7R5G,7B9R1R8R,7R,9R1B", "6,8,7,2,1,5,4,10,3,9")
+/*17*/ test("3G8B2B8G,7B7R5G,4B9G2R,4G,1G2R5R8R,1B,8R9G7G,7R6B,6B8B,3G3R,3R2R", "2,7,1,3,9,5,8,10,11,4,6")
+/*18*/ test("5G3B,4B3G,7G8R2B7R,6G,1G,1B,1R9R2R7R,3R4G1R,4B3G2G8G,3B,2B1G,7R", "3,7,9,8,1,4,2,12,10,11,5,6")
+/*19*/ test("4B2B5G1G,2G2B3R,7G4B9R9G,7R9G,5B,5G3G,7R5R,4B,6G3R4G3G,3R9G,8R9G4R,2R", "3,11,4,7,10,9,1,5,6,2,8,12")
+/*20*/ test("8R,9R,5R,4G,3G2G1R,5G,4G5G,2G,6G6B1G,8R2G6B2G,1G5B8B,1G,7R", "10,9,2,1,11,13,3,7,6,4,5,8,12")
+/*21*/ test("2R,4G7G,4R,1G1R7G,5B6G,2G,4B9R,7R2B7R4B,3B1G5G,8B9R,6B1G6R,1R2R,9G2B2R,4R9B", "10,11,14,8,13,5,7,2,3,4,9,1,12,6")
+/*22*/ test("6R3R3B,1R,7R4B4G,7G9B,4G6G8B,4R7R4B,5R3R,3R,5B2G4R,1B,5B,9B2R,5G4R,6R3R3G", "4,3,5,12,9,14,6,11,1,13,7,8,2,10")
+/*23*/ test("5B7B,8G,7G,6R9B3B,2B,3G3B8R7B,7R7G6R,4B6B5G,4R4G9R,4B7G6G5G,3B8B1B1G,5G7G2R,1B,2G6G5B3G,4R4B8B", "7,6,9,10,4,12,14,2,8,15,3,1,11,5,13")
+/*24*/ test("8B9B,6R3B2G,5B,6R2R5R,3R1B,1R1R1B9B,4R4B9G9G,8R2B,6B,1B,2R,4B,6G7R,7G,3G2G7R,7B7G8G", "7,16,1,2,13,6,15,8,9,14,3,4,12,5,11,10")
+/*25*/ test("8R,4G,8G5G,7G1R1R7R,6R,2G3B5B,7G3R1B,4B9G9G,5R4G5R7B,8B9B1B4G,5G9R1R,8B,7G1B,9B3R,2R9G,6G5G", "9,11,4,8,1,3,7,10,15,5,14,16,6,13,2,12")
+/*26*/ test("1G3B8G,8R6B9B9B,7B,7R3B5G1B,3G,7B8G9B,2B2G6B6B,2B7G9R1B,2G8B6R8R,3R,9B3G5R2G,5B2R3R5B,8B4B,4G1R,2B,8R1B7B4R,9B", "6,2,9,11,8,1,4,7,16,12,17,13,14,3,5,10,15")
+/*27*/ test("2B,6G1G6G4R,3B8B3B,9G,1R,3B,7R9G2R,6R1G4G6B,3B5G8G,8G1G3B4R,4G8G,6G2B5B,4G2G5R,1B,4G6G,3G1R9G,8B5R4B7R,4R3B", "7,8,17,10,2,9,13,16,18,4,12,11,15,3,6,1,5,14")
+/*28*/ test("9G,6B3G1B4B,4B3R2R5G,2R1G,6B6R8B1R,4R3R1R,9R,8R8B,4G,3G9B,6G8B2R,5R8R6G,5B1B7B4B,2R3G1G3B,3R5B4R,8G5G,5G2B2R,8G", "5,11,12,3,8,15,10,16,1,7,2,13,6,18,14,17,4,9")
+/*29*/ test("7B9R,2B3R1R2R,2G6B3G,6R,8G,6B7B6R,1R1G5B6G,9G,2R6G,7B6B9G5R,5G4G1B7B,4B9R2B5G,2G8B9G9G,8G3B5R,3G,2R,3R2B9B,8B3B,1R", "10,13,14,6,12,1,11,17,8,7,2,3,5,9,4,18,16,15,19")
+/*30*/ test("8G6B9G,8G,7B4G2G6G,3B8R2R,4R1R3R8B,3G,2R1R,1R9G2B1G,4G8G,8B8B2R8R,2R1R1G,4B2B6R4B,6G9G3G6R,9B6B8R,9R7B,3G,5B4B,4B4G6B8B,4B5G,8B2R", "1,14,10,13,15,18,3,5,8,9,12,2,20,4,19,17,11,7,6,16")</textarea></section><div id="disqus_thread"><script>/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'mtsmfmblog'; // required: replace example with your forum shortname
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></script></div></div></div></body><script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-48013282-1', 'auto');
+  ga('send', 'pageview');
+</script></html>

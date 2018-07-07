@@ -1,0 +1,282 @@
+<html><head><meta charset="utf-8" /><meta content="IE=edge;chrome=1" http-equiv="X-UA-Compatible" /><script src="/javascripts/application.js"></script><link href="/stylesheets/application.css" rel="stylesheet" /><title>mtsmfm blog</title><link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" /></head><body><div class="row"><div class="three columns"><h3><a href="/">mtsmfm blog</a></h3><div class="row"><div class="large btn default"><a href="https://github.com/mtsmfm"><i class="fa fa-github"></i></a></div><div class="large btn default"><a href="https://twitter.com/mtsmfm"><i class="fa fa-twitter"></i></a></div></div></div><div class="nine columns"><article><h2><a href="/2016/12/03/doukaku-e10.html">オフラインリアルタイムどう書く E10 の問題 - 塗って繋ぐ</a></h2><time>2016-12-03</time><p><a href="https://yhpg.doorkeeper.jp/events/53794">オフラインリアルタイムどう書く</a> E10 の問題です。</p>
+
+<h2>問題の概要</h2>
+
+<p>黒い正方形それぞれを9等分して5箇所を白く塗る操作を X、4箇所を白く塗る操作を O とする。
+操作を繰り返した結果、白の領域が繋がった部分がいくつになったか求めよ。</p>
+
+<h3>X</h3>
+
+<p><img src="/images/2016/12/03/x.svg" alt="操作X"></p>
+
+<h3>O</h3>
+
+<p><img src="/images/2016/12/03/o.svg" alt="操作X"></p>
+
+<h3>XO</h3>
+
+<p><img src="/images/2016/12/03/xo.svg" alt="操作X">  </p>
+<h2>ルール</h2>
+
+<h2>入力</h2>
+
+<p><code>XOX</code> のような形式。</p>
+
+<p>各々操作の種類の名前。</p>
+
+<h2>出力</h2>
+
+<p><code>21</code> のような形式。</p>
+
+<p>白の繋がっている部分の数。</p>
+
+<h2>補足</h2>
+
+<p>実装ができた方は <a href="http://qiita.com/mtsmfm/items/8a78b895910a89e3012d">Qiitaの記事</a> のコメント欄からリンクを張っていただくと見つ...</p><a href="/2016/12/03/doukaku-e10.html">Read more</a></article><article><h2><a href="/2016/10/01/doukaku-e08.html">オフラインリアルタイムどう書く E08 の問題 - 白黒陣取りゲーム</a></h2><time>2016-10-01</time><p><a href="https://yhpg.doorkeeper.jp/events/51818">オフラインリアルタイムどう書く</a> E08 の問題です。</p>
+
+<h2>問題の概要</h2>
+
+<p>18 × 18 マスの盤上に、以下の図のように白と黒のコマが置かれている。白陣営と黒陣営、各々の陣地の広さを求めよ。</p>
+<svg xmlns="http://www.w3.org/2000/svg" width="430" height="430" viewbox="-30 -30 460 460"><text x="0.0" y="-15" text-anchor="middle" dominant-baseline="central">a</text>
+<text x="-15" y="0.0" text-anchor="middle" dominant-baseline="central">1</text>
+<path stroke="black" d="M0,0.0L400,0.0"></path>
+<path stroke="black" d="M0.0,0L0.0,400"></path>
+<text x="22.22222222222222" y="-15" text-anchor="middle" dominant-baseline="central">b</text>
+<text x="-15" y="22.22222222222222" text-anchor="middle" dominant-baseline="central">2</text>
+<path stroke="black" d="M0,22.22222222222222L400,22.22222222222222"></path>
+<path stroke="black" d="M22.22222222222222,0L22.22222222222222,400"></path>
+<text x="44.44444444444444" y="-15" text-anchor="middle" dominant-baseline="central">c</text>
+<text x="-15" y="44.44444444444444" text-anchor="middle" dominant-baseline="central">3</text>
+<path stroke="black" d="M0,44.44444444444444L400,44.44444444444444"></path>
+<path stroke="black" d="M44.44444444444444,0L44.44444444444444,400"></path>
+<text x="66.66666666666666" y="-15" text-anchor="middle" dominant-baseline="central">d</text>
+<text x="-15" y="66.66666666666666" text-anchor="middle" dominant-baseline="central">4</text>
+<path stroke="black" d="M0,66.66666666666666L400,66.66666666666666"></path>
+<path stroke="black" d="M66.66666666666666,0L66.66666666666666,400"></path>
+<text x="88.88888888888889" y="-15" text-anchor="middle" dominant-baseline="central">e</text>
+<text x="-15" y="88.88888888888889" text-anchor="middle" dominant-baseline="central">5</text>
+<path stroke="black" d="M0,88.88888888888889L400,88.88888888888889"></path>
+<path stroke="black" d="M88.88888888888889,0L88.88888888888889,400"></path>
+<text x="111.11111111111111" y="-15" text-anchor="middle" dominant-baseline="central">f</text>
+<text x="-15" y="111.11111111111111" text-anchor="middle" dominant-baseline="central">6</text>
+<path stroke="black" d="M0,111.11111111111111L400,111.11111111111111"></path>
+<path stroke="black" d="M111.11111111111111,0L111.11111111111111,400"></path>
+<text x="133.33333333333331" y="-15" text-anchor="middle" dominant-baseline="central">g</text>
+<text x="-15" y="133.33333333333331" text-anchor="middle" dominant-baseline="central">7</text>
+<path stroke="black" d="M0,133.33333333333331L400,133.33333333333331"></path>
+<path stroke="black" d="M133.33333333333331,0L133.33333333333331,400"></path>
+<text x="155.55555555555554" y="-15" text-anchor="middle" dominant-baseline="central">h</text>
+<text x="-15" y="155.55555555555554" text-anchor="middle" dominant-baseline="central">8</text>
+<path stroke="black" d="M0,155.55555555555554L400,155.55555555555554"></path>
+<path stroke="black" d="M155.55555555555554,0L155.55555555555554,400"></path>
+<text x="177.77777777777777" y="-15" text-anchor="middle" dominant-baseline="central">i</text>
+<text x="-15" y="177.77777777777777" text-anchor="middle" dominant-baseline="central">9</text>
+<path stroke="black" d="M0,177.77777777777777L400,177.77777777777777"></path>
+<path stroke="black" d="M177.77777777777777,0L177.77777777777777,400"></path>
+<text x="200.0" y="-15" text-anchor="middle" dominant-baseline="central">j</text>
+<text x="-15" y="200.0" text-anchor="middle" dominant-baseline="central">10</text>
+<path stroke="black" d="M0,200.0L400,200.0"></path>
+<path stroke="black" d="M200.0,0L200.0,400"></path>
+<text x="222.22222222222223" y="-15" text-anchor="middle" dominant-baseline="central">k</text>
+<text x="-15" y="222.22222222222223" text-anchor="middle" dominant-baseline="central">11</text>
+<path stroke="black" d="M0,222.22222222222223L400,222.22222222222223"></path>
+<path stroke="black" d="M222.22222222222223,0L222.22222222222223,400"></path>
+<text x="244.44444444444443" y="-15" text-anchor="middle" dominant-baseline="central">l</text>
+<text x="-15" y="244.44444444444443" text-anchor="middle" dominant-baseline="central">12</text>
+<path stroke="black" d="M0,244.44444444444443L400,244.44444444444443"></path>
+<path stroke="black" d="M244.44444444444443,0L244.44444444444443,400"></path>
+<text x="266.66666666666663" y="-15" text-anchor="middle" dominant-baseline="central">m</text>
+<text x="-15" y="266.66666666666663" text-anchor="middle" dominant-baseline="central">13</text>
+<path stroke="black" d="M0,266.66666666666663L400,266.66666666666663"></path>
+<path stroke="black" d="M266.66666666666663,0L266.66666666666663,400"></path>
+<text x="288.88888888888886" y="-15" text-anchor="middle" dominant-baseline="central">n</text>
+<text x="-15" y="288.88888888888886" text-anchor="middle" dominant-baseline="central">14</text>
+<path stroke="black" d="M0,288.88888888888886L400,288.88888888888886"></path>
+<path stroke="black" d="M288.88888888888886,0L288.88888888888886,400"></path>
+<text x="311.1111111111111" y="-15" text-anchor="middle" dominant-baseline="central">o</text>
+<text x="-15" y="311.1111111111111" text-anchor="middle" dominant-baseline="central">15</text>
+<path stroke="black" d="M0,311.1111111111111L400,311.1111111111111"></path>
+<path stroke="black" d="M311.1111111111111,0L311.1111111111111,400"></path>
+<text x="333.3333333333333" y="-15" text-anchor="middle" dominant-baseline="central">p</text>
+<text x="-15" y="333.3333333333333" text-anchor="middle" dominant-baseline="central">16</text>
+<path stroke="black" d="M0,333.3333333333333L400,333.3333333333333"></path>
+<path stroke="black" d="M333.3333333333333,0L333.3333333333333,400"></path>
+<text x="355.55555555555554" y="-15" text-anchor="middle" dominant-baseline="central">q</text>
+<text x="-15" y="355.55555555555554" text-anchor="middle" dominant-baseline="central">17</text>
+<path stroke="black" d="M0,355.55555555555554L400,355.55555555555554"></path>
+<path stroke="black" d="M355.55555555555554,0L355.55555555555554,400"></path>
+<text x="377.77777777777777" y="-15" text-anchor="middle" dominant-baseline="central">r</text>
+<text x="-15" y="377.77777777777777" text-anchor="middle" dominant-baseline="central">18</text>
+<path stroke="black" d="M0,377.77777777777777L400,377.77777777777777"></path>
+<path stroke="black" d="M377.77777777777777,0L377.77777777777777,400"></path>
+<text x="400.0" y="-15" text-anchor="middle" dominant-baseline="central">s</text>
+<text x="-15" y="400.0" text-anchor="middle" dominant-baseline="central">19</text>
+<path stroke="black" d="M0,400.0L400,400.0"></path>
+<path stroke="black" d="M400.0,0L400.0,400"></path>
+<circle cx="66.66666666666666" cy="44.44444444444444" r="5" stroke="black" fill="white"></circle>
+ &lt;!-- 3, 2 --&gt;
+<circle cx="66.66666666666666" cy="66.66666666666666" r="5" stroke="black" fill="white"></circle>
+ &lt;!-- 3, 3 -...</svg><a href="/2016/10/01/doukaku-e08.html">Read more</a></article><article><h2><a href="/2016/08/06/doukaku-e06.html">オフラインリアルタイムどう書く E06 の問題 - 目指せホゲモンマスター</a></h2><time>2016-08-06</time><p><a href="https://yhpg.doorkeeper.jp/events/48610">オフラインリアルタイムどう書く</a> E06 の問題です。</p>
+
+<h2>問題の概要</h2>
+
+<p>ホゲモンリーグを勝ち抜いて、ホゲモンマスターになろう!</p>
+
+<h2>ルール</h2>
+
+<p>プレイヤー同士でホゲモンを戦わせ、総当たり戦を行う。</p>
+
+<ol>
+<li>プレイヤーは手持ちの中で登録した順に 1 匹づつホゲモンを繰り出し、常に 1 対 1 で戦う</li>
+<li>ホゲモンには体力があり、 0 以下になるともう行動することはできない</li>
+</ol>
+
+<h3>戦闘について</h3>
+
+<ol>
+<li>戦闘はターン制で、1 ターンに 1 回攻撃できる</li>
+<li>レベルが高い方が先に攻撃する
+
+<ul>
+<li>レベルが低い方は、体力が残っ...</li>
+</ul>
+</li>
+</ol><a href="/2016/08/06/doukaku-e06.html">Read more</a></article><article><h2><a href="/2016/07/31/oss-gate.html">OSS Gate でメンター参加してました</a></h2><time>2016-07-31</time><p><a href="https://oss-gate.doorkeeper.jp/events/42159">OSS Gateワークショップ2016-07-30</a>に初参加してメンターしてました。</p>
+
+<p>OSS Gate は「OSSの開発に参加する」を実際に体験するワークショップです。
+詳細は<a href="https://github.com/oss-gate/workshop/blob/master/tutorial/scenario.md">公式ドキュメント</a>参照のこと。</p>
+
+<p>Tokyo RubyKaigi 11 での宣伝を見て来た人が多かったからか、 OSS の題材として Ruby や Rails を選ぶ人が多かった印象でした。
+一方で僕が担当になったビギナーの方は Trac や Perl を選んだので、僕がメンターと言いながらどっちも経験がないのが不安で...</p><a href="/2016/07/31/oss-gate.html">Read more</a></article><article><h2><a href="/2016/06/04/doukaku-e04.html">オフラインリアルタイムどう書く E04 の問題 - ドキドキ登山</a></h2><time>2016-06-04</time><p><a href="https://yhpg.doorkeeper.jp">オフラインリアルタイムどう書く</a> E04 の問題です。</p>
+
+<h2>問題</h2>
+
+<p>次の図は山を上から見たところである。</p>
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="345.0" viewbox="0 0 300 300"><circle cx="150" cy="150" r="20" stroke="black" fill="none"></circle><text x="150" y="150" text-anchor="middle" dominant-baseline="central">頂上</text><path stroke="black" d="M250.0,150.0L170.0,150.0"></path>
+<text x="260.0" y="150.0" text-anchor="middle" dominant-baseline="central">A</text>
+<circle cx="260.0" cy="150.0" r="10" stroke="black" fill="none"></circle>
+<text x="270.1043392264673" y="100.25115379253833" text-anchor="middle" dominant-baseline="central" font-size="0.8rem">1</text>
+<path stroke="black" d="M220.71067811865476,79.28932188134526L164.14213562373095,135.85786437626905"></path>
+<text x="227.78174593052023" y="72.21825406947978" text-anchor="middle" dominant-baseline="central">B</text>
+<circle cx="227.78174593052023" cy="72.21825406947978" r="10" stroke="black" fill="none"></circle>
+<text x="199.74884620746167" y="29.895660773532725" text-anchor="middle" dominant-baseline="central" font-size="0.8rem">2</text>
+<path stroke="black" d="M150.0,50.0L150.0,130.0"></path>
+<text x="150.0" y="40.0" text-anchor="middle" dominant-baseline="central">C</text>
+<circle cx="150.0" cy="40.0" r="10" stroke="black" fill="none"></circle>
+<text x="100.25115379253833" y="29.895660773532725" text-anchor="middle" dominant-baseline="central" font-size="0.8rem">3</text>
+<path stroke="black" d="M79.28932188134526,79.28932188134524L135.85786437626905,135.85786437626905"></path>
+<text x="72.21825406947978" y="72.21825406947977" text-anchor="middle" dominant-baseline="central">D</text>
+<circle cx="72.21825406947978" cy="72.21825406947977" r="10" stroke="black" fill="none"></circle>
+<text x="29.895660773532725" y="100.2511537925383" text-anchor="middle" dominant-baseline="central" font-size="0.8rem">4</text>
+<path stroke="black" d="M50.0,150.0L130.0,150.0"></path>
+<text x="40.0" y="150.0" text-anchor="middle" dominant-baseline="central">E</text>
+<circle cx="40.0" cy="150.0" r="10" stroke="black" fill="none"></circle>
+<text x="29.89566077353271" y="199.74884620746167" text-anchor="middle" dominant-baseline="central" font-size="0.8rem">5</text>
+<path stroke="black" d="M79.28932188134523,220.71067811865476L135.85786437626905,164.14213562373095"></path>
+<text x="72.21825406947976" y="227.78174593052023" text-anchor="middle" dominant-baseline="central">F</text>
+<circle cx="72.21825406947976" cy="227.78174593052023" r="10" stroke="black" fill="none"></circle>
+<text x="100.25115379253825" y="270.10433922646723" text-anchor="middle" dominant-baseline="central" font-size="0.8rem">6</text>
+<path stroke="black" d="M149.99999999999997,250.0L150.0,170.0"></path>
+<text x="149.99999999999997" y="260.0" text-anchor="middle" dominant-baseline="central">G</text>
+<circle cx="149.99999999999997" cy="260.0" r="10" stroke="black" fill="none"></circle>
+<text x="199.7488462074617" y="270.10433922646723" text-anchor="middle" dominant-baseline="central" font-size="0.8rem">7</text>
+<path stroke="black" d="M220.71067811865476,220.71067811865476L164.14213562373095,164.14213562373095"></path>
+<text x="227.7817459305202" y="227.78174593052023" text-anchor="middle" dominant-baseline="central">H</text>
+<circle cx="227.7817459305202" cy="227.78174593052023" r="10" stroke="black" fill="none"></circle>
+<text x="270.10433922646723" y="199.74884620746175" text-anchor="middle" dominant-baseline="central" font-size="0.8rem">8</text><text x="150" y="300" text-anchor="middle" dominant-baseline="central">入力 2512:C</text>
+<path stroke="black" d="M178.2842712474619,121.7157287525381a40.0 40.0 0 0 0 -28.284271247461902,-11.715728752538098" fill="none"></path>
+<path stroke="black" d="M95.0,150.0a55.0 55.0 0 0 0 16.109127034739885,38.890872965260115" fill="none"></path>
+<path stroke="black" d="M220.0,150.0a70.0 70.0 0 0 0 -20.50252531694167,-49.49747468305833" fill="none"></path>
+<path stroke="black" d="M210.10407640085654,89.89592359914346a85.0 85.0 0 0 0 -60.10407640085654,-24.895923599143458" fill="none"></path></svg><p>A ~ H が登山者、1 ~ 8 は方角、実線が登山道である。</p>
+
+<p>A ~ H のうち登頂できた人を求めたい。</p>
+
+<h2>ルール</h2>
+
+<p>登山には次のルールがある:</p>
+
+<ol>
+<li>登山道を麓から頂上に向かって登る</li>
+<li>登る際に、横方向の登山道があればそちらを通る</li>
+</ol>
+
+<p>ただし、一部の登山道は頂上から...</p><a href="/2016/06/04/doukaku-e04.html">Read more</a></article><article><h2><a href="/2015/10/22/esm-doukaku.html">ESM オフラインリアルタイムどう書くを開催しました</a></h2><time>2015-10-22</time><p><a href="https://yhpg.doorkeeper.jp">オフラインリアルタイムどう書く</a> という、
+<a href="https://twitter.com/Nabetani">@Nabetani</a> さん主催のイベントを模したものを
+<a href="http://agile.esm.co.jp">ESM</a> の社内イベントとして行いました。</p>
+
+<p><a href="https://gist.github.com/mtsmfm/4b8ffb53ffac055f5843">問題はこちら</a></p>
+
+<h2>開催の経緯</h2>
+
+<p>オフラインリアルタイムどう書くは <a href="https://twitter.com/Nabetani">@Nabetani</a> さんが当日出題した問題を 1 時間で解いて、解けたり解けなかったりした結果を互いに発表する、というイベントです。
+過去に何回か参加し、なかなかにおもしろいのでこういうのを社内でも次は出題者としてやってみたいなぁと思っていました。</p>
+
+<p>一方、ESM では 60 min とい...</p><a href="/2015/10/22/esm-doukaku.html">Read more</a></article><article><h2><a href="/2015/01/12/new-year.html">新年あけました</a></h2><time>2015-01-12</time><p>あけましておめでとうございます。</p>
+
+<p>去年はすごい Haskell 読むだけで満足しちゃった感じある。
+lazy 的な部分が Ruby でも発想として出てくるようになったのが収穫かも。</p>
+
+<p>今年は JS かなぁ。仕事でも騙し騙し使ってる感じがしている。</p>
+
+<p>あとは GitHub にもうちょっと草を生やしたい。
+テストを直すとか、分かりやすいところから手をつけようとしている。</p>
+
+<p>なんか compass のテストが落ちているのが気になって PR 出してみた。
+<a href="https://github.com/Compass/compass/pull/1912">compass#1912</a></p>
+
+<p>listen...</p><a href="/2015/01/12/new-year.html">Read more</a></article><article><h2><a href="/2014/07/19/usb-tethering-nexus-5.html">Gentoo での Nexus 5 による USB テザリング</a></h2><time>2014-07-19</time><p>カーネルの設定で、以下の内容にチェックを入れる。</p>
+<div class="highlight plaintext"><table style="border-spacing: 0"><tbody><tr>
+<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6</pre></td>
+<td class="code"><pre>Device Drivers
+  Network device support
+    USB Network Adapters
+       &lt;*&gt; Multi-purpose USB Networking Framework
+       -*-   CDC Ethernet support (smart devices such as cable modems)
+       &lt;*&gt;   Host for RNDIS...</pre></td>
+</tr></tbody></table></div><a href="/2014/07/19/usb-tethering-nexus-5.html">Read more</a></article><article><h2><a href="/2014/02/23/cucumber-wiki-conjunction-steps.html">接続詞ステップ</a></h2><time>2014-02-23</time><p>原文 : <a href="https://github.com/cucumber/cucumber/wiki/Conjunction-Steps-(Antipattern)">Conjunction Steps (Antipattern)</a></p>
+
+<p>オンライン辞書の Merriam-Webster によれば:</p>
+
+<blockquote>
+<p>con·junc·tion :an uninflected linguistic form that joins together sentences, clauses, phrases, or words</p>
+
+<p>文や節、熟語や単語を結ぶ、語形変化しない語学上の構造</p>
+</blockquote>
+
+<p>これをステップでやらないでください。
+これはステップを特化や再利用しにくくします。
+...</p><a href="/2014/02/23/cucumber-wiki-conjunction-steps.html">Read more</a></article><article><h2><a href="/2014/02/16/cucumber-wiki-feature-coupled-step-definitions.html">フィーチャと一対一なステップ定義(アンチパターン)</a></h2><time>2014-02-16</time><p>原文 : <a href="https://github.com/cucumber/cucumber/wiki/Feature-Coupled-Step-Definitions-(Antipattern)">Feature Coupled Step Definitions (Antipattern)</a></p>
+
+<hr>
+
+<p>フィーチャと一対一なステップ定義はフィーチャやシナリオをまたいで使うことのできないステップ定義です。
+これは、ステップ定義の急増やコードの重複、そしてメンテナンスが大変になるため有害です。</p>
+
+<h2>例</h2>
+
+<p>架空の履歴書アプリに以下のステップがあります:</p>
+<div class="highlight plaintext"><table style="border-spacing: 0"><tbody><tr>
+<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8</pre></td>
+<td class="code"><pre>features/
++--edit_work_experience.feature
++--edit_languages...</pre></td>
+</tr></tbody></table></div><a href="/2014/02/16/cucumber-wiki-feature-coupled-step-definitions.html">Read more</a></article><p class="prev-link"><a href="/">Previous page</a></p><p class="next-link"><a href="/page/3/">Next page</a></p></div></div></body><script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-48013282-1', 'auto');
+  ga('send', 'pageview');
+</script></html>

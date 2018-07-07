@@ -1,0 +1,191 @@
+<html><head><meta charset="utf-8" /><meta content="IE=edge;chrome=1" http-equiv="X-UA-Compatible" /><script src="/javascripts/application.js"></script><link href="/stylesheets/application.css" rel="stylesheet" /><title>mtsmfm blog</title><link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" /></head><body><div class="row"><div class="three columns"><h3><a href="/">mtsmfm blog</a></h3><div class="row"><div class="large btn default"><a href="https://github.com/mtsmfm"><i class="fa fa-github"></i></a></div><div class="large btn default"><a href="https://twitter.com/mtsmfm"><i class="fa fa-twitter"></i></a></div></div></div><div class="nine columns"><article><h2><a href="/2018/07/07/doukaku-e25.html">オフラインリアルタイムどう書く E25 の問題 - ビッグセブン</a></h2><time>2018-07-07</time><p><a href="https://yhpg.doorkeeper.jp/events/75247">オフラインリアルタイムどう書く E25</a> の問題です。</p>
+
+<p>格子状に並んだ点がある。一番大きな7を描こう。</p>
+
+<p><img src="/images/2018/07/07/example-1.png" alt="Example 1">
+<img src="/images/2018/07/07/example-2.png" alt="Example 2"></p>
+
+<h2>ルール</h2>
+
+<p>「7」の1辺が最も長いものを求め、各頂点の座標を返す。</p>
+
+<p>「7」の条件は以下の通り。</p>
+
+<ol>
+<li>3本の直線でできている</li>
+<li>1:1:2 の長さである</li>
+<li>図のように直角に繋がっている</li>
+</ol>
+
+<p><img src="/images/2018/07/07/7-1.png" alt="7 1"></p>
+
+<h2>入力</h2>
+
+<p><code>4,7,(0,3)</code> のような入力。
+最初の2つの数字、 <code>4</code>、<code>7</code> はそれぞれ縦と横の点の数。
+<code>(0,3)</code> は 7 の左側の短い縦線の先端の座標。</p>
+
+<p><img src="/images/2018/07/07/7-2.png" alt="7 2"></p>
+
+<h2>出力</h2>
+
+<p><code>(0,0),(3,0),(3...</code></p><a href="/2018/07/07/doukaku-e25.html">Read more</a></article><article><h2><a href="/2018/02/03/doukaku-e21.html">オフラインリアルタイムどう書く E21 の問題 - ドキドキロシアンルーレット</a></h2><time>2018-02-03</time><p><a href="https://yhpg.doorkeeper.jp/events/69404">オフラインリアルタイムどう書く E21</a> の問題です。</p>
+
+<p>ロシアンルーレットをして、何人かがアタリを引いた。</p>
+
+<p>最初にリボルバーに弾がどう込められていたか求めよ。</p>
+
+<h2>ルール</h2>
+
+<ol>
+<li>順番に引き金を引く</li>
+<li>ハズレた場合、弾倉を回転させる</li>
+<li>アタリを引いた場合、リタイア</li>
+<li>ただし、全員回転させかたに癖があり、常に同じ方向に同じだけ回転させる</li>
+<li>残弾が 0 になるまで順番に続ける</li>
+</ol>
+
+<h2>入力</h2>
+
+<p><code>31[1]/6</code> のような形式。
+最初の数字、<code>3</code>、<code>1</code>、<code>1</code> はそれぞれ参加者。
+<code>/</code> の後ろの数字、<code>6</code> はリボルバーの最大装...</p><a href="/2018/02/03/doukaku-e21.html">Read more</a></article><article><h2><a href="/2017/11/04/doukaku-e19.html">オフラインリアルタイムどう書く E19 の問題 - カード当てゲーム</a></h2><time>2017-11-04</time><p><a href="https://yhpg.doorkeeper.jp/events/66089">オフラインリアルタイムどう書く</a> E19 の問題です。</p>
+
+<p>1からNまでのカードが2枚ずつある。
+このカードは、奇数と偶数で裏に書いてある模様が違う。
+これをシャッフルし、裏向きにして左から小さい順に2行に並べる。</p>
+
+<p>並んでいるカードを当てよう。</p>
+
+<p><img src="/images/2017/11/04/image.svg" alt="図"></p>
+
+<h2>入力</h2>
+
+<p><code>xxoxo,oooxo</code> のような形式。
+<code>o</code> は奇数、<code>x</code> は偶数、<code>,</code> は行の区切り。</p>
+
+<p>つまり、この場合、1 ~ 5 までのカードが2枚ずつあり、</p>
+
+<p><code>
+xxoxo
+</code></p>
+
+<p><code>
+oooxo
+</code></p>
+
+<p>のように並んでいるということ。</p>
+
+<h2>出力</h2>
+
+<p><code>2,2,3...</code></p><a href="/2017/11/04/doukaku-e19.html">Read more</a></article><article><h2><a href="/2017/09/15/rubykaigi.html">RubyKaigi 2017 で Language Serverの話をします</a></h2><time>2017-09-15</time><p>RubyKaigi 2017 で Language Server の話をします。
+<a href="http://rubykaigi.org/2017/presentations/mtsmfm.html">http://rubykaigi.org/2017/presentations/mtsmfm.html</a></p>
+
+<p>この発表を通じて、Language Server というもの、その考え方を知ってもらい、
+「あのエディタならこの便利プラグインがあるがこのエディタにはない」という状況が発生しないようにすることで、開発者が Ruby をさらにキメやすくなるといいなぁと思っています。
+また、Ruby の静的解析について僕自身...</p><a href="/2017/09/15/rubykaigi.html">Read more</a></article><article><h2><a href="/2017/06/29/yaichi.html">Docker 版 pow もどきの Yaichi を作った</a></h2><time>2017-06-29</time><p>複数のアプリが連携しているような Web アプリを開発する場合、アプリ A が localhost:3000 で、B が localhost:3001 で…
+というような構成にして手元では開発することがあるだろう。</p>
+
+<p>現に Quipper では生徒向け、先生向け、管理者向け、問題作成者向け etc といったようにアプリがいくつもあって、ポート何番で動いているのかよくわからなくなる。
+前々から Docker 版 pow みたいなのが欲しいなー (pow 使ったことないけど) と思っていたので...</p><a href="/2017/06/29/yaichi.html">Read more</a></article><article><h2><a href="/2017/06/03/doukaku-e14.html">オフラインリアルタイムどう書く E14 の問題 - サイコロできるかな</a></h2><time>2017-06-03</time><p><a href="https://yhpg.doorkeeper.jp/events/59397">オフラインリアルタイムどう書く</a> E14 の問題です。</p>
+
+<p>追記: 当日発表中に自分で気づいて懺悔しましたが、ある場合のテストケースが足りずに出題者の回答が特定の状況で誤検出していました。
+<a href="http://qiita.com/mtsmfm/items/89b6634f363bbf5b47f5#comment-ba97a09d85a837b385c6">@Nabetani さんありがとうございます。</a></p>
+
+<h2>問題の概要</h2>
+
+<p>でたらめにサイコロの目を印刷した紙がある。
+サイコロを作ることができるか答えよ。</p>
+<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MzAiIGhlaWdodD0iNDMwIiB2aWV3Qm94PSItMzAgLTMwIDQ2MCA0NjAiPgogIDxyZWN0IHg9IjAuMCIgeT0iMC4wIiB3aWR0aD0iMTAwLjAiIGhlaWdodD0iMTAwLjAiIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOnJlZCIgc3Ryb2tlLXdpZHRoPSIzIj4KICAKPC9yZWN0Pgo8cmVjdCB4PSIwLjAiIHk9IjAuMCIgd2lkdGg9IjEwMC4wIiBoZWlnaHQ9IjEwMC4wIiBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTpibGFjayIgc3Ryb2tlLXdpZHRoPSIxIj4KICAKPC9yZWN0Pgo8Y2lyY2xlIGN4PSIzMC4wIiBjeT0iMzAuMCIgcj0iNi42NjY2NjY2NjY2NjY2NjciIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMyI+CiAgCjwvY2lyY2xlPgo8Y2lyY2xlIGN4PSI3MC4wIiBjeT0iNzAuMCIgcj0iNi42NjY2NjY2NjY2NjY2NjciIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMyI+CiAgCjwvY2lyY2xlPgo8Y2lyY2xlIGN4PSI3MC4wIiBjeT0iMzAuMCIgcj0iNi42NjY2NjY2NjY2NjY2NjciIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMyI+CiAgCjwvY2lyY2xlPgo8Y2lyY2xlIGN4PSIzMC4wIiBjeT0iNzAuMCIgcj0iNi42NjY2NjY2NjY2NjY2NjciIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMyI+CiAgCjwvY2lyY2xlPgo8Y2lyY2xlIGN4PSI1MC4wIiBjeT0iNTAuMCIgcj0iNi42NjY2NjY2NjY2NjY2NjciIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMyI+CiAgCjwvY2lyY2xlPgoKPHJlY3QgeD0iMTAwLjAiIHk9IjAuMCIgd2lkdGg9IjEwMC4wIiBoZWlnaHQ9IjEwMC4wIiBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTpibGFjayIgc3Ryb2tlLXdpZHRoPSIxIj4KICAKPC9yZWN0Pgo8Y2lyY2xlIGN4PSIxMzAuMCIgY3k9IjMwLjAiIHI9IjYuNjY2NjY2NjY2NjY2NjY3IiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjMiPgogIAo8L2NpcmNsZT4KPGNpcmNsZSBjeD0iMTcwLjAiIGN5PSI3MC4wIiByPSI2LjY2NjY2NjY2NjY2NjY2NyIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIzIj4KICAKPC9jaXJjbGU+Cgo8cmVjdCB4PSIyMDAuMCIgeT0iMC4wIiB3aWR0aD0iMTAwLjAiIGhlaWdodD0iMTAwLjAiIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOmJsYWNrIiBzdHJva2Utd2lkdGg9IjEiPgogIAo8L3JlY3Q+CjxjaXJjbGUgY3g9IjIzMC4wIiBjeT0iMzAuMCIgcj0iNi42NjY2NjY2NjY2NjY2NjciIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMyI+CiAgCjwvY2lyY2xlPgo8Y2lyY2xlIGN4PSIyNzAuMCIgY3k9IjcwLjAiIHI9IjYuNjY2NjY2NjY2NjY2NjY3IiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjMiPgogIAo8L2NpcmNsZT4KPGNpcmNsZSBjeD0iMjcwLjAiIGN5PSIzMC4wIiByPSI2LjY2NjY2NjY2NjY2NjY2NyIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIzIj4KICAKPC9jaXJjbGU+CjxjaXJjbGUgY3g9IjIzMC4wIiBjeT0iNzAuMCIgcj0iNi42NjY2NjY2NjY2NjY2NjciIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMyI+CiAgCjwvY2lyY2xlPgo8Y2lyY2xlIGN4PSIyNTAuMCIgY3k9IjMwLjAiIHI9IjYuNjY2NjY2NjY2NjY2NjY3IiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjMiPgogIAo8L2NpcmNsZT4KPGNpcmNsZSBjeD0iMjUwLjAiIGN5PSI3MC4wIiByPSI2LjY2NjY2NjY2NjY2NjY2NyIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIzIj4KICAKPC9jaXJjbGU+Cgo8cmVjdCB4PSIzMDAuMCIgeT0iMC4wIiB3aWR0aD0iMTAwLjAiIGhlaWdodD0iMTAwLjAiIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOmJsYWNrIiBzdHJva2Utd2lkdGg9IjEiPgogIAo8L3JlY3Q+CjxjaXJjbGUgY3g9IjMzMC4wIiBjeT0iMzAuMCIgcj0iNi42NjY2NjY2NjY2NjY2NjciIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMyI+CiAgCjwvY2lyY2xlPgo8Y2lyY2xlIGN4PSIzNzAuMCIgY3k9IjcwLjAiIHI9IjYuNjY2NjY2NjY2NjY2NjY3IiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjMiPgogIAo8L2NpcmNsZT4KCjxyZWN0IHg9IjAuMCIgeT0iMTAwLjAiIHdpZHRoPSIxMDAuMCIgaGVpZ2h0PSIxMDAuMCIgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6cmVkIiBzdHJva2Utd2lkdGg9IjMiPgogIAo8L3JlY3Q+CjxyZWN0IHg9IjAuMCIgeT0iMTAwLjAiIHdpZHRoPSIxMDAuMCIgaGVpZ2h0PSIxMDAuMCIgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6YmxhY2siIHN0cm9rZS13aWR0aD0iMSI+CiAgCjwvcmVjdD4KPGNpcmNsZSBjeD0iMzAuMCIgY3k9IjEzMC4wIiByPSI2LjY2NjY2NjY2NjY2NjY2NyIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIzIj4KICAKPC9jaXJjbGU+CjxjaXJjbGUgY3g9IjcwLjAiIGN5PSIxNzAuMCIgcj0iNi42NjY2NjY2NjY2NjY2NjciIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMyI+CiAgCjwvY2lyY2xlPgo8Y2lyY2xlIGN4PSI3MC4wIiBjeT0iMTMwLjAiIHI9IjYuNjY2NjY2NjY2NjY2NjY3IiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjMiPgogIAo8L2NpcmNsZT4KPGNpcmNsZSBjeD0iMzAuMCIgY3k9IjE3MC4wIiByPSI2LjY2NjY2NjY2NjY2NjY2NyIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIzIj4KICAKPC9jaXJjbGU+Cgo8cmVjdCB4PSIxMDAuMCIgeT0iMTAwLjAiIHdpZHRoPSIxMDAuMCIgaGVpZ2h0PSIxMDAuMCIgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6cmVkIiBzdHJva2Utd2lkdGg9IjMiPgogIAo8L3JlY3Q+CjxyZWN0IHg9IjEwMC4wIiB5PSIxMDAuMCIgd2lkdGg9IjEwMC4wIiBoZWlnaHQ9IjEwMC4wIiBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTpibGFjayIgc3Ryb2tlLXdpZHRoPSIxIj4KICAKPC9yZWN0Pgo8Y2lyY2xlIGN4PSIxMzAuMCIgY3k9IjEzMC4wIiByPSI2LjY2NjY2NjY2NjY2NjY2NyIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIzIj4KICAKPC9jaXJjbGU+CjxjaXJjbGUgY3g9IjE3MC4wIiBjeT0iMTcwLjAiIHI9IjYuNjY2NjY2NjY2NjY2NjY3IiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjMiPgogIAo8L2NpcmNsZT4KPGNpcmNsZSBjeD0iMTcwLjAiIGN5PSIxMzAuMCIgcj0iNi42NjY2NjY2NjY2NjY2NjciIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMyI+CiAgCjwvY2lyY2xlPgo8Y2lyY2xlIGN4PSIxMzAuMCIgY3k9IjE3MC4wIiByPSI2LjY2NjY2NjY2NjY2NjY2NyIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIzIj4KICAKPC9jaXJjbGU+CjxjaXJjbGUgY3g9IjE1MC4wIiBjeT0iMTMwLjAiIHI9IjYuNjY2NjY2NjY2NjY2NjY3IiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjMiPgogIAo8L2NpcmNsZT4KPGNpcmNsZSBjeD0iMTUwLjAiIGN5PSIxNzAuMCIgcj0iNi42NjY2NjY2NjY2NjY2NjciIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMyI+CiAgCjwvY2lyY2xlPgoKPHJlY3QgeD0iMjAwLjAiIHk9IjEwMC4wIiB3aWR0aD0iMTAwLjAiIGhlaWdodD0iMTAwLjAiIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOnJlZCIgc3Ryb2tlLXdpZHRoPSIzIj4KICAKPC9yZWN0Pgo8cmVjdCB4PSIyMDAuMCIgeT0iMTAwLjAiIHdpZHRoPSIxMDAuMCIgaGVpZ2h0PSIxMDAuMCIgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6YmxhY2siIHN0cm9rZS13aWR0aD0iMSI+CiAgCjwvcmVjdD4KPGNpcmNsZSBjeD0iMjMwLjAiIGN5PSIxMzAuMCIgcj0iNi42NjY2NjY2NjY2NjY2NjciIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMyI+CiAgCjwvY2lyY2xlPgo8Y2lyY2xlIGN4PSIyNzAuMCIgY3k9IjE3MC4wIiByPSI2LjY2NjY2NjY2NjY2NjY2NyIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIzIj4KICAKPC9jaXJjbGU+CjxjaXJjbGUgY3g9IjI1MC4wIiBjeT0iMTUwLjAiIHI9IjYuNjY2NjY2NjY2NjY2NjY3IiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjMiPgogIAo8L2NpcmNsZT4KCjxyZWN0IHg9IjMwMC4wIiB5PSIxMDAuMCIgd2lkdGg9IjEwMC4wIiBoZWlnaHQ9IjEwMC4wIiBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTpyZWQiIHN0cm9rZS13aWR0aD0iMyI+CiAgCjwvcmVjdD4KPHJlY3QgeD0iMzAwLjAiIHk9IjEwMC4wIiB3aWR0aD0iMTAwLjAiIGhlaWdodD0iMTAwLjAiIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOmJsYWNrIiBzdHJva2Utd2lkdGg9IjEiPgogIAo8L3JlY3Q+CjxjaXJjbGUgY3g9IjM1MC4wIiBjeT0iMTUwLjAiIHI9IjEwLjAiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMyIgZmlsbD0icmVkIj4KICAKPC9jaXJjbGU+Cgo8cmVjdCB4PSIwLjAiIHk9IjIwMC4wIiB3aWR0aD0iMTAwLjAiIGhlaWdodD0iMTAwLjAiIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOnJlZCIgc3Ryb2tlLXdpZHRoPSIzIj4KICAKPC9yZWN0Pgo8cmVjdCB4PSIwLjAiIHk9IjIwMC4wIiB3aWR0aD0iMTAwLjAiIGhlaWdodD0iMTAwLjAiIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOmJsYWNrIiBzdHJva2Utd2lkdGg9IjEiPgogIAo8L3JlY3Q+CjxjaXJjbGUgY3g9IjMwLjAiIGN5PSIyMzAuMCIgcj0iNi42NjY2NjY2NjY2NjY2NjciIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMyI+CiAgCjwvY2lyY2xlPgo8Y2lyY2xlIGN4PSI3MC4wIiBjeT0iMjcwLjAiIHI9IjYuNjY2NjY2NjY2NjY2NjY3IiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjMiPgogIAo8L2NpcmNsZT4KCjxyZWN0IHg9IjEwMC4wIiB5PSIyMDAuMCIgd2lkdGg9IjEwMC4wIiBoZWlnaHQ9IjEwMC4wIiBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTpibGFjayIgc3Ryb2tlLXdpZHRoPSIxIj4KICAKPC9yZWN0Pgo8Y2lyY2xlIGN4PSIxMzAuMCIgY3k9IjIzMC4wIiByPSI2LjY2NjY2NjY2NjY2NjY2NyIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIzIj4KICAKPC9jaXJjbGU+CjxjaXJjbGUgY3g9IjE3MC4wIiBjeT0iMjcwLjAiIHI9IjYuNjY2NjY2NjY2NjY2NjY3IiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjMiPgogIAo8L2NpcmNsZT4KPGNpcmNsZSBjeD0iMTcwLjAiIGN5PSIyMzAuMCIgcj0iNi42NjY2NjY2NjY2NjY2NjciIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMyI+CiAgCjwvY2lyY2xlPgo8Y2lyY2xlIGN4PSIxMzAuMCIgY3k9IjI3MC4wIiByPSI2LjY2NjY2NjY2NjY2NjY2NyIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIzIj4KICAKPC9jaXJjbGU+CjxjaXJjbGUgY3g9IjE1MC4wIiBjeT0iMjMwLjAiIHI9IjYuNjY2NjY2NjY2NjY2NjY3IiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjMiPgogIAo8L2NpcmNsZT4KPGNpcmNsZSBjeD0iMTUwLjAiIGN5PSIyNzAuMCIgcj0iNi42NjY2NjY2NjY2NjY2NjciIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMyI+CiAgCjwvY2lyY2xlPgoKPHJlY3QgeD0iMjAwLjAiIHk9IjIwMC4wIiB3aWR0aD0iMTAwLjAiIGhlaWdodD0iMTAwLjAiIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOmJsYWNrIiBzdHJva2Utd2lkdGg9IjEiPgogIAo8L3JlY3Q+CjxjaXJjbGUgY3g9IjIzMC4wIiBjeT0iMjMwLjAiIHI9IjYuNjY2NjY2NjY2NjY2NjY3IiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjMiPgogIAo8L2NpcmNsZT4KPGNpcmNsZSBjeD0iMjcwLjAiIGN5PSIyNzAuMCIgcj0iNi42NjY2NjY2NjY2NjY2NjciIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMyI+CiAgCjwvY2lyY2xlPgo8Y2lyY2xlIGN4PSIyNzAuMCIgY3k9IjIzMC4wIiByPSI2LjY2NjY2NjY2NjY2NjY2NyIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIzIj4KICAKPC9jaXJjbGU+CjxjaXJjbGUgY3g9IjIzMC4wIiBjeT0iMjcwLjAiIHI9IjYuNjY2NjY2NjY2NjY2NjY3IiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjMiPgogIAo8L2NpcmNsZT4KCjxyZWN0IHg9IjMwMC4wIiB5PSIyMDAuMCIgd2lkdGg9IjEwMC4wIiBoZWlnaHQ9IjEwMC4wIiBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTpibGFjayIgc3Ryb2tlLXdpZHRoPSIxIj4KICAKPC9yZWN0Pgo8Y2lyY2xlIGN4PSIzMzAuMCIgY3k9IjIzMC4wIiByPSI2LjY2NjY2NjY2NjY2NjY2NyIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIzIj4KICAKPC9jaXJjbGU+CjxjaXJjbGUgY3g9IjM3MC4wIiBjeT0iMjcwLjAiIHI9IjYuNjY2NjY2NjY2NjY2NjY3IiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjMiPgogIAo8L2NpcmNsZT4KPGNpcmNsZSBjeD0iMzcwLjAiIGN5PSIyMzAuMCIgcj0iNi42NjY2NjY2NjY2NjY2NjciIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMyI+CiAgCjwvY2lyY2xlPgo8Y2lyY2xlIGN4PSIzMzAuMCIgY3k9IjI3MC4wIiByPSI2LjY2NjY2NjY2NjY2NjY2NyIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIzIj4KICAKPC9jaXJjbGU+Cgo8L3N2Zz4K">
+  
+
+<h2>入力</h2>
+
+<p><code>5262,4631,2644</code> のような形式。
+数字はサイコロの目。<code>,</code> は行の区切り。
+この値の場合上の図のようになる。</p>
+
+<h2>出力</h2>
+
+<p><code>true</code> もし...</p><a href="/2017/06/03/doukaku-e14.html">Read more</a></article><article><h2><a href="/2017/06/01/career-change.html">転職しました</a></h2><time>2017-06-01</time><p>5月末で<a href="http://agile.esm.co.jp">永和システムマネジメント</a> を退職し、<a href="https://www.quipper.com/">Quipper</a> に入社してました。</p>
+
+<p>前職は新卒で入社し、学生時代コード書ける方とか思ってたけれど微塵もできないことを突きつけていただいたり、
+プログラマとしてのありかた、仕事のやり方など非常に多くのことを学ばせていただきました。</p>
+
+<p>仕事だけでなくコミュニティ面でも多くの刺激を得ることができ、西日暮里.rb とか OSS とかもこの会社にいなければしなかっただろうなぁと思います。</p>
+
+<p>中でも一番影響を受けたのは <a href="https://github.com/tkywtnb">@tkywtnb</a> さんの「まずは自分...</p><a href="/2017/06/01/career-change.html">Read more</a></article><article><h2><a href="/2017/04/16/vanir.html">SQL マスキングツール Vanir を作った</a></h2><time>2017-04-16</time><p>本番データと同様の分量、分布のデータが欲しいことはよくあるが、
+個人情報を含むとそのままコピってくるわけにもいかない。</p>
+
+<p>そこで *** みたいにマスキングする必要があるが、なんかそれっぽいのが見つからなかったのでえいやで作った。</p>
+
+<p><a href="https://github.com/mtsmfm/vanir">https://github.com/mtsmfm/vanir</a></p>
+
+<p>名前は某見通す悪魔から。</p>
+
+<p>マスクしたいテーブル名とカラム名の yaml に Go のテンプレート書けばおっけー。</p>
+
+<p>ハッシュ化できるようにしたのは、メアドなどの個人情報を外部キーに使っているよ...</p><a href="/2017/04/16/vanir.html">Read more</a></article><article><h2><a href="/2017/03/04/doukaku-e12.html">オフラインリアルタイムどう書く E12 の問題 - 積むけど消えない</a></h2><time>2017-03-04</time><p><a href="https://yhpg.doorkeeper.jp/events/57434">オフラインリアルタイムどう書く</a> E12 の問題です。</p>
+
+<h2>問題の概要</h2>
+
+<p>5 種類のテトロミノを積んでいく。高さを求めよ。</p>
+
+<p><img src="/images/2017/03/04/list.png" alt="テトロミノ"></p>
+
+<h2>入力</h2>
+
+<p><code>3S0T2O3I</code> のような形式。</p>
+
+<p>数字は右にいくつずらしてから落とすか、文字 (I、 L、 O、 S、 T) はテトロミノの形。</p>
+
+<h2>出力</h2>
+
+<p><code>8</code> のような形式。高さ。</p>
+
+<h2>補足</h2>
+
+<p>実装ができた方は <a href="http://qiita.com/mtsmfm/items/d307c7b884cd86621262">Qiitaの記事</a> のコメント欄からリンクを張っていただくと見つけやすくて助かります。</p>
+<h2>サンプルデータ</h2><table>
+<thead><tr>
+<th>#</th>
+<th>入力</th>
+<th>期待</th>
+<th>状況へのリンク</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>1O3L0I0T</td>
+<td>5</td>
+<td><a href="#0">状況</a></td>
+</tr>
+<tr>
+<td>1</td>
+<td>0I</td>
+<td>4</td>
+<td><a href="#1">状況</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>0I0I</td>
+</tr>
+</tbody>
+</table><a href="/2017/03/04/doukaku-e12.html">Read more</a></article><article><h2><a href="/2016/12/20/ninirb-retrospective.html">西日暮里.rb 2年のふりかえり</a></h2><time>2016-12-20</time><p>この記事は <a href="http://qiita.com/advent-calendar/2016/event-management">IT勉強会/コミュニティ運営 Advent Calendar 2016</a> の20日目の記事です。</p>
+
+<p>19日目は @ara_ta3 さんの <a href="http://arata.hatenadiary.com/entry/2016/12/19/230000">大体新卒(?)コミュニティDarkでやってるtips集</a> でした。</p>
+
+<p>どうもこんばんは、@mtsmfm です。
+Ruby と麻雀が好きです。
+西日暮里.rb のオーガナイザーをしています。</p>
+
+<p>西日暮里.rb は、主に最終月曜日に行われている地域.rb です。
+西日暮里や神田や五反田などで、もくもく会をしたり LT 大会をしたりしています。
+最近で...</p><a href="/2016/12/20/ninirb-retrospective.html">Read more</a></article><p class="next-link"><a href="/page/2/">Next page</a></p></div></div></body><script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-48013282-1', 'auto');
+  ga('send', 'pageview');
+</script></html>
