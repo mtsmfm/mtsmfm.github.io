@@ -10,11 +10,11 @@
     <name>mtsmfm</name>
   </author>
   <entry>
-    <title>オフラインリアルタイムどう書く E25 の問題 - ビッグセブン</title>
+    <title>オフラインリアルタイムどう書く E25 の問題 - ビッグ7</title>
     <link rel="alternate" href="http://mtsmfm.github.io/2018/07/07/doukaku-e25.html"/>
     <id>http://mtsmfm.github.io/2018/07/07/doukaku-e25.html</id>
     <published>2018-07-07T07:00:00+00:00</published>
-    <updated>2018-07-07T07:11:49+00:00</updated>
+    <updated>2018-07-07T07:29:12+00:00</updated>
     <author>
       <name>mtsmfm</name>
     </author>
@@ -63,7 +63,7 @@
 &lt;hr&gt;
 
 &lt;p&gt;実装ができた方は &lt;a href="http://qiita.com/mtsmfm/items/b48952dee07784cce8f2"&gt;Qiitaの記事&lt;/a&gt; のコメント欄からリンクを張っていただくと見つけやすくて助かります。&lt;/p&gt;
-&lt;h2&gt;サンプルデータ&lt;/h2&gt;&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;#&lt;/th&gt;&lt;th&gt;入力&lt;/th&gt;&lt;th&gt;期待&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;4,7,(0,3)&lt;/td&gt;&lt;td&gt;(0,0),(3,0),(3,6)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;4,6,(3,3)&lt;/td&gt;&lt;td&gt;(2,5),(0,4),(2,0)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;1,1,(0,0)&lt;/td&gt;&lt;td&gt;-&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;2,2,(0,0)&lt;/td&gt;&lt;td&gt;-&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td&gt;2,3,(0,0)&lt;/td&gt;&lt;td&gt;-&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;2,3,(0,1)&lt;/td&gt;&lt;td&gt;(0,0),(1,0),(1,2)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;6&lt;/td&gt;&lt;td&gt;2,3,(1,1)&lt;/td&gt;&lt;td&gt;(1,2),(0,2),(0,0)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;7&lt;/td&gt;&lt;td&gt;2,3,(1,2)&lt;/td&gt;&lt;td&gt;-&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;8&lt;/td&gt;&lt;td&gt;3,4,(1,2)&lt;/td&gt;&lt;td&gt;-&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;9&lt;/td&gt;&lt;td&gt;4,3,(2,2)&lt;/td&gt;&lt;td&gt;(1,2),(1,1),(3,1)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;10&lt;/td&gt;&lt;td&gt;7,7,(2,5)&lt;/td&gt;&lt;td&gt;(0,3),(2,1),(6,5)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;11&lt;/td&gt;&lt;td&gt;8,7,(1,1)&lt;/td&gt;&lt;td&gt;(3,0),(4,2),(0,4)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;12&lt;/td&gt;&lt;td&gt;9,7,(3,6)&lt;/td&gt;&lt;td&gt;(0,4),(2,1),(8,5)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;13&lt;/td&gt;&lt;td&gt;10,7,(6,6)&lt;/td&gt;&lt;td&gt;(3,6),(3,3),(9,3)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;14&lt;/td&gt;&lt;td&gt;10,11,(4,2)&lt;/td&gt;&lt;td&gt;(8,1),(9,5),(1,7)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;15&lt;/td&gt;&lt;td&gt;10,12,(0,3)&lt;/td&gt;&lt;td&gt;(3,0),(6,3),(0,9)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;16&lt;/td&gt;&lt;td&gt;10,13,(0,0)&lt;/td&gt;&lt;td&gt;-&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;17&lt;/td&gt;&lt;td&gt;10,14,(4,3)&lt;/td&gt;&lt;td&gt;(8,2),(9,6),(1,8)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;18&lt;/td&gt;&lt;td&gt;15,15,(2,1)&lt;/td&gt;&lt;td&gt;(5,0),(6,3),(0,5)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;19&lt;/td&gt;&lt;td&gt;16,17,(14,13)&lt;/td&gt;&lt;td&gt;(10,16),(7,12),(15,6)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;20&lt;/td&gt;&lt;td&gt;19,7,(18,0)&lt;/td&gt;&lt;td&gt;-&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;21&lt;/td&gt;&lt;td&gt;20,7,(1,4)&lt;/td&gt;&lt;td&gt;(0,1),(3,0),(5,6)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;22&lt;/td&gt;&lt;td&gt;25,11,(15,1)&lt;/td&gt;&lt;td&gt;(24,1),(24,10),(6,10)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;23&lt;/td&gt;&lt;td&gt;26,12,(12,8)&lt;/td&gt;&lt;td&gt;(4,8),(4,0),(20,0)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;24&lt;/td&gt;&lt;td&gt;27,13,(14,2)&lt;/td&gt;&lt;td&gt;(24,2),(24,12),(4,12)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;25&lt;/td&gt;&lt;td&gt;28,14,(6,6)&lt;/td&gt;&lt;td&gt;-&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;26&lt;/td&gt;&lt;td&gt;30,30,(25,17)&lt;/td&gt;&lt;td&gt;(20,29),(8,24),(18,0)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;27&lt;/td&gt;&lt;td&gt;35,36,(32,3)&lt;/td&gt;&lt;td&gt;(34,8),(29,10),(25,0)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;28&lt;/td&gt;&lt;td&gt;150,130,(50,113)&lt;/td&gt;&lt;td&gt;(8,56),(65,14),(149,128)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;29&lt;/td&gt;&lt;td&gt;180,120,(120,18)&lt;/td&gt;&lt;td&gt;-&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;30&lt;/td&gt;&lt;td&gt;200,200,(24,134)&lt;/td&gt;&lt;td&gt;(0,45),(89,21),(137,199)&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;h2&gt;テストデータ&lt;/h2&gt;&lt;textarea&gt;/*0*/ test("4,7,(0,3)", "(0,0),(3,0),(3,6)");
+&lt;h2&gt;サンプルデータ&lt;/h2&gt;&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;#&lt;/th&gt;&lt;th&gt;入力&lt;/th&gt;&lt;th&gt;期待&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;4,7,(0,3)&lt;/td&gt;&lt;td&gt;(0,0),(3,0),(3,6)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;4,6,(3,3)&lt;/td&gt;&lt;td&gt;(2,5),(0,4),(2,0)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;1,1,(0,0)&lt;/td&gt;&lt;td&gt;-&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;2,2,(0,0)&lt;/td&gt;&lt;td&gt;-&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td&gt;2,3,(0,0)&lt;/td&gt;&lt;td&gt;-&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;2,3,(0,1)&lt;/td&gt;&lt;td&gt;(0,0),(1,0),(1,2)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;6&lt;/td&gt;&lt;td&gt;2,3,(1,1)&lt;/td&gt;&lt;td&gt;(1,2),(0,2),(0,0)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;7&lt;/td&gt;&lt;td&gt;2,3,(1,2)&lt;/td&gt;&lt;td&gt;-&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;8&lt;/td&gt;&lt;td&gt;3,4,(1,2)&lt;/td&gt;&lt;td&gt;-&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;9&lt;/td&gt;&lt;td&gt;4,3,(2,2)&lt;/td&gt;&lt;td&gt;(1,2),(1,1),(3,1)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;10&lt;/td&gt;&lt;td&gt;7,7,(2,5)&lt;/td&gt;&lt;td&gt;(0,3),(2,1),(6,5)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;11&lt;/td&gt;&lt;td&gt;8,7,(1,1)&lt;/td&gt;&lt;td&gt;(3,0),(4,2),(0,4)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;12&lt;/td&gt;&lt;td&gt;9,7,(3,6)&lt;/td&gt;&lt;td&gt;(0,4),(2,1),(8,5)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;13&lt;/td&gt;&lt;td&gt;10,7,(6,6)&lt;/td&gt;&lt;td&gt;(3,6),(3,3),(9,3)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;14&lt;/td&gt;&lt;td&gt;10,11,(4,2)&lt;/td&gt;&lt;td&gt;(8,1),(9,5),(1,7)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;15&lt;/td&gt;&lt;td&gt;10,12,(0,3)&lt;/td&gt;&lt;td&gt;(3,0),(6,3),(0,9)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;16&lt;/td&gt;&lt;td&gt;10,13,(0,0)&lt;/td&gt;&lt;td&gt;-&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;17&lt;/td&gt;&lt;td&gt;10,14,(4,3)&lt;/td&gt;&lt;td&gt;(8,2),(9,6),(1,8)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;18&lt;/td&gt;&lt;td&gt;15,15,(2,1)&lt;/td&gt;&lt;td&gt;(5,0),(6,3),(0,5)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;19&lt;/td&gt;&lt;td&gt;16,17,(14,13)&lt;/td&gt;&lt;td&gt;(10,16),(7,12),(15,6)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;20&lt;/td&gt;&lt;td&gt;19,7,(18,0)&lt;/td&gt;&lt;td&gt;-&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;21&lt;/td&gt;&lt;td&gt;20,7,(1,4)&lt;/td&gt;&lt;td&gt;(0,1),(3,0),(5,6)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;22&lt;/td&gt;&lt;td&gt;25,11,(15,1)&lt;/td&gt;&lt;td&gt;(24,1),(24,10),(6,10)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;23&lt;/td&gt;&lt;td&gt;26,12,(12,8)&lt;/td&gt;&lt;td&gt;(4,8),(4,0),(20,0)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;24&lt;/td&gt;&lt;td&gt;27,13,(14,2)&lt;/td&gt;&lt;td&gt;(24,2),(24,12),(4,12)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;25&lt;/td&gt;&lt;td&gt;28,14,(6,6)&lt;/td&gt;&lt;td&gt;-&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;26&lt;/td&gt;&lt;td&gt;30,30,(25,17)&lt;/td&gt;&lt;td&gt;(20,29),(8,24),(18,0)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;27&lt;/td&gt;&lt;td&gt;35,36,(32,3)&lt;/td&gt;&lt;td&gt;(34,8),(29,10),(25,0)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;28&lt;/td&gt;&lt;td&gt;150,130,(50,113)&lt;/td&gt;&lt;td&gt;(8,56),(65,14),(149,128)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;29&lt;/td&gt;&lt;td&gt;180,120,(120,18)&lt;/td&gt;&lt;td&gt;-&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;30&lt;/td&gt;&lt;td&gt;200,200,(24,134)&lt;/td&gt;&lt;td&gt;(0,45),(89,21),(137,199)&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;h2&gt;テストデータ&lt;/h2&gt;&lt;h3&gt;C/C++/Java 用のテストデータ&lt;/h3&gt;&lt;textarea&gt;/*0*/ test("4,7,(0,3)", "(0,0),(3,0),(3,6)");
 /*1*/ test("4,6,(3,3)", "(2,5),(0,4),(2,0)");
 /*2*/ test("1,1,(0,0)", "-");
 /*3*/ test("2,2,(0,0)", "-");
@@ -93,14 +93,14 @@
 /*27*/ test("35,36,(32,3)", "(34,8),(29,10),(25,0)");
 /*28*/ test("150,130,(50,113)", "(8,56),(65,14),(149,128)");
 /*29*/ test("180,120,(120,18)", "-");
-/*30*/ test("200,200,(24,134)", "(0,45),(89,21),(137,199)");&lt;/textarea&gt;</content>
+/*30*/ test("200,200,(24,134)", "(0,45),(89,21),(137,199)");&lt;/textarea&gt;&lt;h3&gt;JSON 形式のテストデータ&lt;/h3&gt;&lt;a href="https://github.com/mtsmfm/mtsmfm.github.io/raw/2c9f20bd754a494926eda17ff7ecfdbb5db8b657/source/2018-07-07-doukaku-e25/doukaku.json" target="_blank"&gt;json&lt;/a&gt;</content>
   </entry>
   <entry>
     <title>オフラインリアルタイムどう書く E21 の問題 - ドキドキロシアンルーレット</title>
     <link rel="alternate" href="http://mtsmfm.github.io/2018/02/03/doukaku-e21.html"/>
     <id>http://mtsmfm.github.io/2018/02/03/doukaku-e21.html</id>
     <published>2018-02-03T07:00:00+00:00</published>
-    <updated>2018-07-07T07:11:49+00:00</updated>
+    <updated>2018-07-07T07:29:12+00:00</updated>
     <author>
       <name>mtsmfm</name>
     </author>
@@ -209,7 +209,7 @@
     <link rel="alternate" href="http://mtsmfm.github.io/2017/11/04/doukaku-e19.html"/>
     <id>http://mtsmfm.github.io/2017/11/04/doukaku-e19.html</id>
     <published>2017-11-04T07:00:00+00:00</published>
-    <updated>2018-07-07T07:11:49+00:00</updated>
+    <updated>2018-07-07T07:29:12+00:00</updated>
     <author>
       <name>mtsmfm</name>
     </author>
@@ -286,7 +286,7 @@ oooxo
     <link rel="alternate" href="http://mtsmfm.github.io/2017/09/15/rubykaigi.html"/>
     <id>http://mtsmfm.github.io/2017/09/15/rubykaigi.html</id>
     <published>2017-09-14T16:00:00+00:00</published>
-    <updated>2018-07-07T07:11:49+00:00</updated>
+    <updated>2018-07-07T07:29:12+00:00</updated>
     <author>
       <name>mtsmfm</name>
     </author>
@@ -336,7 +336,7 @@ oooxo
     <link rel="alternate" href="http://mtsmfm.github.io/2017/06/29/yaichi.html"/>
     <id>http://mtsmfm.github.io/2017/06/29/yaichi.html</id>
     <published>2017-06-28T16:00:00+00:00</published>
-    <updated>2018-07-07T07:11:49+00:00</updated>
+    <updated>2018-07-07T07:29:12+00:00</updated>
     <author>
       <name>mtsmfm</name>
     </author>
@@ -385,7 +385,7 @@ mruby での erb の使い方もわからなかったので、起動時の erb �
     <link rel="alternate" href="http://mtsmfm.github.io/2017/06/03/doukaku-e14.html"/>
     <id>http://mtsmfm.github.io/2017/06/03/doukaku-e14.html</id>
     <published>2017-06-03T07:00:00+00:00</published>
-    <updated>2018-07-07T07:11:49+00:00</updated>
+    <updated>2018-07-07T07:29:12+00:00</updated>
     <author>
       <name>mtsmfm</name>
     </author>
