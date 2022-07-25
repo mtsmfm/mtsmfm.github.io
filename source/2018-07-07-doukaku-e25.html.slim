@@ -1,5 +1,5 @@
 ---
-title: オフラインリアルタイムどう書く E25 の問題 - ビッグセブン
+title: オフラインリアルタイムどう書く E25 の問題 - ビッグ7
 date: 2018-07-07 16:00 JST
 tags:
 ---
@@ -48,7 +48,7 @@ markdown:
 
   ----------
 
-  実装ができた方は [Qiitaの記事](http://qiita.com/mtsmfm/items/b48952dee07784cce8f2) のコメント欄からリンクを張っていただくと見つけやすくて助かります。
+  実装ができた方は [Qiitaの記事](https://qiita.com/mtsmfm/items/9e06456b4330305d4ed0) のコメント欄からリンクを張っていただくと見つけやすくて助かります。
 
 ruby:
   json = JSON.parse(File.read(File.join(__dir__, "2018-07-07-doukaku-e25/doukaku.json")), symbolize_names: true)
@@ -71,4 +71,10 @@ table
 
 h2 テストデータ
 
+h3 C/C++/Java 用のテストデータ
+
 textarea= json.map.with_index {|data, i| %!/*#{i}*/ test("#{data[:input]}", "#{data[:expected]}");! }.join("\n")
+
+h3 JSON 形式のテストデータ
+
+= link_to 'json', 'https://github.com/mtsmfm/mtsmfm.github.io/raw/2c9f20bd754a494926eda17ff7ecfdbb5db8b657/source/2018-07-07-doukaku-e25/doukaku.json', target: '_blank'
