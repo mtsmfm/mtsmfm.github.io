@@ -17,24 +17,23 @@ SSD 全体をフォーマットして Win 7 をインストールしました。
 boot.conf を変更しました。</p>
 
 <h3>パーティションの設定</h3>
-<div class="highlight plaintext"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<div class="highlight"><pre class="highlight plaintext"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
 5
 6
-7</pre></td><td class="code"><pre>   Device Boot      Start         End      Blocks   Id  System
+7
+</pre></td><td class="rouge-code"><pre>   Device Boot      Start         End      Blocks   Id  System
    /dev/sda1            2048      206847      102400    7  HPFS/NTFS/exFAT
    /dev/sda2          206848   235685887   117739520    7  HPFS/NTFS/exFAT
    /dev/sda3   *   235685888   236709887      512000   83  Linux
    /dev/sda4       236709888   468860927   116075520    5  Extended
    /dev/sda5       236711936   245100543     4194304   82  Linux swap / Solaris
    /dev/sda6       245102592   468860927   111879168   83  Linux
-</pre></td></tr></tbody></table>
-</div>
-
+</pre></td></tr></tbody></table></code></pre></div>
 <h3>boot.conf</h3>
-<div class="highlight plaintext"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<div class="highlight"><pre class="highlight plaintext"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -47,7 +46,8 @@ boot.conf を変更しました。</p>
 11
 12
 13
-14</pre></td><td class="code"><pre>boot {
+14
+</pre></td><td class="rouge-code"><pre>boot {
         generate grub
         default "Funtoo Linux"
         timeout 3
@@ -61,9 +61,7 @@ boot.conf を変更しました。</p>
         type win7
         params root=/dev/sda1
 }
-</pre></td></tr></tbody></table>
-</div>
-
+</pre></td></tr></tbody></table></code></pre></div>
 <h2>funtoo で gdm が起動しない</h2>
 
 <p>Wi-Fi はとりあえずいいかと linux-firmware と networkmanager を入れていなかったのが原因でした。</p>

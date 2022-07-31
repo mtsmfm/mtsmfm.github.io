@@ -8,14 +8,15 @@
 <h2>例</h2>
 
 <p>架空の履歴書アプリに以下のステップがあります:</p>
-<div class="highlight plaintext"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<div class="highlight"><pre class="highlight plaintext"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
 5
 6
 7
-8</pre></td><td class="code"><pre>features/
+8
+</pre></td><td class="rouge-code"><pre>features/
 +--edit_work_experience.feature
 +--edit_languages.feature
 +--edit_education.feature
@@ -23,35 +24,31 @@
    +--edit_work_experience_steps.rb
    +--edit_languages_steps.rb
    +--edit_education_steps.rb
-</pre></td></tr></tbody></table>
-</div>
-
+</pre></td></tr></tbody></table></code></pre></div>
 <p><code>edit_work_experience.feature</code> に次のようなシナリオがあります:</p>
-<div class="highlight gherkin"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<div class="highlight"><pre class="highlight gherkin"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
-5</pre></td><td class="code"><pre><span class="kn">シナリオ</span><span class="p">:</span> 説明を追加する
+5
+</pre></td><td class="rouge-code"><pre><span class="kn">シナリオ</span><span class="p">:</span> 説明を追加する
   <span class="nf">前提</span> 履歴書があり、説明の編集ページを表示している
   <span class="nf">かつ</span> <span class="s">"説明"</span> に <span class="s">"Cucumber BDD tool"</span> と記入する
   <span class="nf">もし</span> <span class="s">"保存"</span> を押す
   <span class="nf">ならば</span> <span class="s">"説明"</span> に <span class="s">"Cucumber BDD tool"</span> と表示されていること
-</pre></td></tr></tbody></table>
-</div>
-
+</pre></td></tr></tbody></table></code></pre></div>
 <p><code>edit_work_experience_steps.rb</code> が次のように実装されています:</p>
-<div class="highlight ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<div class="highlight"><pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
-5</pre></td><td class="code"><pre><span class="err">前提</span> <span class="o">/</span><span class="err">履歴書があり、説明の編集ページを表示している</span><span class="o">/</span> <span class="k">do</span>
+5
+</pre></td><td class="rouge-code"><pre><span class="err">前提</span> <span class="o">/</span><span class="err">履歴書があり、説明の編集ページを表示している</span><span class="o">/</span> <span class="k">do</span>
   <span class="vi">@employee</span> <span class="o">=</span> <span class="no">Employee</span><span class="p">.</span><span class="nf">create!</span><span class="p">(</span><span class="ss">:name</span> <span class="o">=&gt;</span> <span class="s1">'Sally'</span><span class="p">)</span>
   <span class="vi">@employee</span><span class="p">.</span><span class="nf">create_cv</span>
   <span class="n">visits</span><span class="p">(</span><span class="s2">"/employees/</span><span class="si">#{</span><span class="vi">@employee</span><span class="p">.</span><span class="nf">id</span><span class="si">}</span><span class="s2">/descriptions/new"</span><span class="p">)</span>
 <span class="k">end</span>
-</pre></td></tr></tbody></table>
-</div>
-
+</pre></td></tr></tbody></table></code></pre></div>
 <h2>修正方法</h2>
 
 <ol>
@@ -77,4 +74,5 @@ var disqus_shortname = 'mtsmfmblog'; // required: replace example with your foru
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
   ga('create', 'UA-48013282-1', 'auto');
   ga('send', 'pageview');
-</script></html>
+</script>
+</html>

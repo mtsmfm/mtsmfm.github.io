@@ -15,7 +15,7 @@
 
 <h3>XO</h3>
 
-<p><img src="/images/2016/12/03/xo.svg" alt="操作X">  </p>
+<p><img src="/images/2016/12/03/xo.svg" alt="操作X"></p>
 <h2>ルール</h2>
 
 <h2>入力</h2>
@@ -32,91 +32,24 @@
 
 <h2>補足</h2>
 
-<p>実装ができた方は <a href="http://qiita.com/mtsmfm/items/8a78b895910a89e3012d">Qiitaの記事</a> のコメント欄からリンクを張っていただくと見つ...</p><a href="/2016/12/03/doukaku-e10.html">Read more</a></article><article><h2><a href="/2016/10/01/doukaku-e08.html">オフラインリアルタイムどう書く E08 の問題 - 白黒陣取りゲーム</a></h2><time>2016-10-01</time><p><a href="https://yhpg.doorkeeper.jp/events/51818">オフラインリアルタイムどう書く</a> E08 の問題です。</p>
+<p>実装ができた方は <a href="http://qiita.com/mtsmfm/items/8a78b895910a89e3012d">Qiitaの記事</a> のコメント欄からリンクを張っていただくと見つけや...</p><a href="/2016/12/03/doukaku-e10.html">Read more</a></article><article><h2><a href="/2016/10/01/doukaku-e08.html">オフラインリアルタイムどう書く E08 の問題 - 白黒陣取りゲーム</a></h2><time>2016-10-01</time><p><a href="https://yhpg.doorkeeper.jp/events/51818">オフラインリアルタイムどう書く</a> E08 の問題です。</p>
 
 <h2>問題の概要</h2>
 
 <p>18 × 18 マスの盤上に、以下の図のように白と黒のコマが置かれている。白陣営と黒陣営、各々の陣地の広さを求めよ。</p>
-<svg xmlns="http://www.w3.org/2000/svg" width="430" height="430" viewbox="-30 -30 460 460"><text x="0.0" y="-15" text-anchor="middle" dominant-baseline="central">a</text>
-<text x="-15" y="0.0" text-anchor="middle" dominant-baseline="central">1</text>
-<path stroke="black" d="M0,0.0L400,0.0"></path>
-<path stroke="black" d="M0.0,0L0.0,400"></path>
-<text x="22.22222222222222" y="-15" text-anchor="middle" dominant-baseline="central">b</text>
-<text x="-15" y="22.22222222222222" text-anchor="middle" dominant-baseline="central">2</text>
-<path stroke="black" d="M0,22.22222222222222L400,22.22222222222222"></path>
-<path stroke="black" d="M22.22222222222222,0L22.22222222222222,400"></path>
-<text x="44.44444444444444" y="-15" text-anchor="middle" dominant-baseline="central">c</text>
-<text x="-15" y="44.44444444444444" text-anchor="middle" dominant-baseline="central">3</text>
-<path stroke="black" d="M0,44.44444444444444L400,44.44444444444444"></path>
-<path stroke="black" d="M44.44444444444444,0L44.44444444444444,400"></path>
-<text x="66.66666666666666" y="-15" text-anchor="middle" dominant-baseline="central">d</text>
-<text x="-15" y="66.66666666666666" text-anchor="middle" dominant-baseline="central">4</text>
-<path stroke="black" d="M0,66.66666666666666L400,66.66666666666666"></path>
-<path stroke="black" d="M66.66666666666666,0L66.66666666666666,400"></path>
-<text x="88.88888888888889" y="-15" text-anchor="middle" dominant-baseline="central">e</text>
-<text x="-15" y="88.88888888888889" text-anchor="middle" dominant-baseline="central">5</text>
-<path stroke="black" d="M0,88.88888888888889L400,88.88888888888889"></path>
-<path stroke="black" d="M88.88888888888889,0L88.88888888888889,400"></path>
-<text x="111.11111111111111" y="-15" text-anchor="middle" dominant-baseline="central">f</text>
-<text x="-15" y="111.11111111111111" text-anchor="middle" dominant-baseline="central">6</text>
-<path stroke="black" d="M0,111.11111111111111L400,111.11111111111111"></path>
-<path stroke="black" d="M111.11111111111111,0L111.11111111111111,400"></path>
-<text x="133.33333333333331" y="-15" text-anchor="middle" dominant-baseline="central">g</text>
-<text x="-15" y="133.33333333333331" text-anchor="middle" dominant-baseline="central">7</text>
-<path stroke="black" d="M0,133.33333333333331L400,133.33333333333331"></path>
-<path stroke="black" d="M133.33333333333331,0L133.33333333333331,400"></path>
-<text x="155.55555555555554" y="-15" text-anchor="middle" dominant-baseline="central">h</text>
-<text x="-15" y="155.55555555555554" text-anchor="middle" dominant-baseline="central">8</text>
-<path stroke="black" d="M0,155.55555555555554L400,155.55555555555554"></path>
-<path stroke="black" d="M155.55555555555554,0L155.55555555555554,400"></path>
-<text x="177.77777777777777" y="-15" text-anchor="middle" dominant-baseline="central">i</text>
-<text x="-15" y="177.77777777777777" text-anchor="middle" dominant-baseline="central">9</text>
-<path stroke="black" d="M0,177.77777777777777L400,177.77777777777777"></path>
-<path stroke="black" d="M177.77777777777777,0L177.77777777777777,400"></path>
-<text x="200.0" y="-15" text-anchor="middle" dominant-baseline="central">j</text>
-<text x="-15" y="200.0" text-anchor="middle" dominant-baseline="central">10</text>
-<path stroke="black" d="M0,200.0L400,200.0"></path>
-<path stroke="black" d="M200.0,0L200.0,400"></path>
-<text x="222.22222222222223" y="-15" text-anchor="middle" dominant-baseline="central">k</text>
-<text x="-15" y="222.22222222222223" text-anchor="middle" dominant-baseline="central">11</text>
-<path stroke="black" d="M0,222.22222222222223L400,222.22222222222223"></path>
-<path stroke="black" d="M222.22222222222223,0L222.22222222222223,400"></path>
-<text x="244.44444444444443" y="-15" text-anchor="middle" dominant-baseline="central">l</text>
-<text x="-15" y="244.44444444444443" text-anchor="middle" dominant-baseline="central">12</text>
-<path stroke="black" d="M0,244.44444444444443L400,244.44444444444443"></path>
-<path stroke="black" d="M244.44444444444443,0L244.44444444444443,400"></path>
-<text x="266.66666666666663" y="-15" text-anchor="middle" dominant-baseline="central">m</text>
-<text x="-15" y="266.66666666666663" text-anchor="middle" dominant-baseline="central">13</text>
-<path stroke="black" d="M0,266.66666666666663L400,266.66666666666663"></path>
-<path stroke="black" d="M266.66666666666663,0L266.66666666666663,400"></path>
-<text x="288.88888888888886" y="-15" text-anchor="middle" dominant-baseline="central">n</text>
-<text x="-15" y="288.88888888888886" text-anchor="middle" dominant-baseline="central">14</text>
-<path stroke="black" d="M0,288.88888888888886L400,288.88888888888886"></path>
-<path stroke="black" d="M288.88888888888886,0L288.88888888888886,400"></path>
-<text x="311.1111111111111" y="-15" text-anchor="middle" dominant-baseline="central">o</text>
-<text x="-15" y="311.1111111111111" text-anchor="middle" dominant-baseline="central">15</text>
-<path stroke="black" d="M0,311.1111111111111L400,311.1111111111111"></path>
-<path stroke="black" d="M311.1111111111111,0L311.1111111111111,400"></path>
-<text x="333.3333333333333" y="-15" text-anchor="middle" dominant-baseline="central">p</text>
-<text x="-15" y="333.3333333333333" text-anchor="middle" dominant-baseline="central">16</text>
-<path stroke="black" d="M0,333.3333333333333L400,333.3333333333333"></path>
-<path stroke="black" d="M333.3333333333333,0L333.3333333333333,400"></path>
-<text x="355.55555555555554" y="-15" text-anchor="middle" dominant-baseline="central">q</text>
-<text x="-15" y="355.55555555555554" text-anchor="middle" dominant-baseline="central">17</text>
-<path stroke="black" d="M0,355.55555555555554L400,355.55555555555554"></path>
-<path stroke="black" d="M355.55555555555554,0L355.55555555555554,400"></path>
-<text x="377.77777777777777" y="-15" text-anchor="middle" dominant-baseline="central">r</text>
-<text x="-15" y="377.77777777777777" text-anchor="middle" dominant-baseline="central">18</text>
-<path stroke="black" d="M0,377.77777777777777L400,377.77777777777777"></path>
-<path stroke="black" d="M377.77777777777777,0L377.77777777777777,400"></path>
-<text x="400.0" y="-15" text-anchor="middle" dominant-baseline="central">s</text>
-<text x="-15" y="400.0" text-anchor="middle" dominant-baseline="central">19</text>
-<path stroke="black" d="M0,400.0L400,400.0"></path>
-<path stroke="black" d="M400.0,0L400.0,400"></path>
-<circle cx="66.66666666666666" cy="44.44444444444444" r="5" stroke="black" fill="white"></circle>
- &lt;!-- 3, 2 --&gt;
-<circle cx="66.66666666666666" cy="66.66666666666666" r="5" stroke="black" fill="white"></circle>
- &lt;!-- 3, 3 -...</svg><a href="/2016/10/01/doukaku-e08.html">Read more</a></article><article><h2><a href="/2016/08/06/doukaku-e06.html">オフラインリアルタイムどう書く E06 の問題 - 目指せホゲモンマスター</a></h2><time>2016-08-06</time><p><a href="https://yhpg.doorkeeper.jp/events/48610">オフラインリアルタイムどう書く</a> E06 の問題です。</p>
+<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MzAiIGhlaWdodD0iNDMwIiB2aWV3Qm94PSItMzAgLTMwIDQ2MCA0NjAiPgogIDx0ZXh0IHg9IjAuMCIgeT0iLTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCI+CiAgYQo8L3RleHQ+Cgo8dGV4dCB4PSItMTUiIHk9IjAuMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiPgogIDEKPC90ZXh0PgoKPHBhdGggc3Ryb2tlPSJibGFjayIgZD0iTTAsMC4wTDQwMCwwLjAiPgogIAo8L3BhdGg+Cgo8cGF0aCBzdHJva2U9ImJsYWNrIiBkPSJNMC4wLDBMMC4wLDQwMCI+CiAgCjwvcGF0aD4KCjx0ZXh0IHg9IjIyLjIyMjIyMjIyMjIyMjIyIiB5PSItMTUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIj4KICBiCjwvdGV4dD4KCjx0ZXh0IHg9Ii0xNSIgeT0iMjIuMjIyMjIyMjIyMjIyMjIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIj4KICAyCjwvdGV4dD4KCjxwYXRoIHN0cm9rZT0iYmxhY2siIGQ9Ik0wLDIyLjIyMjIyMjIyMjIyMjIyTDQwMCwyMi4yMjIyMjIyMjIyMjIyMiI+CiAgCjwvcGF0aD4KCjxwYXRoIHN0cm9rZT0iYmxhY2siIGQ9Ik0yMi4yMjIyMjIyMjIyMjIyMiwwTDIyLjIyMjIyMjIyMjIyMjIyLDQwMCI+CiAgCjwvcGF0aD4KCjx0ZXh0IHg9IjQ0LjQ0NDQ0NDQ0NDQ0NDQ0IiB5PSItMTUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIj4KICBjCjwvdGV4dD4KCjx0ZXh0IHg9Ii0xNSIgeT0iNDQuNDQ0NDQ0NDQ0NDQ0NDQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIj4KICAzCjwvdGV4dD4KCjxwYXRoIHN0cm9rZT0iYmxhY2siIGQ9Ik0wLDQ0LjQ0NDQ0NDQ0NDQ0NDQ0TDQwMCw0NC40NDQ0NDQ0NDQ0NDQ0NCI+CiAgCjwvcGF0aD4KCjxwYXRoIHN0cm9rZT0iYmxhY2siIGQ9Ik00NC40NDQ0NDQ0NDQ0NDQ0NCwwTDQ0LjQ0NDQ0NDQ0NDQ0NDQ0LDQwMCI+CiAgCjwvcGF0aD4KCjx0ZXh0IHg9IjY2LjY2NjY2NjY2NjY2NjY2IiB5PSItMTUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIj4KICBkCjwvdGV4dD4KCjx0ZXh0IHg9Ii0xNSIgeT0iNjYuNjY2NjY2NjY2NjY2NjYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIj4KICA0CjwvdGV4dD4KCjxwYXRoIHN0cm9rZT0iYmxhY2siIGQ9Ik0wLDY2LjY2NjY2NjY2NjY2NjY2TDQwMCw2Ni42NjY2NjY2NjY2NjY2NiI+CiAgCjwvcGF0aD4KCjxwYXRoIHN0cm9rZT0iYmxhY2siIGQ9Ik02Ni42NjY2NjY2NjY2NjY2NiwwTDY2LjY2NjY2NjY2NjY2NjY2LDQwMCI+CiAgCjwvcGF0aD4KCjx0ZXh0IHg9Ijg4Ljg4ODg4ODg4ODg4ODg5IiB5PSItMTUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIj4KICBlCjwvdGV4dD4KCjx0ZXh0IHg9Ii0xNSIgeT0iODguODg4ODg4ODg4ODg4ODkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIj4KICA1CjwvdGV4dD4KCjxwYXRoIHN0cm9rZT0iYmxhY2siIGQ9Ik0wLDg4Ljg4ODg4ODg4ODg4ODg5TDQwMCw4OC44ODg4ODg4ODg4ODg4OSI+CiAgCjwvcGF0aD4KCjxwYXRoIHN0cm9rZT0iYmxhY2siIGQ9Ik04OC44ODg4ODg4ODg4ODg4OSwwTDg4Ljg4ODg4ODg4ODg4ODg5LDQwMCI+CiAgCjwvcGF0aD4KCjx0ZXh0IHg9IjExMS4xMTExMTExMTExMTExMSIgeT0iLTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCI+CiAgZgo8L3RleHQ+Cgo8dGV4dCB4PSItMTUiIHk9IjExMS4xMTExMTExMTExMTExMSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiPgogIDYKPC90ZXh0PgoKPHBhdGggc3Ryb2tlPSJibGFjayIgZD0iTTAsMTExLjExMTExMTExMTExMTExTDQwMCwxMTEuMTExMTExMTExMTExMTEiPgogIAo8L3BhdGg+Cgo8cGF0aCBzdHJva2U9ImJsYWNrIiBkPSJNMTExLjExMTExMTExMTExMTExLDBMMTExLjExMTExMTExMTExMTExLDQwMCI+CiAgCjwvcGF0aD4KCjx0ZXh0IHg9IjEzMy4zMzMzMzMzMzMzMzMzMSIgeT0iLTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCI+CiAgZwo8L3RleHQ+Cgo8dGV4dCB4PSItMTUiIHk9IjEzMy4zMzMzMzMzMzMzMzMzMSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiPgogIDcKPC90ZXh0PgoKPHBhdGggc3Ryb2tlPSJibGFjayIgZD0iTTAsMTMzLjMzMzMzMzMzMzMzMzMxTDQwMCwxMzMuMzMzMzMzMzMzMzMzMzEiPgogIAo8L3BhdGg+Cgo8cGF0aCBzdHJva2U9ImJsYWNrIiBkPSJNMTMzLjMzMzMzMzMzMzMzMzMxLDBMMTMzLjMzMzMzMzMzMzMzMzMxLDQwMCI+CiAgCjwvcGF0aD4KCjx0ZXh0IHg9IjE1NS41NTU1NTU1NTU1NTU1NCIgeT0iLTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCI+CiAgaAo8L3RleHQ+Cgo8dGV4dCB4PSItMTUiIHk9IjE1NS41NTU1NTU1NTU1NTU1NCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiPgogIDgKPC90ZXh0PgoKPHBhdGggc3Ryb2tlPSJibGFjayIgZD0iTTAsMTU1LjU1NTU1NTU1NTU1NTU0TDQwMCwxNTUuNTU1NTU1NTU1NTU1NTQiPgogIAo8L3BhdGg+Cgo8cGF0aCBzdHJva2U9ImJsYWNrIiBkPSJNMTU1LjU1NTU1NTU1NTU1NTU0LDBMMTU1LjU1NTU1NTU1NTU1NTU0LDQwMCI+CiAgCjwvcGF0aD4KCjx0ZXh0IHg9IjE3Ny43Nzc3Nzc3Nzc3Nzc3NyIgeT0iLTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCI+CiAgaQo8L3RleHQ+Cgo8dGV4dCB4PSItMTUiIHk9IjE3Ny43Nzc3Nzc3Nzc3Nzc3NyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiPgogIDkKPC90ZXh0PgoKPHBhdGggc3Ryb2tlPSJibGFjayIgZD0iTTAsMTc3Ljc3Nzc3Nzc3Nzc3Nzc3TDQwMCwxNzcuNzc3Nzc3Nzc3Nzc3NzciPgogIAo8L3BhdGg+Cgo8cGF0aCBzdHJva2U9ImJsYWNrIiBkPSJNMTc3Ljc3Nzc3Nzc3Nzc3Nzc3LDBMMTc3Ljc3Nzc3Nzc3Nzc3Nzc3LDQwMCI+CiAgCjwvcGF0aD4KCjx0ZXh0IHg9IjIwMC4wIiB5PSItMTUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIj4KICBqCjwvdGV4dD4KCjx0ZXh0IHg9Ii0xNSIgeT0iMjAwLjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIj4KICAxMAo8L3RleHQ+Cgo8cGF0aCBzdHJva2U9ImJsYWNrIiBkPSJNMCwyMDAuMEw0MDAsMjAwLjAiPgogIAo8L3BhdGg+Cgo8cGF0aCBzdHJva2U9ImJsYWNrIiBkPSJNMjAwLjAsMEwyMDAuMCw0MDAiPgogIAo8L3BhdGg+Cgo8dGV4dCB4PSIyMjIuMjIyMjIyMjIyMjIyMjMiIHk9Ii0xNSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiPgogIGsKPC90ZXh0PgoKPHRleHQgeD0iLTE1IiB5PSIyMjIuMjIyMjIyMjIyMjIyMjMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIj4KICAxMQo8L3RleHQ+Cgo8cGF0aCBzdHJva2U9ImJsYWNrIiBkPSJNMCwyMjIuMjIyMjIyMjIyMjIyMjNMNDAwLDIyMi4yMjIyMjIyMjIyMjIyMyI+CiAgCjwvcGF0aD4KCjxwYXRoIHN0cm9rZT0iYmxhY2siIGQ9Ik0yMjIuMjIyMjIyMjIyMjIyMjMsMEwyMjIuMjIyMjIyMjIyMjIyMjMsNDAwIj4KICAKPC9wYXRoPgoKPHRleHQgeD0iMjQ0LjQ0NDQ0NDQ0NDQ0NDQzIiB5PSItMTUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIj4KICBsCjwvdGV4dD4KCjx0ZXh0IHg9Ii0xNSIgeT0iMjQ0LjQ0NDQ0NDQ0NDQ0NDQzIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCI+CiAgMTIKPC90ZXh0PgoKPHBhdGggc3Ryb2tlPSJibGFjayIgZD0iTTAsMjQ0LjQ0NDQ0NDQ0NDQ0NDQzTDQwMCwyNDQuNDQ0NDQ0NDQ0NDQ0NDMiPgogIAo8L3BhdGg+Cgo8cGF0aCBzdHJva2U9ImJsYWNrIiBkPSJNMjQ0LjQ0NDQ0NDQ0NDQ0NDQzLDBMMjQ0LjQ0NDQ0NDQ0NDQ0NDQzLDQwMCI+CiAgCjwvcGF0aD4KCjx0ZXh0IHg9IjI2Ni42NjY2NjY2NjY2NjY2MyIgeT0iLTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCI+CiAgbQo8L3RleHQ+Cgo8dGV4dCB4PSItMTUiIHk9IjI2Ni42NjY2NjY2NjY2NjY2MyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiPgogIDEzCjwvdGV4dD4KCjxwYXRoIHN0cm9rZT0iYmxhY2siIGQ9Ik0wLDI2Ni42NjY2NjY2NjY2NjY2M0w0MDAsMjY2LjY2NjY2NjY2NjY2NjYzIj4KICAKPC9wYXRoPgoKPHBhdGggc3Ryb2tlPSJibGFjayIgZD0iTTI2Ni42NjY2NjY2NjY2NjY2MywwTDI2Ni42NjY2NjY2NjY2NjY2Myw0MDAiPgogIAo8L3BhdGg+Cgo8dGV4dCB4PSIyODguODg4ODg4ODg4ODg4ODYiIHk9Ii0xNSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiPgogIG4KPC90ZXh0PgoKPHRleHQgeD0iLTE1IiB5PSIyODguODg4ODg4ODg4ODg4ODYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIj4KICAxNAo8L3RleHQ+Cgo8cGF0aCBzdHJva2U9ImJsYWNrIiBkPSJNMCwyODguODg4ODg4ODg4ODg4ODZMNDAwLDI4OC44ODg4ODg4ODg4ODg4NiI+CiAgCjwvcGF0aD4KCjxwYXRoIHN0cm9rZT0iYmxhY2siIGQ9Ik0yODguODg4ODg4ODg4ODg4ODYsMEwyODguODg4ODg4ODg4ODg4ODYsNDAwIj4KICAKPC9wYXRoPgoKPHRleHQgeD0iMzExLjExMTExMTExMTExMTEiIHk9Ii0xNSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiPgogIG8KPC90ZXh0PgoKPHRleHQgeD0iLTE1IiB5PSIzMTEuMTExMTExMTExMTExMSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiPgogIDE1CjwvdGV4dD4KCjxwYXRoIHN0cm9rZT0iYmxhY2siIGQ9Ik0wLDMxMS4xMTExMTExMTExMTExTDQwMCwzMTEuMTExMTExMTExMTExMSI+CiAgCjwvcGF0aD4KCjxwYXRoIHN0cm9rZT0iYmxhY2siIGQ9Ik0zMTEuMTExMTExMTExMTExMSwwTDMxMS4xMTExMTExMTExMTExLDQwMCI+CiAgCjwvcGF0aD4KCjx0ZXh0IHg9IjMzMy4zMzMzMzMzMzMzMzMzIiB5PSItMTUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIj4KICBwCjwvdGV4dD4KCjx0ZXh0IHg9Ii0xNSIgeT0iMzMzLjMzMzMzMzMzMzMzMzMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIj4KICAxNgo8L3RleHQ+Cgo8cGF0aCBzdHJva2U9ImJsYWNrIiBkPSJNMCwzMzMuMzMzMzMzMzMzMzMzM0w0MDAsMzMzLjMzMzMzMzMzMzMzMzMiPgogIAo8L3BhdGg+Cgo8cGF0aCBzdHJva2U9ImJsYWNrIiBkPSJNMzMzLjMzMzMzMzMzMzMzMzMsMEwzMzMuMzMzMzMzMzMzMzMzMyw0MDAiPgogIAo8L3BhdGg+Cgo8dGV4dCB4PSIzNTUuNTU1NTU1NTU1NTU1NTQiIHk9Ii0xNSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiPgogIHEKPC90ZXh0PgoKPHRleHQgeD0iLTE1IiB5PSIzNTUuNTU1NTU1NTU1NTU1NTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIj4KICAxNwo8L3RleHQ+Cgo8cGF0aCBzdHJva2U9ImJsYWNrIiBkPSJNMCwzNTUuNTU1NTU1NTU1NTU1NTRMNDAwLDM1NS41NTU1NTU1NTU1NTU1NCI+CiAgCjwvcGF0aD4KCjxwYXRoIHN0cm9rZT0iYmxhY2siIGQ9Ik0zNTUuNTU1NTU1NTU1NTU1NTQsMEwzNTUuNTU1NTU1NTU1NTU1NTQsNDAwIj4KICAKPC9wYXRoPgoKPHRleHQgeD0iMzc3Ljc3Nzc3Nzc3Nzc3Nzc3IiB5PSItMTUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIj4KICByCjwvdGV4dD4KCjx0ZXh0IHg9Ii0xNSIgeT0iMzc3Ljc3Nzc3Nzc3Nzc3Nzc3IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCI+CiAgMTgKPC90ZXh0PgoKPHBhdGggc3Ryb2tlPSJibGFjayIgZD0iTTAsMzc3Ljc3Nzc3Nzc3Nzc3Nzc3TDQwMCwzNzcuNzc3Nzc3Nzc3Nzc3NzciPgogIAo8L3BhdGg+Cgo8cGF0aCBzdHJva2U9ImJsYWNrIiBkPSJNMzc3Ljc3Nzc3Nzc3Nzc3Nzc3LDBMMzc3Ljc3Nzc3Nzc3Nzc3Nzc3LDQwMCI+CiAgCjwvcGF0aD4KCjx0ZXh0IHg9IjQwMC4wIiB5PSItMTUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIj4KICBzCjwvdGV4dD4KCjx0ZXh0IHg9Ii0xNSIgeT0iNDAwLjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIj4KICAxOQo8L3RleHQ+Cgo8cGF0aCBzdHJva2U9ImJsYWNrIiBkPSJNMCw0MDAuMEw0MDAsNDAwLjAiPgogIAo8L3BhdGg+Cgo8cGF0aCBzdHJva2U9ImJsYWNrIiBkPSJNNDAwLjAsMEw0MDAuMCw0MDAiPgogIAo8L3BhdGg+Cgo8Y2lyY2xlIGN4PSI2Ni42NjY2NjY2NjY2NjY2NiIgY3k9IjQ0LjQ0NDQ0NDQ0NDQ0NDQ0IiByPSI1IiBzdHJva2U9ImJsYWNrIiBmaWxsPSJ3aGl0ZSI+CiAgCjwvY2lyY2xlPgoKIDwhLS0gMywgMiAtLT4KPGNpcmNsZSBjeD0iNjYuNjY2NjY2NjY2NjY2NjYiIGN5PSI2Ni42NjY2NjY2NjY2NjY2NiIgcj0iNSIgc3Ryb2tlPSJibGFjayIgZmlsbD0id2hpdGUiPgogIAo8L2NpcmNsZT4KCiA8IS0tIDMsIDMgLS0+CjxjaXJjbGUgY3g9Ijg4Ljg4ODg4ODg4ODg4ODg5IiBjeT0iNDQuNDQ0NDQ0NDQ0NDQ0NDQiIHI9IjUiIHN0cm9rZT0iYmxhY2siIGZpbGw9IndoaXRlIj4KICAKPC9jaXJjbGU+CgogPCEtLSA0LCAyIC0tPgo8Y2lyY2xlIGN4PSI4OC44ODg4ODg4ODg4ODg4OSIgY3k9IjY2LjY2NjY2NjY2NjY2NjY2IiByPSI1IiBzdHJva2U9ImJsYWNrIiBmaWxsPSJ3aGl0ZSI+CiAgCjwvY2lyY2xlPgoKIDwhLS0gNCwgMyAtLT4KPGNpcmNsZSBjeD0iNjYuNjY2NjY2NjY2NjY2NjYiIGN5PSIxNzcuNzc3Nzc3Nzc3Nzc3NzciIHI9IjUiIHN0cm9rZT0iYmxhY2siIGZpbGw9IndoaXRlIj4KICAKPC9jaXJjbGU+CgogPCEtLSAzLCA4IC0tPgo8Y2lyY2xlIGN4PSIxNTUuNTU1NTU1NTU1NTU1NTQiIGN5PSIxMzMuMzMzMzMzMzMzMzMzMzEiIHI9IjUiIHN0cm9rZT0iYmxhY2siIGZpbGw9IndoaXRlIj4KICAKPC9jaXJjbGU+CgogPCEtLSA3LCA2IC0tPgo8Y2lyY2xlIGN4PSIxNTUuNTU1NTU1NTU1NTU1NTQiIGN5PSIxNzcuNzc3Nzc3Nzc3Nzc3NzciIHI9IjUiIHN0cm9rZT0iYmxhY2siIGZpbGw9IndoaXRlIj4KICAKPC9jaXJjbGU+CgogPCEtLSA3LCA4IC0tPgo8Y2lyY2xlIGN4PSIyMDAuMCIgY3k9IjQ0LjQ0NDQ0NDQ0NDQ0NDQ0IiByPSI1IiBzdHJva2U9ImJsYWNrIiBmaWxsPSJ3aGl0ZSI+CiAgCjwvY2lyY2xlPgoKIDwhLS0gOSwgMiAtLT4KPGNpcmNsZSBjeD0iMjAwLjAiIGN5PSI2Ni42NjY2NjY2NjY2NjY2NiIgcj0iNSIgc3Ryb2tlPSJibGFjayIgZmlsbD0id2hpdGUiPgogIAo8L2NpcmNsZT4KCiA8IS0tIDksIDMgLS0+CjxjaXJjbGUgY3g9IjIwMC4wIiBjeT0iMTMzLjMzMzMzMzMzMzMzMzMxIiByPSI1IiBzdHJva2U9ImJsYWNrIiBmaWxsPSJ3aGl0ZSI+CiAgCjwvY2lyY2xlPgoKIDwhLS0gOSwgNiAtLT4KPGNpcmNsZSBjeD0iMjAwLjAiIGN5PSIxNzcuNzc3Nzc3Nzc3Nzc3NzciIHI9IjUiIHN0cm9rZT0iYmxhY2siIGZpbGw9IndoaXRlIj4KICAKPC9jaXJjbGU+CgogPCEtLSA5LCA4IC0tPgo8Y2lyY2xlIGN4PSIxMTEuMTExMTExMTExMTExMTEiIGN5PSI2Ni42NjY2NjY2NjY2NjY2NiIgcj0iNSIgc3Ryb2tlPSJibGFjayIgZmlsbD0iYmxhY2siPgogIAo8L2NpcmNsZT4KCiA8IS0tIDUsIDMgLS0+CjxjaXJjbGUgY3g9IjExMS4xMTExMTExMTExMTExMSIgY3k9IjExMS4xMTExMTExMTExMTExMSIgcj0iNSIgc3Ryb2tlPSJibGFjayIgZmlsbD0iYmxhY2siPgogIAo8L2NpcmNsZT4KCiA8IS0tIDUsIDUgLS0+CjxjaXJjbGUgY3g9IjEzMy4zMzMzMzMzMzMzMzMzMSIgY3k9IjY2LjY2NjY2NjY2NjY2NjY2IiByPSI1IiBzdHJva2U9ImJsYWNrIiBmaWxsPSJibGFjayI+CiAgCjwvY2lyY2xlPgoKIDwhLS0gNiwgMyAtLT4KPGNpcmNsZSBjeD0iMTMzLjMzMzMzMzMzMzMzMzMxIiBjeT0iODguODg4ODg4ODg4ODg4ODkiIHI9IjUiIHN0cm9rZT0iYmxhY2siIGZpbGw9ImJsYWNrIj4KICAKPC9jaXJjbGU+CgogPCEtLSA2LCA0IC0tPgo8Y2lyY2xlIGN4PSIxMzMuMzMzMzMzMzMzMzMzMzEiIGN5PSIxMTEuMTExMTExMTExMTExMTEiIHI9IjUiIHN0cm9rZT0iYmxhY2siIGZpbGw9ImJsYWNrIj4KICAKPC9jaXJjbGU+CgogPCEtLSA2LCA1IC0tPgo8Y2lyY2xlIGN4PSIxNTUuNTU1NTU1NTU1NTU1NTQiIGN5PSI4OC44ODg4ODg4ODg4ODg4OSIgcj0iNSIgc3Ryb2tlPSJibGFjayIgZmlsbD0iYmxhY2siPgogIAo8L2NpcmNsZT4KCiA8IS0tIDcsIDQgLS0+CjxjaXJjbGUgY3g9IjE1NS41NTU1NTU1NTU1NTU1NCIgY3k9IjExMS4xMTExMTExMTExMTExMSIgcj0iNSIgc3Ryb2tlPSJibGFjayIgZmlsbD0iYmxhY2siPgogIAo8L2NpcmNsZT4KCiA8IS0tIDcsIDUgLS0+CjxyZWN0IHg9IjY2LjY2NjY2NjY2NjY2NjY2IiB5PSI0NC40NDQ0NDQ0NDQ0NDQ0NCIgd2lkdGg9IjIyLjIyMjIyMjIyMjIyMjIyIiBoZWlnaHQ9IjIyLjIyMjIyMjIyMjIyMjIyIiBmaWxsPSJ3aGl0ZSIgZmlsbC1vcGFjaXR5PSIwLjk1Ij4KICAKPC9yZWN0PgoKPHJlY3QgeD0iMTU1LjU1NTU1NTU1NTU1NTU0IiB5PSIxMzMuMzMzMzMzMzMzMzMzMzEiIHdpZHRoPSIyMi4yMjIyMjIyMjIyMjIyMiIgaGVpZ2h0PSIyMi4yMjIyMjIyMjIyMjIyMiIgZmlsbD0id2hpdGUiIGZpbGwtb3BhY2l0eT0iMC45NSI+CiAgCjwvcmVjdD4KCjxyZWN0IHg9IjE3Ny43Nzc3Nzc3Nzc3Nzc3NyIgeT0iMTMzLjMzMzMzMzMzMzMzMzMxIiB3aWR0aD0iMjIuMjIyMjIyMjIyMjIyMjIiIGhlaWdodD0iMjIuMjIyMjIyMjIyMjIyMjIiIGZpbGw9IndoaXRlIiBmaWxsLW9wYWNpdHk9IjAuOTUiPgogIAo8L3JlY3Q+Cgo8cmVjdCB4PSIxNTUuNTU1NTU1NTU1NTU1NTQiIHk9IjE1NS41NTU1NTU1NTU1NTU1NCIgd2lkdGg9IjIyLjIyMjIyMjIyMjIyMjIyIiBoZWlnaHQ9IjIyLjIyMjIyMjIyMjIyMjIyIiBmaWxsPSJ3aGl0ZSIgZmlsbC1vcGFjaXR5PSIwLjk1Ij4KICAKPC9yZWN0PgoKPHJlY3QgeD0iMTc3Ljc3Nzc3Nzc3Nzc3Nzc3IiB5PSIxNTUuNTU1NTU1NTU1NTU1NTQiIHdpZHRoPSIyMi4yMjIyMjIyMjIyMjIyMiIgaGVpZ2h0PSIyMi4yMjIyMjIyMjIyMjIyMiIgZmlsbD0id2hpdGUiIGZpbGwtb3BhY2l0eT0iMC45NSI+CiAgCjwvcmVjdD4KCjxyZWN0IHg9IjExMS4xMTExMTExMTExMTExMSIgeT0iNjYuNjY2NjY2NjY2NjY2NjYiIHdpZHRoPSIyMi4yMjIyMjIyMjIyMjIyMiIgaGVpZ2h0PSIyMi4yMjIyMjIyMjIyMjIyMiIgZmlsbD0iYmxhY2siIGZpbGwtb3BhY2l0eT0iMC45NSI+CiAgCjwvcmVjdD4KCjxyZWN0IHg9IjExMS4xMTExMTExMTExMTExMSIgeT0iODguODg4ODg4ODg4ODg4ODkiIHdpZHRoPSIyMi4yMjIyMjIyMjIyMjIyMiIgaGVpZ2h0PSIyMi4yMjIyMjIyMjIyMjIyMiIgZmlsbD0iYmxhY2siIGZpbGwtb3BhY2l0eT0iMC45NSI+CiAgCjwvcmVjdD4KCjxyZWN0IHg9IjEzMy4zMzMzMzMzMzMzMzMzMSIgeT0iODguODg4ODg4ODg4ODg4ODkiIHdpZHRoPSIyMi4yMjIyMjIyMjIyMjIyMiIgaGVpZ2h0PSIyMi4yMjIyMjIyMjIyMjIyMiIgZmlsbD0iYmxhY2siIGZpbGwtb3BhY2l0eT0iMC45NSI+CiAgCjwvcmVjdD4KCjwvc3ZnPgo="><h2>ルール</h2>
+
+<ol>
+<li>各陣営のコマを結んで作った長方形が陣地になる。</li>
+<li>長方形の中に相手のコマがあると陣地にならない。</li>
+<li>コマはマス目通りに線で結ぶ。つまり、斜めには結ばない。</li>
+</ol>
+
+<h2>入力</h2>
+
+<p><code>d3d4e3e4d9h7h9j3j4j7j9,f4f6g4g5g6h5h6</code> のような形式。</p>
+
+<p><code>&lt;白のコマの配置&gt;,&lt;黒のコマの配置...</code></p><a href="/2016/10/01/doukaku-e08.html">Read more</a></article><article><h2><a href="/2016/08/06/doukaku-e06.html">オフラインリアルタイムどう書く E06 の問題 - 目指せホゲモンマスター</a></h2><time>2016-08-06</time><p><a href="https://yhpg.doorkeeper.jp/events/48610">オフラインリアルタイムどう書く</a> E06 の問題です。</p>
 
 <h2>問題の概要</h2>
 
@@ -152,42 +85,10 @@
 <h2>問題</h2>
 
 <p>次の図は山を上から見たところである。</p>
-<svg xmlns="http://www.w3.org/2000/svg" width="300" height="345.0" viewbox="0 0 300 300"><circle cx="150" cy="150" r="20" stroke="black" fill="none"></circle><text x="150" y="150" text-anchor="middle" dominant-baseline="central">頂上</text><path stroke="black" d="M250.0,150.0L170.0,150.0"></path>
-<text x="260.0" y="150.0" text-anchor="middle" dominant-baseline="central">A</text>
-<circle cx="260.0" cy="150.0" r="10" stroke="black" fill="none"></circle>
-<text x="270.1043392264673" y="100.25115379253833" text-anchor="middle" dominant-baseline="central" font-size="0.8rem">1</text>
-<path stroke="black" d="M220.71067811865476,79.28932188134526L164.14213562373095,135.85786437626905"></path>
-<text x="227.78174593052023" y="72.21825406947978" text-anchor="middle" dominant-baseline="central">B</text>
-<circle cx="227.78174593052023" cy="72.21825406947978" r="10" stroke="black" fill="none"></circle>
-<text x="199.74884620746167" y="29.895660773532725" text-anchor="middle" dominant-baseline="central" font-size="0.8rem">2</text>
-<path stroke="black" d="M150.0,50.0L150.0,130.0"></path>
-<text x="150.0" y="40.0" text-anchor="middle" dominant-baseline="central">C</text>
-<circle cx="150.0" cy="40.0" r="10" stroke="black" fill="none"></circle>
-<text x="100.25115379253833" y="29.895660773532725" text-anchor="middle" dominant-baseline="central" font-size="0.8rem">3</text>
-<path stroke="black" d="M79.28932188134526,79.28932188134524L135.85786437626905,135.85786437626905"></path>
-<text x="72.21825406947978" y="72.21825406947977" text-anchor="middle" dominant-baseline="central">D</text>
-<circle cx="72.21825406947978" cy="72.21825406947977" r="10" stroke="black" fill="none"></circle>
-<text x="29.895660773532725" y="100.2511537925383" text-anchor="middle" dominant-baseline="central" font-size="0.8rem">4</text>
-<path stroke="black" d="M50.0,150.0L130.0,150.0"></path>
-<text x="40.0" y="150.0" text-anchor="middle" dominant-baseline="central">E</text>
-<circle cx="40.0" cy="150.0" r="10" stroke="black" fill="none"></circle>
-<text x="29.89566077353271" y="199.74884620746167" text-anchor="middle" dominant-baseline="central" font-size="0.8rem">5</text>
-<path stroke="black" d="M79.28932188134523,220.71067811865476L135.85786437626905,164.14213562373095"></path>
-<text x="72.21825406947976" y="227.78174593052023" text-anchor="middle" dominant-baseline="central">F</text>
-<circle cx="72.21825406947976" cy="227.78174593052023" r="10" stroke="black" fill="none"></circle>
-<text x="100.25115379253825" y="270.10433922646723" text-anchor="middle" dominant-baseline="central" font-size="0.8rem">6</text>
-<path stroke="black" d="M149.99999999999997,250.0L150.0,170.0"></path>
-<text x="149.99999999999997" y="260.0" text-anchor="middle" dominant-baseline="central">G</text>
-<circle cx="149.99999999999997" cy="260.0" r="10" stroke="black" fill="none"></circle>
-<text x="199.7488462074617" y="270.10433922646723" text-anchor="middle" dominant-baseline="central" font-size="0.8rem">7</text>
-<path stroke="black" d="M220.71067811865476,220.71067811865476L164.14213562373095,164.14213562373095"></path>
-<text x="227.7817459305202" y="227.78174593052023" text-anchor="middle" dominant-baseline="central">H</text>
-<circle cx="227.7817459305202" cy="227.78174593052023" r="10" stroke="black" fill="none"></circle>
-<text x="270.10433922646723" y="199.74884620746175" text-anchor="middle" dominant-baseline="central" font-size="0.8rem">8</text><text x="150" y="300" text-anchor="middle" dominant-baseline="central">入力 2512:C</text>
-<path stroke="black" d="M178.2842712474619,121.7157287525381a40.0 40.0 0 0 0 -28.284271247461902,-11.715728752538098" fill="none"></path>
-<path stroke="black" d="M95.0,150.0a55.0 55.0 0 0 0 16.109127034739885,38.890872965260115" fill="none"></path>
-<path stroke="black" d="M220.0,150.0a70.0 70.0 0 0 0 -20.50252531694167,-49.49747468305833" fill="none"></path>
-<path stroke="black" d="M210.10407640085654,89.89592359914346a85.0 85.0 0 0 0 -60.10407640085654,-24.895923599143458" fill="none"></path></svg><p>A ~ H が登山者、1 ~ 8 は方角、実線が登山道である。</p>
+
+<p><img src="/images/2016/06/04/example1.svg" alt=""></p>
+
+<p>A ~ H が登山者、1 ~ 8 は方角、実線が登山道である。</p>
 
 <p>A ~ H のうち登頂できた人を求めたい。</p>
 
@@ -200,7 +101,9 @@
 <li>登る際に、横方向の登山道があればそちらを通る</li>
 </ol>
 
-<p>ただし、一部の登山道は頂上から...</p><a href="/2016/06/04/doukaku-e04.html">Read more</a></article><article><h2><a href="/2015/10/22/esm-doukaku.html">ESM オフラインリアルタイムどう書くを開催しました</a></h2><time>2015-10-22</time><p><a href="https://yhpg.doorkeeper.jp">オフラインリアルタイムどう書く</a> という、
+<p>ただし、一部の登山道は頂上からの落石によって通行止めになっており、通行止めに行きあたると登頂失敗になる。</p>
+
+<p>落石は、頂上から登山者と同じルールで麓ま...</p><a href="/2016/06/04/doukaku-e04.html">Read more</a></article><article><h2><a href="/2015/10/22/esm-doukaku.html">ESM オフラインリアルタイムどう書くを開催しました</a></h2><time>2015-10-22</time><p><a href="https://yhpg.doorkeeper.jp">オフラインリアルタイムどう書く</a> という、
 <a href="https://twitter.com/Nabetani">@Nabetani</a> さん主催のイベントを模したものを
 <a href="http://agile.esm.co.jp">ESM</a> の社内イベントとして行いました。</p>
 
@@ -225,20 +128,21 @@ lazy 的な部分が Ruby でも発想として出てくるようになったの
 <a href="https://github.com/Compass/compass/pull/1912">compass#1912</a></p>
 
 <p>listen...</p><a href="/2015/01/12/new-year.html">Read more</a></article><article><h2><a href="/2014/07/19/usb-tethering-nexus-5.html">Gentoo での Nexus 5 による USB テザリング</a></h2><time>2014-07-19</time><p>カーネルの設定で、以下の内容にチェックを入れる。</p>
-<div class="highlight plaintext"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<div class="highlight"><pre class="highlight plaintext"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
 5
-6</pre></td>
-<td class="code"><pre>Device Drivers
+6
+</pre></td>
+<td class="rouge-code"><pre>Device Drivers
   Network device support
     USB Network Adapters
        &lt;*&gt; Multi-purpose USB Networking Framework
        -*-   CDC Ethernet support (smart devices such as cable modems)
        &lt;*&gt;   Host for RNDIS...</pre></td>
-</tr></tbody></table></div><a href="/2014/07/19/usb-tethering-nexus-5.html">Read more</a></article><article><h2><a href="/2014/02/23/cucumber-wiki-conjunction-steps.html">接続詞ステップ</a></h2><time>2014-02-23</time><p>原文 : <a href="https://github.com/cucumber/cucumber/wiki/Conjunction-Steps-(Antipattern)">Conjunction Steps (Antipattern)</a></p>
+</tr></tbody></table></code></pre></div><a href="/2014/07/19/usb-tethering-nexus-5.html">Read more</a></article><article><h2><a href="/2014/02/23/cucumber-wiki-conjunction-steps.html">接続詞ステップ</a></h2><time>2014-02-23</time><p>原文 : <a href="https://github.com/cucumber/cucumber/wiki/Conjunction-Steps-(Antipattern)">Conjunction Steps (Antipattern)</a></p>
 
 <p>オンライン辞書の Merriam-Webster によれば:</p>
 
@@ -260,23 +164,25 @@ lazy 的な部分が Ruby でも発想として出てくるようになったの
 <h2>例</h2>
 
 <p>架空の履歴書アプリに以下のステップがあります:</p>
-<div class="highlight plaintext"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<div class="highlight"><pre class="highlight plaintext"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
 5
 6
 7
-8</pre></td>
-<td class="code"><pre>features/
+8
+</pre></td>
+<td class="rouge-code"><pre>features/
 +--edit_work_experience.feature
 +--edit_languages...</pre></td>
-</tr></tbody></table></div><a href="/2014/02/16/cucumber-wiki-feature-coupled-step-definitions.html">Read more</a></article><p class="prev-link"><a href="/">Previous page</a></p><p class="next-link"><a href="/page/3/">Next page</a></p></div></div></body><script type="text/javascript">
+</tr></tbody></table></code></pre></div><a href="/2014/02/16/cucumber-wiki-feature-coupled-step-definitions.html">Read more</a></article><p class="prev-link"><a href="/">Previous page</a></p><p class="next-link"><a href="/page/3/">Next page</a></p></div></div></body><script type="text/javascript">
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
   ga('create', 'UA-48013282-1', 'auto');
   ga('send', 'pageview');
-</script></html>
+</script>
+</html>

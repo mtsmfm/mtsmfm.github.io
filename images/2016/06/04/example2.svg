@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="345.0" viewBox="0 0 300 300"><circle cx="150" cy="150" r="20" stroke="black" fill="none"></circle><text x="150" y="150" text-anchor="middle" dominant-baseline="central">頂上</text><path stroke="black" d="M250.0,150.0L170.0,150.0"></path>
+<text x="260.0" y="150.0" text-anchor="middle" dominant-baseline="central">A</text>
+<circle cx="260.0" cy="150.0" r="10" stroke="black" fill="none"></circle>
+<text x="270.1043392264673" y="100.25115379253833" text-anchor="middle" dominant-baseline="central" font-size="0.8rem">1</text>
+<path stroke="black" d="M220.71067811865476,79.28932188134526L164.14213562373095,135.85786437626905"></path>
+<text x="227.78174593052023" y="72.21825406947978" text-anchor="middle" dominant-baseline="central">B</text>
+<circle cx="227.78174593052023" cy="72.21825406947978" r="10" stroke="black" fill="none"></circle>
+<text x="199.74884620746167" y="29.895660773532725" text-anchor="middle" dominant-baseline="central" font-size="0.8rem">2</text>
+<path stroke="black" d="M150.0,50.0L150.0,130.0"></path>
+<text x="150.0" y="40.0" text-anchor="middle" dominant-baseline="central">C</text>
+<circle cx="150.0" cy="40.0" r="10" stroke="black" fill="none"></circle>
+<text x="100.25115379253833" y="29.895660773532725" text-anchor="middle" dominant-baseline="central" font-size="0.8rem">3</text>
+<path stroke="black" d="M79.28932188134526,79.28932188134524L135.85786437626905,135.85786437626905"></path>
+<text x="72.21825406947978" y="72.21825406947977" text-anchor="middle" dominant-baseline="central">D</text>
+<circle cx="72.21825406947978" cy="72.21825406947977" r="10" stroke="black" fill="none"></circle>
+<text x="29.895660773532725" y="100.2511537925383" text-anchor="middle" dominant-baseline="central" font-size="0.8rem">4</text>
+<path stroke="black" d="M50.0,150.0L130.0,150.0"></path>
+<text x="40.0" y="150.0" text-anchor="middle" dominant-baseline="central">E</text>
+<circle cx="40.0" cy="150.0" r="10" stroke="black" fill="none"></circle>
+<text x="29.89566077353271" y="199.74884620746167" text-anchor="middle" dominant-baseline="central" font-size="0.8rem">5</text>
+<path stroke="black" d="M79.28932188134523,220.71067811865476L135.85786437626905,164.14213562373095"></path>
+<text x="72.21825406947976" y="227.78174593052023" text-anchor="middle" dominant-baseline="central">F</text>
+<circle cx="72.21825406947976" cy="227.78174593052023" r="10" stroke="black" fill="none"></circle>
+<text x="100.25115379253825" y="270.10433922646723" text-anchor="middle" dominant-baseline="central" font-size="0.8rem">6</text>
+<path stroke="black" d="M149.99999999999997,250.0L150.0,170.0"></path>
+<text x="149.99999999999997" y="260.0" text-anchor="middle" dominant-baseline="central">G</text>
+<circle cx="149.99999999999997" cy="260.0" r="10" stroke="black" fill="none"></circle>
+<text x="199.7488462074617" y="270.10433922646723" text-anchor="middle" dominant-baseline="central" font-size="0.8rem">7</text>
+<path stroke="black" d="M220.71067811865476,220.71067811865476L164.14213562373095,164.14213562373095"></path>
+<text x="227.7817459305202" y="227.78174593052023" text-anchor="middle" dominant-baseline="central">H</text>
+<circle cx="227.7817459305202" cy="227.78174593052023" r="10" stroke="black" fill="none"></circle>
+<text x="270.10433922646723" y="199.74884620746175" text-anchor="middle" dominant-baseline="central" font-size="0.8rem">8</text><text x="150" y="300" text-anchor="middle" dominant-baseline="central">入力 2512:C</text>
+<path stroke="black" d="M178.2842712474619,121.7157287525381a40.0 40.0 0 0 0 -28.284271247461902,-11.715728752538098" fill="none"></path>
+<path stroke="black" d="M95.0,150.0a55.0 55.0 0 0 0 16.109127034739885,38.890872965260115" fill="none"></path>
+<path stroke="black" d="M220.0,150.0a70.0 70.0 0 0 0 -20.50252531694167,-49.49747468305833" fill="none"></path>
+<path stroke="black" d="M210.10407640085654,89.89592359914346a85.0 85.0 0 0 0 -60.10407640085654,-24.895923599143458" fill="none"></path>
+<path stroke="red" d="M178.2842712474619,121.7157287525381a40.0 40.0 0 0 0 -28.284271247461902,-11.715728752538098" fill="none" stroke-width="3" stroke-dasharray="3, 3"></path>
+<path stroke="red" d="M150.0,130.0L150.0,110.0" stroke-width="3" stroke-dasharray="3, 3"></path>
+<path stroke="red" d="M220.0,150.0a70.0 70.0 0 0 0 -20.50252531694167,-49.49747468305833" fill="none" stroke-width="3" stroke-dasharray="3, 3"></path>
+<path stroke="red" d="M178.2842712474619,121.7157287525381L199.49747468305833,100.50252531694167" stroke-width="3" stroke-dasharray="3, 3"></path>
+<path stroke="red" d="M220.0,150.0L250.0,150.0" stroke-width="3" stroke-dasharray="3, 3"></path></svg>

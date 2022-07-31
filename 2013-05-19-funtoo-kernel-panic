@@ -11,10 +11,9 @@
 <h2>自分のハマりどころや教えていただいた便利情報など</h2>
 
 <p>インストールガイド内の設定を見ながら、噛み合わない部分を飛ばしたら結局 XFS ファイルサポートくらいしか弄らずにコンパイル。すると、</p>
-<div class="highlight plaintext"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre>Unable to mount root fs on unknow block(0,0)
-</pre></td></tr></tbody></table>
-</div>
-
+<div class="highlight"><pre class="highlight plaintext"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>Unable to mount root fs on unknow block(0,0)
+</pre></td></tr></tbody></table></code></pre></div>
 <p>という感じでカーネルパニックに。</p>
 
 <p>boot.conf にはgentoo sources の場合には initrd や params は不要らしいと
@@ -43,7 +42,7 @@
 </ul>
 
 <p>備忘録として、カーネルコンパイルしてgrubの設定するまでの流れを書いておく。</p>
-<div class="highlight plaintext"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<div class="highlight"><pre class="highlight plaintext"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -52,7 +51,8 @@
 7
 8
 9
-10</pre></td><td class="code"><pre>emerge gentoo-sources
+10
+</pre></td><td class="rouge-code"><pre>emerge gentoo-sources
 cd /usr/src/linux
 make nconfig
 make &amp;&amp; make modules_install
@@ -62,5 +62,4 @@ emerge boot-update
 vi /etc/boot.conf
 grub-install --no-floppy /dev/sda
 boot-update
-</pre></td></tr></tbody></table>
-</div>
+</pre></td></tr></tbody></table></code></pre></div>

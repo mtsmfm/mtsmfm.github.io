@@ -14,7 +14,7 @@
     <link rel="alternate" href="http://mtsmfm.github.io/2018/07/07/doukaku-e25.html"/>
     <id>http://mtsmfm.github.io/2018/07/07/doukaku-e25.html</id>
     <published>2018-07-07T07:00:00+00:00</published>
-    <updated>2018-07-07T07:31:34+00:00</updated>
+    <updated>2022-07-31T02:28:41+00:00</updated>
     <author>
       <name>mtsmfm</name>
     </author>
@@ -22,8 +22,8 @@
 
 &lt;p&gt;格子状に並んだ点がある。一番大きな7を描こう。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="/images/2018/07/07/example-1.png" alt="Example 1" /&gt;
-&lt;img src="/images/2018/07/07/example-2.png" alt="Example 2" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/2018/07/07/example-1.png" alt="" /&gt;
+&lt;img src="/images/2018/07/07/example-2.png" alt="" /&gt;&lt;/p&gt;
 
 &lt;h2&gt;ルール&lt;/h2&gt;
 
@@ -37,7 +37,7 @@
 &lt;li&gt;図のように直角に繋がっている&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;img src="/images/2018/07/07/7-1.png" alt="7 1" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/2018/07/07/7-1.png" alt="" /&gt;&lt;/p&gt;
 
 &lt;h2&gt;入力&lt;/h2&gt;
 
@@ -45,14 +45,14 @@
 最初の2つの数字、 &lt;code&gt;4&lt;/code&gt;、&lt;code&gt;7&lt;/code&gt; はそれぞれ縦と横の点の数。
 &lt;code&gt;(0,3)&lt;/code&gt; は 7 の左側の短い縦線の先端の座標。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="/images/2018/07/07/7-2.png" alt="7 2" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/2018/07/07/7-2.png" alt="" /&gt;&lt;/p&gt;
 
 &lt;h2&gt;出力&lt;/h2&gt;
 
 &lt;p&gt;&lt;code&gt;(0,0),(3,0),(3,6)&lt;/code&gt; 、または &lt;code&gt;-&lt;/code&gt; のような形式。
 入力で指定された地点から時計回りで座標を返す。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="/images/2018/07/07/7-3.png" alt="7 3" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/2018/07/07/7-3.png" alt="" /&gt;&lt;/p&gt;
 
 &lt;p&gt;候補が複数ある場合、または一つも「7」を描く余地がない場合には &lt;code&gt;-&lt;/code&gt; を返す。&lt;/p&gt;
 
@@ -100,7 +100,7 @@
     <link rel="alternate" href="http://mtsmfm.github.io/2018/02/03/doukaku-e21.html"/>
     <id>http://mtsmfm.github.io/2018/02/03/doukaku-e21.html</id>
     <published>2018-02-03T07:00:00+00:00</published>
-    <updated>2018-07-07T07:29:12+00:00</updated>
+    <updated>2022-07-31T02:28:41+00:00</updated>
     <author>
       <name>mtsmfm</name>
     </author>
@@ -209,7 +209,7 @@
     <link rel="alternate" href="http://mtsmfm.github.io/2017/11/04/doukaku-e19.html"/>
     <id>http://mtsmfm.github.io/2017/11/04/doukaku-e19.html</id>
     <published>2017-11-04T07:00:00+00:00</published>
-    <updated>2018-07-07T07:29:12+00:00</updated>
+    <updated>2022-07-31T02:28:41+00:00</updated>
     <author>
       <name>mtsmfm</name>
     </author>
@@ -286,7 +286,7 @@ oooxo
     <link rel="alternate" href="http://mtsmfm.github.io/2017/09/15/rubykaigi.html"/>
     <id>http://mtsmfm.github.io/2017/09/15/rubykaigi.html</id>
     <published>2017-09-14T16:00:00+00:00</published>
-    <updated>2018-07-07T07:29:12+00:00</updated>
+    <updated>2022-07-31T02:28:41+00:00</updated>
     <author>
       <name>mtsmfm</name>
     </author>
@@ -336,7 +336,7 @@ oooxo
     <link rel="alternate" href="http://mtsmfm.github.io/2017/06/29/yaichi.html"/>
     <id>http://mtsmfm.github.io/2017/06/29/yaichi.html</id>
     <published>2017-06-28T16:00:00+00:00</published>
-    <updated>2018-07-07T07:29:12+00:00</updated>
+    <updated>2022-07-31T02:28:41+00:00</updated>
     <author>
       <name>mtsmfm</name>
     </author>
@@ -385,7 +385,7 @@ mruby での erb の使い方もわからなかったので、起動時の erb �
     <link rel="alternate" href="http://mtsmfm.github.io/2017/06/03/doukaku-e14.html"/>
     <id>http://mtsmfm.github.io/2017/06/03/doukaku-e14.html</id>
     <published>2017-06-03T07:00:00+00:00</published>
-    <updated>2018-07-07T07:29:12+00:00</updated>
+    <updated>2022-07-31T02:28:41+00:00</updated>
     <author>
       <name>mtsmfm</name>
     </author>
