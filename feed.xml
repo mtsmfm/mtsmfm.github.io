@@ -14,13 +14,17 @@
     <link rel="alternate" href="http://mtsmfm.github.io/2022/08/01/hello-autify.html"/>
     <id>http://mtsmfm.github.io/2022/08/01/hello-autify.html</id>
     <published>2022-08-01T13:00:00+00:00</published>
-    <updated>2022-08-01T13:51:56+00:00</updated>
+    <updated>2022-08-01T15:01:40+00:00</updated>
     <author>
       <name>mtsmfm</name>
     </author>
     <content type="html">&lt;p&gt;リクルート (旧 Quipper Japan) を退職し、&lt;a href="https://autify.com/"&gt;Autify&lt;/a&gt; に入社しました。&lt;/p&gt;
 
-&lt;p&gt;Quipper は友人に誘われ 2017 年に転職しました。自社サービスの開発したさが 6 割、仕事で英語やりたさが 2 割、知り合いが何人かいるからが 2 割くらいでの転職でした。特に自社サービスにある程度長く関わってメンテナンスする中で、自分の設計判断が後々にどのような影響を生むかを身をもって知ることができました。うまくいくかどうかは運要素も少なくないですが、結果として自分が苦しむ、あるいは楽するという形で当時の判断についてのフィードバックが得られるのは、自身で開発運用までしないとできない経験だと思います。私が関わった最大の機能のコア部分は残念ながら売上などの理由により廃止になってしまいましたが、最後に自分の手で消すことができたのも感慨深いものがありました。また、その機能自体は廃止されたものの、その実装過程で行ったリファクタが 1 年後に思わぬ機能開発の際に生きてくるなど、成長し続けるソフトウェアの先の読めなさを感じました。&lt;/p&gt;
+&lt;p&gt;Quipper は友人に誘われ 2017 年に転職しました。
+最終出社日に数えたら、この 5 年で 2419 の PR がマージされたようです。
+&lt;img src="/images/2022/08/01/image.png" alt="" /&gt;&lt;/p&gt;
+
+&lt;p&gt;自社サービスの開発したさが 6 割、仕事で英語やりたさが 2 割、知り合いが何人かいるからが 2 割くらいでの転職でした。特に自社サービスにある程度長く関わってメンテナンスする中で、自分の設計判断が後々にどのような影響を生むかを身をもって知ることができました。うまくいくかどうかは運要素も少なくないですが、結果として自分が苦しむ、あるいは楽するという形で当時の判断についてのフィードバックが得られるのは、自身で開発運用までしないとできない経験だと思います。私が関わった最大の機能のコア部分は残念ながら売上などの理由により廃止になってしまいましたが、最後に自分の手で消すことができたのも感慨深いものがありました。また、その機能自体は廃止されたものの、その実装過程で行ったリファクタが 1 年後に思わぬ機能開発の際に生きてくるなど、成長し続けるソフトウェアの先の読めなさを感じました。&lt;/p&gt;
 
 &lt;p&gt;好き勝手やっていたら評価もしていただき、MVP に選出していただいたり、シニアソフトウェアエンジニアという役職をいただいたりと大きな励みになりました。&lt;/p&gt;
 
@@ -33,7 +37,8 @@
 
 &lt;p&gt;自動テスト、特に E2E テストにはもともと興味があり、&lt;a href="https://speakerdeck.com/mtsmfm/how-do-e2e-tests-fail-randomly"&gt;不安定なテストについて悩まされる中で得た知見の発表&lt;/a&gt;をしたこともありました。
 E2E テストはうまく動く分には書いたテスト量あたりの価値が高い一方で、速度や落ちたときのわかりにくさ、安定性などで課題を感じていました。
-仕事でこういった開発支援ツール自体の開発ができるのはとてもおもしろそうで、利用者からの評判もよく、利用シーンが想像しやすく、またちゃんとドッグフーディングしているという点も魅力的でした。&lt;/p&gt;
+仕事でこういった開発支援ツール自体の開発ができるのはとてもおもしろそうで、利用者からの評判もよく、利用シーンが想像しやすく、またちゃんとドッグフーディングしているという点も魅力的でした。
+また、英語について、Quipper で特に後半は使う機会がなかったので、再挑戦していきたいと思っています。&lt;/p&gt;
 
 &lt;p&gt;私は離れる決断をしましたが、スタディサプリ開発チームは教育にただ熱意を燃やすだけでなく&lt;a href="https://blog.studysapuri.jp/entry/2022/07/25/ruby-ujihisa"&gt;プログラマとして N 家言持っているメンバー&lt;/a&gt;、&lt;a href="https://blog.studysapuri.jp/entry/pre-mortem"&gt;開発を支えてくれる強力な SRE&lt;/a&gt;などユニークな精鋭がおり、&lt;a href="https://recruit-saiyo.jp/benefits/"&gt;平均週休 3 日&lt;/a&gt;の実践など待遇面でも優れた環境だと感じています。&lt;/p&gt;
 
@@ -52,7 +57,7 @@ E2E テストはうまく動く分には書いたテスト量あたりの価値�
     <link rel="alternate" href="http://mtsmfm.github.io/2018/07/07/doukaku-e25.html"/>
     <id>http://mtsmfm.github.io/2018/07/07/doukaku-e25.html</id>
     <published>2018-07-07T07:00:00+00:00</published>
-    <updated>2022-08-01T13:51:56+00:00</updated>
+    <updated>2022-08-01T15:01:40+00:00</updated>
     <author>
       <name>mtsmfm</name>
     </author>
@@ -138,7 +143,7 @@ E2E テストはうまく動く分には書いたテスト量あたりの価値�
     <link rel="alternate" href="http://mtsmfm.github.io/2018/02/03/doukaku-e21.html"/>
     <id>http://mtsmfm.github.io/2018/02/03/doukaku-e21.html</id>
     <published>2018-02-03T07:00:00+00:00</published>
-    <updated>2022-08-01T13:51:56+00:00</updated>
+    <updated>2022-08-01T15:01:40+00:00</updated>
     <author>
       <name>mtsmfm</name>
     </author>
@@ -247,7 +252,7 @@ E2E テストはうまく動く分には書いたテスト量あたりの価値�
     <link rel="alternate" href="http://mtsmfm.github.io/2017/11/04/doukaku-e19.html"/>
     <id>http://mtsmfm.github.io/2017/11/04/doukaku-e19.html</id>
     <published>2017-11-04T07:00:00+00:00</published>
-    <updated>2022-08-01T13:51:56+00:00</updated>
+    <updated>2022-08-01T15:01:40+00:00</updated>
     <author>
       <name>mtsmfm</name>
     </author>
@@ -324,7 +329,7 @@ oooxo
     <link rel="alternate" href="http://mtsmfm.github.io/2017/09/15/rubykaigi.html"/>
     <id>http://mtsmfm.github.io/2017/09/15/rubykaigi.html</id>
     <published>2017-09-14T16:00:00+00:00</published>
-    <updated>2022-08-01T13:51:56+00:00</updated>
+    <updated>2022-08-01T15:01:40+00:00</updated>
     <author>
       <name>mtsmfm</name>
     </author>
@@ -374,7 +379,7 @@ oooxo
     <link rel="alternate" href="http://mtsmfm.github.io/2017/06/29/yaichi.html"/>
     <id>http://mtsmfm.github.io/2017/06/29/yaichi.html</id>
     <published>2017-06-28T16:00:00+00:00</published>
-    <updated>2022-08-01T13:51:56+00:00</updated>
+    <updated>2022-08-01T15:01:40+00:00</updated>
     <author>
       <name>mtsmfm</name>
     </author>
