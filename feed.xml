@@ -14,7 +14,7 @@
     <link rel="alternate" href="http://mtsmfm.github.io/2022/08/01/hello-autify.html"/>
     <id>http://mtsmfm.github.io/2022/08/01/hello-autify.html</id>
     <published>2022-08-01T13:00:00+00:00</published>
-    <updated>2022-08-01T15:05:51+00:00</updated>
+    <updated>2022-08-01T15:08:46+00:00</updated>
     <author>
       <name>mtsmfm</name>
     </author>
@@ -25,7 +25,9 @@
 (いくつかはスクリプトによって生成した PR もあるかもしれません)
 &lt;img src="/images/2022/08/01/image.png" alt="" /&gt;&lt;/p&gt;
 
-&lt;p&gt;自社サービスの開発したさが 6 割、仕事で英語やりたさが 2 割、知り合いが何人かいるからが 2 割くらいでの転職でした。特に自社サービスにある程度長く関わってメンテナンスする中で、自分の設計判断が後々にどのような影響を生むかを身をもって知ることができました。うまくいくかどうかは運要素も少なくないですが、結果として自分が苦しむ、あるいは楽するという形で当時の判断についてのフィードバックが得られるのは、自身で開発運用までしないとできない経験だと思います。私が関わった最大の機能のコア部分は残念ながら売上などの理由により廃止になってしまいましたが、最後に自分の手で消すことができたのも感慨深いものがありました。また、その機能自体は廃止されたものの、その実装過程で行ったリファクタが 1 年後に思わぬ機能開発の際に生きてくるなど、成長し続けるソフトウェアの先の読めなさを感じました。&lt;/p&gt;
+&lt;p&gt;自社サービスの開発したさが 6 割、仕事で英語やりたさが 2 割、知り合いが何人かいるからが 2 割くらいでの転職でした。特に自社サービスにある程度長く関わってメンテナンスする中で、自分の設計判断が後々にどのような影響を生むかを身をもって知ることができました。うまくいくかどうかは運要素も少なくないですが、結果として自分が苦しむ、あるいは楽するという形で当時の判断についてのフィードバックが得られるのは、自身で開発運用までしないとできない経験だと思います。&lt;/p&gt;
+
+&lt;p&gt;私が関わった最大の機能のコア部分は残念ながら売上などの理由により廃止になってしまいましたが、最後に自分の手で消すことができたのも感慨深いものがありました。また、その機能自体は廃止されたものの、その実装過程で行ったリファクタが 1 年後に思わぬ機能開発の際に生きてくるなど、成長し続けるソフトウェアの先の読めなさを感じました。&lt;/p&gt;
 
 &lt;p&gt;好き勝手やっていたら評価もしていただき、MVP に選出していただいたり、シニアソフトウェアエンジニアという役職をいただいたりと大きな励みになりました。&lt;/p&gt;
 
@@ -58,7 +60,7 @@ E2E テストはうまく動く分には書いたテスト量あたりの価値�
     <link rel="alternate" href="http://mtsmfm.github.io/2018/07/07/doukaku-e25.html"/>
     <id>http://mtsmfm.github.io/2018/07/07/doukaku-e25.html</id>
     <published>2018-07-07T07:00:00+00:00</published>
-    <updated>2022-08-01T15:05:51+00:00</updated>
+    <updated>2022-08-01T15:08:46+00:00</updated>
     <author>
       <name>mtsmfm</name>
     </author>
@@ -144,7 +146,7 @@ E2E テストはうまく動く分には書いたテスト量あたりの価値�
     <link rel="alternate" href="http://mtsmfm.github.io/2018/02/03/doukaku-e21.html"/>
     <id>http://mtsmfm.github.io/2018/02/03/doukaku-e21.html</id>
     <published>2018-02-03T07:00:00+00:00</published>
-    <updated>2022-08-01T15:05:51+00:00</updated>
+    <updated>2022-08-01T15:08:46+00:00</updated>
     <author>
       <name>mtsmfm</name>
     </author>
@@ -253,7 +255,7 @@ E2E テストはうまく動く分には書いたテスト量あたりの価値�
     <link rel="alternate" href="http://mtsmfm.github.io/2017/11/04/doukaku-e19.html"/>
     <id>http://mtsmfm.github.io/2017/11/04/doukaku-e19.html</id>
     <published>2017-11-04T07:00:00+00:00</published>
-    <updated>2022-08-01T15:05:51+00:00</updated>
+    <updated>2022-08-01T15:08:46+00:00</updated>
     <author>
       <name>mtsmfm</name>
     </author>
@@ -330,7 +332,7 @@ oooxo
     <link rel="alternate" href="http://mtsmfm.github.io/2017/09/15/rubykaigi.html"/>
     <id>http://mtsmfm.github.io/2017/09/15/rubykaigi.html</id>
     <published>2017-09-14T16:00:00+00:00</published>
-    <updated>2022-08-01T15:05:51+00:00</updated>
+    <updated>2022-08-01T15:08:46+00:00</updated>
     <author>
       <name>mtsmfm</name>
     </author>
@@ -380,7 +382,7 @@ oooxo
     <link rel="alternate" href="http://mtsmfm.github.io/2017/06/29/yaichi.html"/>
     <id>http://mtsmfm.github.io/2017/06/29/yaichi.html</id>
     <published>2017-06-28T16:00:00+00:00</published>
-    <updated>2022-08-01T15:05:51+00:00</updated>
+    <updated>2022-08-01T15:08:46+00:00</updated>
     <author>
       <name>mtsmfm</name>
     </author>
