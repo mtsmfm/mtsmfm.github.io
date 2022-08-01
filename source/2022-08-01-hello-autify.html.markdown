@@ -1,0 +1,30 @@
+---
+title: Autify に転職しました
+date: 2022-08-01 22:00 JST
+tags:
+---
+
+リクルート (旧 Quipper Japan) を退職し、[Autify](https://autify.com/) に入社しました。
+
+Quipper は友人に誘われ 2017 年に転職しました。自社サービスの開発したさが 6 割、仕事で英語やりたさが 2 割、知り合いが何人かいるからが 2 割くらいでの転職でした。特に自社サービスにある程度長く関わってメンテナンスする中で、自分の設計判断が後々にどのような影響を生むかを身をもって知ることができました。うまくいくかどうかは運要素も少なくないですが、結果として自分が苦しむ、あるいは楽するという形で当時の判断についてのフィードバックが得られるのは、自身で開発運用までしないとできない経験だと思います。私が関わった最大の機能のコア部分は残念ながら売上などの理由により廃止になってしまいましたが、最後に自分の手で消すことができたのも感慨深いものがありました。また、その機能自体は廃止されたものの、その実装過程で行ったリファクタが 1 年後に思わぬ機能開発の際に生きてくるなど、成長し続けるソフトウェアの先の読めなさを感じました。
+
+好き勝手やっていたら評価もしていただき、MVP に選出していただいたり、シニアソフトウェアエンジニアという役職をいただいたりと大きな励みになりました。
+
+<blockquote class="twitter-tweet" data-partner="tweetdeck"><p lang="ja" dir="ltr">わぁい <a href="https://t.co/rKgvX0WUYT">pic.twitter.com/rKgvX0WUYT</a></p>&mdash; Fumiaki MATSUSHIMA (@mtsmfm) <a href="https://twitter.com/mtsmfm/status/987265054817972226?ref_src=twsrc%5Etfw">April 20, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+それなりの期間働くうちに組織の変遷を経て Quipper がリクルートに統合されることとなりました。
+そんな中、そろそろ次について考えていたところお声がけいただき、 Autify にまずは副業として参加したのち入社を決めました。
+
+自動テスト、特に E2E テストにはもともと興味があり、[不安定なテストについて悩まされる中で得た知見の発表](https://speakerdeck.com/mtsmfm/how-do-e2e-tests-fail-randomly)をしたこともありました。
+E2E テストはうまく動く分には書いたテスト量あたりの価値が高い一方で、速度や落ちたときのわかりにくさ、安定性などで課題を感じていました。
+仕事でこういった開発支援ツール自体の開発ができるのはとてもおもしろそうで、利用者からの評判もよく、利用シーンが想像しやすく、またちゃんとドッグフーディングしているという点も魅力的でした。
+
+私は離れる決断をしましたが、スタディサプリ開発チームは教育にただ熱意を燃やすだけでなく[プログラマとして N 家言持っているメンバー](https://blog.studysapuri.jp/entry/2022/07/25/ruby-ujihisa)、[開発を支えてくれる強力な SRE](https://blog.studysapuri.jp/entry/pre-mortem)などユニークな精鋭がおり、[平均週休 3 日](https://recruit-saiyo.jp/benefits/)の実践など待遇面でも優れた環境だと感じています。
+
+バランスをとって両方の採用ページを貼っておきます。
+
+- [スタディサプリ採用情報](https://brand.studysapuri.jp/career/)
+- [Autify 採用情報](https://autify.com/careers)
+
+今後ともよろしくお願いします。
